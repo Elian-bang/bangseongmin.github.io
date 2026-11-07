@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-211.html"
 published_on: "2022-10-20"
 section: "알고리즘"
-category: "알고리즘 / 백준"
+category: "알고리즘 / 백준 / 배열·집합"
 ---
 
 * [10815번, 집합과 맵 - 숫자 카드](https://www.acmicpc.net/problem/10815)

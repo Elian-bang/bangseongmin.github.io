@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-370.html"
 published_on: "2023-04-25"
 section: "프로젝트"
-category: "프로젝트 / SNS 서비스"
+category: "프로젝트 / SNS 서비스 / 기획·설계"
 ---
 
 ## 프로젝트 기획

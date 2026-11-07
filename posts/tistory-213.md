@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-213.html"
 published_on: "2022-10-24"
 section: "알고리즘"
-category: "알고리즘 / 백준"
+category: "알고리즘 / 백준 / 배열·집합"
 ---
 
 * [10807번, 1차 배열 - 개수 세기](https://www.acmicpc.net/step/6)

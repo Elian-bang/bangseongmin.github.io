@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-170.html"
 published_on: "2022-09-25"
 section: "알고리즘"
-category: "알고리즘 / 프로그래머스"
+category: "알고리즘 / 프로그래머스 / SQL"
 ---
 
 ### **문제 : 동물 수 구하기**

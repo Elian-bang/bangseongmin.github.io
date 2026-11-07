@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-307.html"
 published_on: "2023-01-06"
 section: "프로젝트"
-category: "프로젝트 / 약국 길찾기"
+category: "프로젝트 / 약국 길찾기 / 환경 구성"
 ---
 
 ![본문 이미지](../assets/tistory/7c9cff8fe9b9da12b4e9341d.png)

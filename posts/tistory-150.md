@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-150.html"
 published_on: "2022-09-13"
 section: "알고리즘"
-category: "알고리즘 / 프로그래머스"
+category: "알고리즘 / 프로그래머스 / 구현·시뮬레이션"
 ---
 
 #### **문제 : 2018 KAKAO BLIND RECRUITMENT - 1차 비밀지도**

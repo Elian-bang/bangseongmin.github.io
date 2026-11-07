@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-67.html"
 published_on: "2022-05-16"
 section: "학습·회고"
-category: "학습·회고 / 항해99"
+category: "학습·회고 / 항해99 / Git·웹개발"
 ---
 
 ![본문 이미지](../assets/tistory/9ded92f571a9601367ec1c40.gif)

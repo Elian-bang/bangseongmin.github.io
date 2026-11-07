@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-281.html"
 published_on: "2022-12-16"
 section: "프로젝트"
-category: "프로젝트 / 게시판 서비스"
+category: "프로젝트 / 게시판 서비스 / 기능 고도화"
 ---
 
 ## 댓글 기능 고도화 댓글 기능의 결정과 Rollback

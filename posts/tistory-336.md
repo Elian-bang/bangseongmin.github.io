@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-336.html"
 published_on: "2023-01-24"
 section: "프로젝트"
-category: "프로젝트 / PT 이용권"
+category: "프로젝트 / PT 이용권 / 배치 구현"
 ---
 
 ## 프로젝트 생성 및 Git 설정

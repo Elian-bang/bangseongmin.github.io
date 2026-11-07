@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-215.html"
 published_on: "2022-10-25"
 section: "알고리즘"
-category: "알고리즘 / 프로그래머스"
+category: "알고리즘 / 프로그래머스 / 탐색·그리디·DP"
 ---
 
 * [Summer/Winter Coding(~2018) > 스킬트리](https://school.programmers.co.kr/learn/courses/30/lessons/49993)

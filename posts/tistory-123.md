@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-123.html"
 published_on: "2022-06-03"
 section: "학습·회고"
-category: "학습·회고 / 항해99"
+category: "학습·회고 / 항해99 / Spring"
 ---
 
 **주특기 4주차 팀과제를 진행하면서 많은 것을 되돌아보게 되었다...**

@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-291.html"
 published_on: "2022-12-28"
 section: "프로젝트"
-category: "프로젝트 / SNS 서비스"
+category: "프로젝트 / SNS 서비스 / 기획·설계"
 ---
 
 ## 프로젝트 개요 및 요구사항 분석하기

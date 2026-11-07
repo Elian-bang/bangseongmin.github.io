@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-106.html"
 published_on: "2022-05-20"
 section: "학습·회고"
-category: "학습·회고 / 항해99"
+category: "학습·회고 / 항해99 / Spring"
 ---
 
 > **1) Tutor 클래스를 만들고, 이름(name)과, 경력(bio) 멤버 변수를 추가하세요. 2) 그리고 각 변수를 private 으로 선언하고, Getter와 Setter 를 만들어보세요. 3) 마지막으로, 기본 생성자와, name/bio 입력받는 생성자 두 개를 만들어보세요.**

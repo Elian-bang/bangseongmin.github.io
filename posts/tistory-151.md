@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-151.html"
 published_on: "2022-09-13"
 section: "알고리즘"
-category: "알고리즘 / 프로그래머스"
+category: "알고리즘 / 프로그래머스 / 구현·시뮬레이션"
 ---
 
 #### **문제 : 2019 KAKAO BLIND RECRUITMENT - 실패율**

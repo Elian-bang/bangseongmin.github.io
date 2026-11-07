@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-160.html"
 published_on: "2022-09-21"
 section: "알고리즘"
-category: "알고리즘 / 프로그래머스"
+category: "알고리즘 / 프로그래머스 / 수학"
 ---
 
 #### **문제 : 월간 코드 챌린지 시즌1 - 이진 변환 반복하기**

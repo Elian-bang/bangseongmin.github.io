@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-341.html"
 published_on: "2023-02-09"
 section: "알고리즘"
-category: "알고리즘 / 프로그래머스"
+category: "알고리즘 / 프로그래머스 / 자료구조"
 ---
 
 [![본문 이미지](../assets/tistory/ec7e4e6a518a01e1418f11e5.jpg)](https://school.programmers.co.kr/learn/courses/30/lessons/138476?language=java)

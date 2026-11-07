@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-112.html"
 published_on: "2022-05-23"
 section: "학습·회고"
-category: "학습·회고 / 항해99"
+category: "학습·회고 / 항해99 / Spring"
 ---
 
 **[수업 목표]**

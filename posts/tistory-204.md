@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-204.html"
 published_on: "2022-10-18"
 section: "알고리즘"
-category: "알고리즘 / 백준"
+category: "알고리즘 / 백준 / 정렬"
 ---
 
 * 정렬 - [1181번, 단어 정렬](https://www.acmicpc.net/problem/1181)

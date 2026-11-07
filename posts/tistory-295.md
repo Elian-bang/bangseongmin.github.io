@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-295.html"
 published_on: "2022-12-29"
 section: "프로젝트"
-category: "프로젝트 / SNS 서비스"
+category: "프로젝트 / SNS 서비스 / 기능 구현"
 ---
 
 ## **회원가입 및 로그인 기능 테스트 작성하기**

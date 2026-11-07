@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-277.html"
 published_on: "2022-12-15"
 section: "프로젝트"
-category: "프로젝트 / 게시판 서비스"
+category: "프로젝트 / 게시판 서비스 / 기능 고도화"
 ---
 
 ## 대댓글

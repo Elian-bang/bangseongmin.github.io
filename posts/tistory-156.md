@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-156.html"
 published_on: "2022-09-19"
 section: "알고리즘"
-category: "알고리즘 / 프로그래머스"
+category: "알고리즘 / 프로그래머스 / 구현·시뮬레이션"
 ---
 
 #### **문제 : [KAKAO BLIND RECRUITMENT] 신고 결과 받기**

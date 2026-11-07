@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-7.html"
 published_on: "2022-04-06"
 section: "알고리즘"
-category: "알고리즘 / 백준"
+category: "알고리즘 / 백준 / 입출력·연산"
 ---
 
 ### 서론

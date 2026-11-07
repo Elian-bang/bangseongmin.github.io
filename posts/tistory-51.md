@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-51.html"
 published_on: "2022-05-13"
 section: "학습·회고"
-category: "학습·회고 / 항해99"
+category: "학습·회고 / 항해99 / Git·웹개발"
 ---
 
 오늘은 2주차의 시작이다!!

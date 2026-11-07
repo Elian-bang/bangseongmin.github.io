@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-195.html"
 published_on: "2022-10-13"
 section: "알고리즘"
-category: "알고리즘 / 백준"
+category: "알고리즘 / 백준 / 입출력·연산"
 ---
 
 * [반복문 - 25304번 영수증](https://www.acmicpc.net/problem/25304)

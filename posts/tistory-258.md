@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-258.html"
 published_on: "2022-12-06"
 section: "프로젝트"
-category: "프로젝트 / 게시판 서비스"
+category: "프로젝트 / 게시판 서비스 / 기본 기능 구현"
 ---
 
 ## **게시글 댓글 구현**

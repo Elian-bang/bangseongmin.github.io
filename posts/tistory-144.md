@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-144.html"
 published_on: "2022-09-02"
 section: "알고리즘"
-category: "알고리즘 / 프로그래머스"
+category: "알고리즘 / 프로그래머스 / SQL"
 ---
 
 **문제명 : 이름이 없는 동물의 아이디**

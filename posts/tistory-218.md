@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-218.html"
 published_on: "2022-10-26"
 section: "알고리즘"
-category: "알고리즘 / 백준"
+category: "알고리즘 / 백준 / 배열·집합"
 ---
 
 * [14425번, 문자열 집합](https://www.acmicpc.net/problem/14425)

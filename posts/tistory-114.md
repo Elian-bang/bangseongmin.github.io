@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-114.html"
 published_on: "2022-05-25"
 section: "학습·회고"
-category: "학습·회고 / 항해99"
+category: "학습·회고 / 항해99 / Spring"
 ---
 
 #### **드디어 오늘은 Spring 기초 5주차이다!!**

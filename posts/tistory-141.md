@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-141.html"
 published_on: "2022-08-30"
 section: "알고리즘"
-category: "알고리즘 / 프로그래머스"
+category: "알고리즘 / 프로그래머스 / 수학"
 ---
 
 **문제 설명**

@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-142.html"
 published_on: "2022-08-30"
 section: "알고리즘"
-category: "알고리즘 / 프로그래머스"
+category: "알고리즘 / 프로그래머스 / SQL"
 ---
 
 ### **1번 문제 : 동물의 아이디와 이름**

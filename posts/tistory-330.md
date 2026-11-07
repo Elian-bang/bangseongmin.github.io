@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-330.html"
 published_on: "2023-01-22"
 section: "프로젝트"
-category: "프로젝트 / 게시판 서비스"
+category: "프로젝트 / 게시판 서비스 / 배포"
 ---
 
 ## 클라우드 서비스 배포하기

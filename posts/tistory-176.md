@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-176.html"
 published_on: "2022-09-28"
 section: "알고리즘"
-category: "알고리즘 / 프로그래머스"
+category: "알고리즘 / 프로그래머스 / 구현·시뮬레이션"
 ---
 
 #### **문제 : 정렬 > H-Index**

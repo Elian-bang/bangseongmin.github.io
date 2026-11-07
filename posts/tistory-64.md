@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-64.html"
 published_on: "2022-05-15"
 section: "알고리즘"
-category: "알고리즘 / 프로그래머스"
+category: "알고리즘 / 프로그래머스 / 수학"
 ---
 
 **#P. 12 : 부족한 금액 계산하기(난이도 : 중하)**

@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-396.html"
 published_on: "2023-05-22"
 section: "프로젝트"
-category: "프로젝트 / SNS 서비스"
+category: "프로젝트 / SNS 서비스 / 기능 구현"
 ---
 
 ## 타임라인 구현

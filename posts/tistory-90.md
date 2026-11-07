@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-90.html"
 published_on: "2022-05-18"
 section: "알고리즘"
-category: "알고리즘 / 프로그래머스"
+category: "알고리즘 / 프로그래머스 / 자료구조"
 ---
 
 #### **#P. 31: 같은 숫자는 싫어 (난이도 : 중)**

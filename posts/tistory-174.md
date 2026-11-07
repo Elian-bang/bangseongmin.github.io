@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-174.html"
 published_on: "2022-09-27"
 section: "알고리즘"
-category: "알고리즘 / 프로그래머스"
+category: "알고리즘 / 프로그래머스 / 수학"
 ---
 
 #### **문제 :  Summer/Winter Coding(~2018) > 점프와 순간 이동**

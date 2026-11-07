@@ -34,13 +34,15 @@ layout: default
   </ul>
 </section>
 <section id="archive" class="archive" aria-labelledby="archive-title">
-  <aside class="filters" aria-label="카테고리">
+  <nav class="filters" aria-label="카테고리">
     <p class="eyebrow">CATEGORIES</p>
     <a class="filter is-active" href="#archive" data-category="">전체 <span>{{ articles.size }}</span></a>
+    <div class="category-tree">
     {% for group in groups %}
     <a class="filter" href="#category-{{ forloop.index }}" data-category="{{ group.name | escape }}">{{ group.name | escape }} <span>{{ group.size }}</span></a>
     {% endfor %}
-  </aside>
+    </div>
+  </nav>
   <div class="archive-main">
     <div class="archive-head">
       <div><p class="eyebrow">ARCHIVE</p><h2 id="archive-title">글 목록</h2></div>
@@ -56,7 +58,7 @@ layout: default
       <h3>{{ group.name | escape }} <span>{{ group.size }}</span></h3>
       <ul class="post-list">
       {% for post in group.items %}
-        <li class="post-row">
+        <li class="post-row" data-category="{{ post.category | default: group.name | escape }}">
           <a href="{{ post.url | relative_url }}">
             <span class="post-info"><span class="category">{{ post.category | escape }}</span><strong>{{ post.title | escape }}</strong></span>
             <time datetime="{{ post.published_on }}">{{ post.published_on }}</time>

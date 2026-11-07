@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-126.html"
 published_on: "2022-06-12"
 section: "학습·회고"
-category: "학습·회고 / 항해99"
+category: "학습·회고 / 항해99 / 알고리즘 스터디"
 ---
 
 **[수업 목표]**

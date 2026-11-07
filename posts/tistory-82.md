@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-82.html"
 published_on: "2022-05-18"
 section: "알고리즘"
-category: "알고리즘 / 프로그래머스"
+category: "알고리즘 / 프로그래머스 / 배열·문자열"
 ---
 
 #### **#P. 23 : 자연수 뒤집어 배열로 만들기 (난이도 : 중하)**

@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-194.html"
 published_on: "2022-10-13"
 section: "알고리즘"
-category: "알고리즘 / 백준"
+category: "알고리즘 / 백준 / 정렬"
 ---
 
 * [25305번 - 정렬 > 커트라인](https://www.acmicpc.net/problem/25305)

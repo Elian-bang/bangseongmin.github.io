@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-313.html"
 published_on: "2023-01-10"
 section: "프로젝트"
-category: "프로젝트 / 약국 길찾기"
+category: "프로젝트 / 약국 길찾기 / 테스트"
 ---
 
 ## 테스트 케이스 Spock 프레임워크

@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-72.html"
 published_on: "2022-05-17"
 section: "알고리즘"
-category: "알고리즘 / 프로그래머스"
+category: "알고리즘 / 프로그래머스 / 배열·문자열"
 ---
 
 **#P. 18 : 서울에서 김서방 찾기 (난이도 : 중하)**

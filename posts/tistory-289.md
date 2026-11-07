@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-289.html"
 published_on: "2022-12-22"
 section: "프로젝트"
-category: "프로젝트 / 게시판 서비스"
+category: "프로젝트 / 게시판 서비스 / 기능 고도화"
 ---
 
 ## **보안 기능 고도화 - 환경 변수 사용**

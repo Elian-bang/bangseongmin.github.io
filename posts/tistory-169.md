@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-169.html"
 published_on: "2022-09-24"
 section: "알고리즘"
-category: "알고리즘 / 프로그래머스"
+category: "알고리즘 / 프로그래머스 / 자료구조"
 ---
 
 #### **문제 : 짝지어 제거하기**

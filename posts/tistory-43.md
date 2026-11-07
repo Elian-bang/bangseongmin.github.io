@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-43.html"
 published_on: "2022-05-03"
 section: "학습·회고"
-category: "학습·회고 / 항해99"
+category: "학습·회고 / 항해99 / 사전 준비"
 ---
 
 오늘은 피곤한 화요일... 화요병?

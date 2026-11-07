@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-206.html"
 published_on: "2022-10-19"
 section: "알고리즘"
-category: "알고리즘 / 백준"
+category: "알고리즘 / 백준 / 정렬"
 ---
 
 * 정렬 - [18870번, 좌표 압축](https://www.acmicpc.net/problem/18870)

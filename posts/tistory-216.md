@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-216.html"
 published_on: "2022-10-25"
 section: "알고리즘"
-category: "알고리즘 / 프로그래머스"
+category: "알고리즘 / 프로그래머스 / 탐색·그리디·DP"
 ---
 
 * [**탐욕법(Greedy) > 큰 수 만들기**](https://school.programmers.co.kr/learn/courses/30/lessons/42883)

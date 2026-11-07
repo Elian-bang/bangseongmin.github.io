@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-50.html"
 published_on: "2022-05-13"
 section: "학습·회고"
-category: "학습·회고 / 항해99"
+category: "학습·회고 / 항해99 / Git·웹개발"
 ---
 
 오늘은 첫 번째 미니 프로젝트 마감일이다..

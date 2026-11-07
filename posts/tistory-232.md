@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-232.html"
 published_on: "2022-11-09"
 section: "알고리즘"
-category: "알고리즘 / 백준"
+category: "알고리즘 / 백준 / 배열·집합"
 ---
 
 * [1269번, 대칭 차집합](https://www.acmicpc.net/problem/1269)

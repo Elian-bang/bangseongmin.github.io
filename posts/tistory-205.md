@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-205.html"
 published_on: "2022-10-18"
 section: "알고리즘"
-category: "알고리즘 / 백준"
+category: "알고리즘 / 백준 / 정렬"
 ---
 
 * 정렬 - [10814번, 나이순 정렬](https://www.acmicpc.net/problem/10814)

@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-324.html"
 published_on: "2023-01-18"
 section: "프로젝트"
-category: "프로젝트 / 약국 길찾기"
+category: "프로젝트 / 약국 길찾기 / 운영·성능 개선"
 ---
 
 ![본문 이미지](../assets/tistory/2a9d61c93b27fdcc449a93e8.jpg)

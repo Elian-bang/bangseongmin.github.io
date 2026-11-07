@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-338.html"
 published_on: "2023-01-30"
 section: "프로젝트"
-category: "프로젝트 / PT 이용권"
+category: "프로젝트 / PT 이용권 / 배치 구현"
 ---
 
 ## 데이터베이스 연동

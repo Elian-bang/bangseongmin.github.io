@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-323.html"
 published_on: "2023-01-18"
 section: "프로젝트"
-category: "프로젝트 / 약국 길찾기"
+category: "프로젝트 / 약국 길찾기 / 주소 검색·길안내"
 ---
 
 ## 약국 데이터 셋업

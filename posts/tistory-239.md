@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-239.html"
 published_on: "2022-11-22"
 section: "프로젝트"
-category: "프로젝트 / 게시판 서비스"
+category: "프로젝트 / 게시판 서비스 / 기획·설계"
 ---
 
 ## 게시판 서비스

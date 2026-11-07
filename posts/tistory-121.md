@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-121.html"
 published_on: "2022-06-01"
 section: "학습·회고"
-category: "학습·회고 / 항해99"
+category: "학습·회고 / 항해99 / Spring"
 ---
 
 ## 9. 회원별 상품 등록 및 조회

@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-339.html"
 published_on: "2023-02-02"
 section: "프로젝트"
-category: "프로젝트 / PT 이용권"
+category: "프로젝트 / PT 이용권 / 배치 구현"
 ---
 
 ## Batch 구현

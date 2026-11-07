@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-225.html"
 published_on: "2022-11-02"
 section: "알고리즘"
-category: "알고리즘 / 백준"
+category: "알고리즘 / 백준 / 배열·집합"
 ---
 
 * [5597번, 과제 안 내신 분..?](https://www.acmicpc.net/problem/5597)

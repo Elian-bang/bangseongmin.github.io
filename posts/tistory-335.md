@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-335.html"
 published_on: "2023-01-24"
 section: "프로젝트"
-category: "프로젝트 / PT 이용권"
+category: "프로젝트 / PT 이용권 / 요구사항·설계"
 ---
 
 ## Batch 프로젝트 설계

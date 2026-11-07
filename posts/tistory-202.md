@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-202.html"
 published_on: "2022-10-17"
 section: "알고리즘"
-category: "알고리즘 / 프로그래머스"
+category: "알고리즘 / 프로그래머스 / 수학"
 ---
 
 * [문제 : 124 나라의 숫자](https://school.programmers.co.kr/learn/courses/30/lessons/12899)

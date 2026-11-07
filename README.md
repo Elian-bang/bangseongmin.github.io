@@ -13,8 +13,10 @@ kind: article
 permalink: /posts/example.html
 published_on: "2026-11-07"
 section: "트러블슈팅"
-category: "트러블슈팅 / 데이터베이스"
+category: "트러블슈팅 / MySQL"
 ---
 ```
+
+`category`는 `대분류 / 세부 분류` 또는 `대분류 / 세부 분류 / 세 번째 분류`로 씁니다. 첫 분류는 `section`과 맞추면 됩니다.
 
 본문 이미지는 `assets/`에 넣고 게시글에서 `../assets/파일명`으로 참조합니다. `main`에 변경이 반영되면 GitHub Pages가 사이트를 빌드합니다.

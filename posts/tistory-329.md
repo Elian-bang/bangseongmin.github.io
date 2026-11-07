@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-329.html"
 published_on: "2023-01-22"
 section: "프로젝트"
-category: "프로젝트 / 약국 길찾기"
+category: "프로젝트 / 약국 길찾기 / 운영·성능 개선"
 ---
 
 ## Redis로 성능 개선

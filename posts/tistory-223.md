@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-223.html"
 published_on: "2022-10-31"
 section: "알고리즘"
-category: "알고리즘 / 백준"
+category: "알고리즘 / 백준 / 배열·집합"
 ---
 
 * [1620번, 나는야 포켓몬 마스터 이다솜](https://www.acmicpc.net/problem/1620)

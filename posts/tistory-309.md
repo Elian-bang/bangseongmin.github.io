@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-309.html"
 published_on: "2023-01-06"
 section: "알고리즘"
-category: "알고리즘 / 백준"
+category: "알고리즘 / 백준 / 재귀·탐색·DP"
 ---
 
 ![본문 이미지](../assets/tistory/063220b63a46ced37c4b7aed.png)

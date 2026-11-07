@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-100.html"
 published_on: "2022-05-18"
 section: "알고리즘"
-category: "알고리즘 / 프로그래머스"
+category: "알고리즘 / 프로그래머스 / 배열·문자열"
 ---
 
 #### **#P. 35: 문자열 내림차순으로 배치하기 (난이도 : 중)**

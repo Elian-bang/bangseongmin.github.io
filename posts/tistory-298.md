@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-298.html"
 published_on: "2022-12-29"
 section: "프로젝트"
-category: "프로젝트 / SNS 서비스"
+category: "프로젝트 / SNS 서비스 / 기능 구현"
 ---
 
 ## **포스트 수정 기능**

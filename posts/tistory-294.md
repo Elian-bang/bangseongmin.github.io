@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-294.html"
 published_on: "2022-12-28"
 section: "프로젝트"
-category: "프로젝트 / SNS 서비스"
+category: "프로젝트 / SNS 서비스 / 배포"
 ---
 
 {% raw %}## 배포하기

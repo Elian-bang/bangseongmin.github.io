@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-74.html"
 published_on: "2022-05-17"
 section: "알고리즘"
-category: "알고리즘 / 프로그래머스"
+category: "알고리즘 / 프로그래머스 / 자료구조"
 ---
 
 **#P. 20 : 완주하지 못한 선수**(난이도 : 중하)****

@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-118.html"
 published_on: "2022-05-31"
 section: "학습·회고"
-category: "학습·회고 / 항해99"
+category: "학습·회고 / 항해99 / Spring"
 ---
 
 ### **13. Spring 3계층 Annotation 적용하기**

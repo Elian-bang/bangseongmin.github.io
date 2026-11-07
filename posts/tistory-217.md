@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-217.html"
 published_on: "2022-10-26"
 section: "알고리즘"
-category: "알고리즘 / 백준"
+category: "알고리즘 / 백준 / 정렬"
 ---
 
 * [2587번, 대표값2](https://www.acmicpc.net/problem/2587)

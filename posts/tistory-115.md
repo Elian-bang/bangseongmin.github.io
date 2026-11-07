@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-115.html"
 published_on: "2022-05-26"
 section: "학습·회고"
-category: "학습·회고 / 항해99"
+category: "학습·회고 / 항해99 / Spring"
 ---
 
 #### 이번 주차를 진행하면서

@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-171.html"
 published_on: "2022-09-27"
 section: "알고리즘"
-category: "알고리즘 / 프로그래머스"
+category: "알고리즘 / 프로그래머스 / 구현·시뮬레이션"
 ---
 
 ### **문제 : [2017 팁스타운] > 예상 대진표**

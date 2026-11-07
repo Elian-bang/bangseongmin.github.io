@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-308.html"
 published_on: "2023-01-06"
 section: "프로젝트"
-category: "프로젝트 / 약국 길찾기"
+category: "프로젝트 / 약국 길찾기 / 환경 구성"
 ---
 
 ## 개발 환경 구성하기

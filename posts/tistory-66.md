@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-66.html"
 published_on: "2022-05-15"
 section: "학습·회고"
-category: "학습·회고 / 항해99"
+category: "학습·회고 / 항해99 / Spring"
 ---
 
 Chapter 02 에서는 주특기 과제가 주어진다. 

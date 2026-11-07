@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-120.html"
 published_on: "2022-05-31"
 section: "학습·회고"
-category: "학습·회고 / 항해99"
+category: "학습·회고 / 항해99 / Spring"
 ---
 
 > **목표 : "회원가입, 로그인, 댓글 작성/수정/삭제 기능이 추가된 나만의 항해 블로그 백엔드 서버 만들기"**

@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-230.html"
 published_on: "2022-11-08"
 section: "Java·Spring"
-category: "Java·Spring / 토비의 스프링"
+category: "Java·Spring / 토비의 스프링 / 테스트"
 ---
 
 ![본문 이미지](../assets/tistory/0317d4adae3e93db01a87f43.jpg)

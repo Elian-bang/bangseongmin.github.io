@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-122.html"
 published_on: "2022-06-02"
 section: "학습·회고"
-category: "학습·회고 / 항해99"
+category: "학습·회고 / 항해99 / Spring"
 ---
 
 ## 01. 테스트의 필요성

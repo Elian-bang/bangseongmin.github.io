@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-38.html"
 published_on: "2022-04-23"
 section: "학습·회고"
-category: "학습·회고 / 항해99"
+category: "학습·회고 / 항해99 / 사전 준비"
 ---
 
 ![본문 이미지](../assets/tistory/537dcdb0e69a067c114ca2f0.gif)

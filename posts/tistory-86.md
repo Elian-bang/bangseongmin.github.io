@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-86.html"
 published_on: "2022-05-18"
 section: "알고리즘"
-category: "알고리즘 / 프로그래머스"
+category: "알고리즘 / 프로그래머스 / 수학"
 ---
 
 #### **#P. 27 : 이상한 문자 만들기 (난이도 : 중하)**

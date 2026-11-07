@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-147.html"
 published_on: "2022-09-06"
 section: "알고리즘"
-category: "알고리즘 / 프로그래머스"
+category: "알고리즘 / 프로그래머스 / 자바 입문"
 ---
 
 > 2차원 배열 강의를 수강하게 되었다.  

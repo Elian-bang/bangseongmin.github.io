@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-177.html"
 published_on: "2022-10-05"
 section: "Java·Spring"
-category: "Java·Spring / 토비의 스프링"
+category: "Java·Spring / 토비의 스프링 / 오브젝트와 의존관계"
 ---
 
 ![본문 이미지](../assets/tistory/84c967f2f5250c51d108e6b2.jpg)

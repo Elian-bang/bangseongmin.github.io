@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-149.html"
 published_on: "2022-09-13"
 section: "알고리즘"
-category: "알고리즘 / 프로그래머스"
+category: "알고리즘 / 프로그래머스 / 수학"
 ---
 
 #### **월간 코드 챌린지 시즌 1 - 3집법 뒤집기(1단계)**

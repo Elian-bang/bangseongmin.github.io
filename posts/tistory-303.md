@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-303.html"
 published_on: "2022-12-30"
 section: "프로젝트"
-category: "프로젝트 / SNS 서비스"
+category: "프로젝트 / SNS 서비스 / 확장·성능"
 ---
 
 ## **대규모 트래픽 고려해보기**

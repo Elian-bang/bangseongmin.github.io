@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-153.html"
 published_on: "2022-09-15"
 section: "알고리즘"
-category: "알고리즘 / 프로그래머스"
+category: "알고리즘 / 프로그래머스 / 탐색·그리디·DP"
 ---
 
 **문제설명**

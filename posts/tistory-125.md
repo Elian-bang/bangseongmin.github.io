@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-125.html"
 published_on: "2022-06-09"
 section: "학습·회고"
-category: "학습·회고 / 항해99"
+category: "학습·회고 / 항해99 / Spring"
 ---
 
 이번 5주차 핵심 Keyword는 "AOP"

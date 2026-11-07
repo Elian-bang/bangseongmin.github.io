@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-354.html"
 published_on: "2023-03-26"
 section: "프로젝트"
-category: "프로젝트 / 게시판 서비스"
+category: "프로젝트 / 게시판 서비스 / 어드민"
 ---
 
 ## **프로젝트 기획**

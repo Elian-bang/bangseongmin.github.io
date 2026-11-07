@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-73.html"
 published_on: "2022-05-17"
 section: "알고리즘"
-category: "알고리즘 / 프로그래머스"
+category: "알고리즘 / 프로그래머스 / 배열·문자열"
 ---
 
 **#P. 14 : 수박수박수박수박수박수 (난이도 : 중하)**

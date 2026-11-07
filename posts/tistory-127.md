@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-127.html"
 published_on: "2022-07-03"
 section: "학습·회고"
-category: "학습·회고 / 항해99"
+category: "학습·회고 / 항해99 / SQL"
 ---
 
 > 오랜만에 강의를 들으려고 스파르타 코딩클럽에 접속!  

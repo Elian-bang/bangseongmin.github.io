@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-210.html"
 published_on: "2022-10-20"
 section: "알고리즘"
-category: "알고리즘 / 프로그래머스"
+category: "알고리즘 / 프로그래머스 / 구현·시뮬레이션"
 ---
 
 * [2022 KAKAO BLIND RECRUITMENT > 주차 요금 계산](https://school.programmers.co.kr/learn/courses/30/lessons/92341)

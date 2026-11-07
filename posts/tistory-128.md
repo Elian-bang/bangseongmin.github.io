@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-128.html"
 published_on: "2022-07-04"
 section: "학습·회고"
-category: "학습·회고 / 항해99"
+category: "학습·회고 / 항해99 / SQL"
 ---
 
 > 1주차가 간단하고 짧아서  

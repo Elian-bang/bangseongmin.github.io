@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-44.html"
 published_on: "2022-05-07"
 section: "학습·회고"
-category: "학습·회고 / 항해99"
+category: "학습·회고 / 항해99 / Git·웹개발"
 ---
 
 항해99 입단 시험에 합격했다!!!

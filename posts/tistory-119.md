@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-119.html"
 published_on: "2022-05-31"
 section: "학습·회고"
-category: "학습·회고 / 항해99"
+category: "학습·회고 / 항해99 / Spring"
 ---
 
 **오늘은 심화반 2주차를 수강하는 날...**

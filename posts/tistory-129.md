@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-129.html"
 published_on: "2022-07-06"
 section: "학습·회고"
-category: "학습·회고 / 항해99"
+category: "학습·회고 / 항해99 / SQL"
 ---
 
 > 오늘은 3주차 SQL 강의를 수강한다.  
