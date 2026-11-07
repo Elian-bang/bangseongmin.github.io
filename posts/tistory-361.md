@@ -3,8 +3,8 @@ title: "[TIL] Feel the futility"
 kind: "article"
 permalink: "/posts/tistory-361.html"
 published_on: "2023-04-17"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / TIL"
 ---
 
 ![본문 이미지](../assets/tistory/8516d123fb0df32f29079fb1.jpg)

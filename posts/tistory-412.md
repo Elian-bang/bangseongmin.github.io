@@ -3,8 +3,8 @@ title: "[TIL] All you need in this life is ignorance and confidence, then succes
 kind: "article"
 permalink: "/posts/tistory-412.html"
 published_on: "2023-06-07"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / TIL"
 ---
 
 ![본문 이미지](../assets/tistory/526ae3535c06b51b319aaa9d.jpg)

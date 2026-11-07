@@ -3,8 +3,8 @@ title: "[TIL] They must often change who would be constant in happiness or wisdo
 kind: "article"
 permalink: "/posts/tistory-365.html"
 published_on: "2023-04-22"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / TIL"
 ---
 
 ![본문 이미지](../assets/tistory/d0b4f94c6263544d37f62334.webp)

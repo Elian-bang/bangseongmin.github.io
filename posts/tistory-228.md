@@ -3,8 +3,8 @@ title: "[Servlet] Tomcat Output path - 404 에러"
 kind: "article"
 permalink: "/posts/tistory-228.html"
 published_on: "2022-11-04"
-section: "프로그래밍"
-category: "프로그래밍"
+section: "트러블슈팅"
+category: "트러블슈팅 / 서버·도구"
 ---
 
 ![본문 이미지](../assets/tistory/f114052e9ef2e38dae7c81f1.png)

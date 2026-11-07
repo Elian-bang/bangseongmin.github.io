@@ -3,8 +3,8 @@ title: "[Spring] 비동기 프로그래밍"
 kind: "article"
 permalink: "/posts/tistory-441.html"
 published_on: "2024-09-14"
-section: "Spring"
-category: "Spring / 비동기 프로그래밍"
+section: "Java·Spring"
+category: "Java·Spring / Spring"
 ---
 
 ### **비동기 프로그래밍**

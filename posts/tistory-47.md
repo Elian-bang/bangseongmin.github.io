@@ -3,8 +3,8 @@ title: "[항해99 - 7기] 항해 2일차 - 웹개발 플러스 2주차"
 kind: "article"
 permalink: "/posts/tistory-47.html"
 published_on: "2022-05-11"
-section: "학습 기록"
-category: "학습 기록 / 항해99"
+section: "학습·회고"
+category: "학습·회고 / 항해99"
 ---
 
 {% raw %}**오늘은 2일차**

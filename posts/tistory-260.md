@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-260.html"
 published_on: "2022-12-07"
 section: "트러블슈팅"
-category: "트러블슈팅"
+category: "트러블슈팅 / Java·JVM"
 ---
 
 ## **Intellij Warning**

@@ -3,8 +3,8 @@ title: "[JPA] OSIV(Open Session In View)"
 kind: "article"
 permalink: "/posts/tistory-249.html"
 published_on: "2022-12-04"
-section: "프로그래밍"
-category: "프로그래밍"
+section: "데이터베이스"
+category: "데이터베이스 / JPA·Hibernate"
 ---
 
 ### OSIV(Open Session In View)

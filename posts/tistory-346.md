@@ -3,8 +3,8 @@ title: "[WIL] 첫번째 도전 (2023.03.05)"
 kind: "article"
 permalink: "/posts/tistory-346.html"
 published_on: "2023-03-05"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / WIL"
 ---
 
 ![본문 이미지](../assets/tistory/db033815451e7e78fe33afff.gif)

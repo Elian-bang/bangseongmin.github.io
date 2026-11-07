@@ -3,8 +3,8 @@ title: "[Firebase] Firebase Hosting"
 kind: "article"
 permalink: "/posts/tistory-427.html"
 published_on: "2023-07-16"
-section: "프로그래밍"
-category: "프로그래밍"
+section: "시스템·인프라"
+category: "시스템·인프라 / Firebase"
 ---
 
 [원문에서 스크린샷 보기](https://to-be-a-artist.tistory.com/427)

@@ -3,8 +3,8 @@ title: "[백준] 18108번 - 1998년생인 내가 태국에서는 2541년생?! (�
 kind: "article"
 permalink: "/posts/tistory-16.html"
 published_on: "2022-04-07"
-section: "학습 기록"
-category: "학습 기록 / 백준"
+section: "알고리즘"
+category: "알고리즘 / 백준"
 ---
 
 * **문제**

@@ -3,8 +3,8 @@ title: "[항해99 - 7기] 항해 5일차 - (CH02 프로그래밍 기초)"
 kind: "article"
 permalink: "/posts/tistory-51.html"
 published_on: "2022-05-13"
-section: "학습 기록"
-category: "학습 기록 / 항해99"
+section: "학습·회고"
+category: "학습·회고 / 항해99"
 ---
 
 오늘은 2주차의 시작이다!!

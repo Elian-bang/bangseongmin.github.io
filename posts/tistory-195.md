@@ -3,8 +3,8 @@ title: "[백준] 영수증"
 kind: "article"
 permalink: "/posts/tistory-195.html"
 published_on: "2022-10-13"
-section: "학습 기록"
-category: "학습 기록 / 백준"
+section: "알고리즘"
+category: "알고리즘 / 백준"
 ---
 
 * [반복문 - 25304번 영수증](https://www.acmicpc.net/problem/25304)

@@ -3,8 +3,8 @@ title: "[TIL] Despite the forecast, live like it’s spring."
 kind: "article"
 permalink: "/posts/tistory-369.html"
 published_on: "2023-04-24"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / TIL"
 ---
 
 ![본문 이미지](../assets/tistory/ce866689c9b714e71e6df15d.jpg)

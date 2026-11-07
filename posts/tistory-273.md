@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-273.html"
 published_on: "2022-12-14"
 section: "데이터베이스"
-category: "데이터베이스"
+category: "데이터베이스 / PostgreSQL"
 ---
 
 ## PostgreSQL 사용자 생성하는 방법

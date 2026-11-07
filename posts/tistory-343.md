@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-343.html"
 published_on: "2023-02-18"
 section: "트러블슈팅"
-category: "트러블슈팅"
+category: "트러블슈팅 / 인증"
 ---
 
 ## error occurs while validating. io.jsonwebtoken.security.signatureexception: jwt signature does not match locally computed signature. jwt validity cannot be asserted and should not be trusted.

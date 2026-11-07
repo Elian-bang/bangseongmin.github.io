@@ -3,8 +3,8 @@ title: "[JUnit] JUnit5에서 예외 테스트"
 kind: "article"
 permalink: "/posts/tistory-227.html"
 published_on: "2022-11-02"
-section: "프로그래밍"
-category: "프로그래밍"
+section: "테스트"
+category: "테스트 / JUnit"
 ---
 
 #### **💣 문제점**

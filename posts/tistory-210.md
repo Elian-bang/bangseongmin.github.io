@@ -3,8 +3,8 @@ title: "[프로그래머스] 주차 요금 계산"
 kind: "article"
 permalink: "/posts/tistory-210.html"
 published_on: "2022-10-20"
-section: "학습 기록"
-category: "학습 기록 / 프로그래머스"
+section: "알고리즘"
+category: "알고리즘 / 프로그래머스"
 ---
 
 * [2022 KAKAO BLIND RECRUITMENT > 주차 요금 계산](https://school.programmers.co.kr/learn/courses/30/lessons/92341)

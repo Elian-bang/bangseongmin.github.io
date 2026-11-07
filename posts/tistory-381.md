@@ -3,8 +3,8 @@ title: "[TIL] Be gentle first with yourself"
 kind: "article"
 permalink: "/posts/tistory-381.html"
 published_on: "2023-05-04"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / TIL"
 ---
 
 ![본문 이미지](../assets/tistory/fc0063e954e4c4dbbc525c75.jpg)

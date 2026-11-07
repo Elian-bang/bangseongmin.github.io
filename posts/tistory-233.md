@@ -3,8 +3,8 @@ title: "[백준] 서로 다른 부분 문자열의 개수"
 kind: "article"
 permalink: "/posts/tistory-233.html"
 published_on: "2022-11-09"
-section: "학습 기록"
-category: "학습 기록 / 백준"
+section: "알고리즘"
+category: "알고리즘 / 백준"
 ---
 
 ### **문제**

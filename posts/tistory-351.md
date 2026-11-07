@@ -3,8 +3,8 @@ title: "[WIL] 적응기... (2023.03.11)"
 kind: "article"
 permalink: "/posts/tistory-351.html"
 published_on: "2023-03-20"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / WIL"
 ---
 
 ## 적응기...

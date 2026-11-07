@@ -3,8 +3,8 @@ title: "[프로그래머스] 1차 - 다트 게임"
 kind: "article"
 permalink: "/posts/tistory-152.html"
 published_on: "2022-09-15"
-section: "학습 기록"
-category: "학습 기록 / 프로그래머스"
+section: "알고리즘"
+category: "알고리즘 / 프로그래머스"
 ---
 
 #### **제목 : 2018 KAKAO BLIND RECRUITMENT - [1차] 다트 게임**

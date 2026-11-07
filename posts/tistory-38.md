@@ -3,8 +3,8 @@ title: "[항해99 - 7기] 사전준비 8일차 - JavaScript 문법 뽀개기 1�
 kind: "article"
 permalink: "/posts/tistory-38.html"
 published_on: "2022-04-23"
-section: "학습 기록"
-category: "학습 기록 / 항해99"
+section: "학습·회고"
+category: "학습·회고 / 항해99"
 ---
 
 ![본문 이미지](../assets/tistory/537dcdb0e69a067c114ca2f0.gif)

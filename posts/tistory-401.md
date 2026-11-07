@@ -3,8 +3,8 @@ title: "[TIL] Success is going from failure to failure without a loss of enthusi
 kind: "article"
 permalink: "/posts/tistory-401.html"
 published_on: "2023-05-25"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / TIL"
 ---
 
 ![본문 이미지](../assets/tistory/e41875f1158d12d25fa17cc0.jpg)

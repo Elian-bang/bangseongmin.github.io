@@ -3,8 +3,8 @@ title: "[WIL] The die is cast"
 kind: "article"
 permalink: "/posts/tistory-358.html"
 published_on: "2023-04-08"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / WIL"
 ---
 
 ![본문 이미지](../assets/tistory/31db8530ee18cf6384c5a71a.jpg)

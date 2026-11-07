@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-342.html"
 published_on: "2023-02-18"
 section: "트러블슈팅"
-category: "트러블슈팅"
+category: "트러블슈팅 / Jackson"
 ---
 
 ## Java 8 date/time type java.time.LocalDateTime not supported by default

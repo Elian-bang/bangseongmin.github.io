@@ -3,8 +3,8 @@ title: "[TIL] Be Confounded"
 kind: "article"
 permalink: "/posts/tistory-362.html"
 published_on: "2023-04-19"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / TIL"
 ---
 
 ![본문 이미지](../assets/tistory/9ef61ec7eea66286b84e2d53.png)

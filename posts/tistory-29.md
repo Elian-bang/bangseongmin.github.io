@@ -3,8 +3,8 @@ title: "[항해99-7기] 사전준비 2일차 - 파이썬 문법뽀개기"
 kind: "article"
 permalink: "/posts/tistory-29.html"
 published_on: "2022-04-12"
-section: "학습 기록"
-category: "학습 기록 / 항해99"
+section: "학습·회고"
+category: "학습·회고 / 항해99"
 ---
 
 ![본문 이미지](../assets/tistory/b3a90c44fd2f36998707bdca.gif)

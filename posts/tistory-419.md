@@ -3,8 +3,8 @@ title: "[Review] Optimizing Java(자바 최적화) 5장"
 kind: "article"
 permalink: "/posts/tistory-419.html"
 published_on: "2023-06-18"
-section: "리뷰"
-category: "리뷰"
+section: "Java·Spring"
+category: "Java·Spring / Optimizing Java"
 ---
 
 ![본문 이미지](../assets/tistory/259591d2cd8ce59ddb36e375.jpg)

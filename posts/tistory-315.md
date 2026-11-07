@@ -3,8 +3,8 @@ title: "[Spring] @Value와 @ConfigurationProperties의 사용법 및 차이"
 kind: "article"
 permalink: "/posts/tistory-315.html"
 published_on: "2023-01-10"
-section: "프로그래밍"
-category: "프로그래밍"
+section: "Java·Spring"
+category: "Java·Spring / Spring"
 ---
 
 Spring에서 프로퍼티에 값을 사용하는 방법은 여러가지가 있겠지만 대표적으로 많이 사용하는 방법은 @Value와 @ConfigurationProperties를 알아보려 한다.

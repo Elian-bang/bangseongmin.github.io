@@ -3,8 +3,8 @@ title: "[TIL] Some people are worth melting for(2023.05.11)"
 kind: "article"
 permalink: "/posts/tistory-384.html"
 published_on: "2023-05-13"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / TIL"
 ---
 
 ![본문 이미지](../assets/tistory/75ae3c81aa970106cddc32c8.jpg)

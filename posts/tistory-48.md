@@ -3,8 +3,8 @@ title: "[항해99 - 7기] 항해 3일차 - 핵심 쏙쏙 Git 2주차"
 kind: "article"
 permalink: "/posts/tistory-48.html"
 published_on: "2022-05-11"
-section: "학습 기록"
-category: "학습 기록 / 항해99"
+section: "학습·회고"
+category: "학습·회고 / 항해99"
 ---
 
 ![본문 이미지](../assets/tistory/2abdc8d838d8be702e4b61d2.png)

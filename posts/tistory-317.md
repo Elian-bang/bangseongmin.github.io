@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-317.html"
 published_on: "2023-01-14"
 section: "트러블슈팅"
-category: "트러블슈팅"
+category: "트러블슈팅 / MySQL"
 ---
 
 ## Situation

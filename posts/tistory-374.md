@@ -3,8 +3,8 @@ title: "[TIL] Practice makes perfect"
 kind: "article"
 permalink: "/posts/tistory-374.html"
 published_on: "2023-04-27"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / TIL"
 ---
 
 ![본문 이미지](../assets/tistory/c2f3e10a4c439029d26a91c8.jpg)

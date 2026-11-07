@@ -3,8 +3,8 @@ title: "[항해99 - 7기] 문자열 내 p와 y의 개수 - 알고리즘 스터�
 kind: "article"
 permalink: "/posts/tistory-70.html"
 published_on: "2022-05-17"
-section: "학습 기록"
-category: "학습 기록 / 프로그래머스"
+section: "알고리즘"
+category: "알고리즘 / 프로그래머스"
 ---
 
 **#P. 16 : 문자열 내 p와 y의 개수 (난이도 : 중하)**

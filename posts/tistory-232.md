@@ -3,8 +3,8 @@ title: "[백준] 대칭 차집합"
 kind: "article"
 permalink: "/posts/tistory-232.html"
 published_on: "2022-11-09"
-section: "학습 기록"
-category: "학습 기록 / 백준"
+section: "알고리즘"
+category: "알고리즘 / 백준"
 ---
 
 * [1269번, 대칭 차집합](https://www.acmicpc.net/problem/1269)

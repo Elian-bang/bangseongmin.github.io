@@ -3,8 +3,8 @@ title: "[MySQL] MySQL 소개"
 kind: "article"
 permalink: "/posts/tistory-377.html"
 published_on: "2023-04-29"
-section: "컴퓨터 과학"
-category: "컴퓨터 과학"
+section: "데이터베이스"
+category: "데이터베이스 / MySQL"
 ---
 
 ![본문 이미지](../assets/tistory/709e350b98cb561eef210120.jpg)

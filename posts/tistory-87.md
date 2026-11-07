@@ -3,8 +3,8 @@ title: "[항해99 - 7기] 하샤드 수 - 알고리즘 스터디(4D)"
 kind: "article"
 permalink: "/posts/tistory-87.html"
 published_on: "2022-05-18"
-section: "학습 기록"
-category: "학습 기록 / 프로그래머스"
+section: "알고리즘"
+category: "알고리즘 / 프로그래머스"
 ---
 
 #### **#P. 28 : 제일 작은 수 제거하기 (난이도 : 중하)**

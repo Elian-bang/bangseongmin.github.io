@@ -3,8 +3,8 @@ title: "[Spring] 객체지향 패러다임"
 kind: "article"
 permalink: "/posts/tistory-212.html"
 published_on: "2022-10-23"
-section: "프로젝트"
-category: "프로젝트 / Spring Basic"
+section: "Java·Spring"
+category: "Java·Spring / Spring 기초"
 ---
 
 ## **객체지향 패러다임**

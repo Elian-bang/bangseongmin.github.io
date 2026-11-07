@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-378.html"
 published_on: "2023-05-02"
 section: "데이터베이스"
-category: "데이터베이스"
+category: "데이터베이스 / 데이터베이스 설계·운영"
 ---
 
 ![본문 이미지](../assets/tistory/1707340f19dd21efbf7d2105.png)

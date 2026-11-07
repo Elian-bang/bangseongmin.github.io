@@ -3,8 +3,8 @@ title: "[항해99 - 7기] 서울에서 김서방 찾기 - 알고리즘 스터디
 kind: "article"
 permalink: "/posts/tistory-72.html"
 published_on: "2022-05-17"
-section: "학습 기록"
-category: "학습 기록 / 프로그래머스"
+section: "알고리즘"
+category: "알고리즘 / 프로그래머스"
 ---
 
 **#P. 18 : 서울에서 김서방 찾기 (난이도 : 중하)**

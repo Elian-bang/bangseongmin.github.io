@@ -3,8 +3,8 @@ title: "엑셀보다 쉬운 SQL 3주차"
 kind: "article"
 permalink: "/posts/tistory-129.html"
 published_on: "2022-07-06"
-section: "학습 기록"
-category: "학습 기록 / 항해99"
+section: "학습·회고"
+category: "학습·회고 / 항해99"
 ---
 
 > 오늘은 3주차 SQL 강의를 수강한다.  

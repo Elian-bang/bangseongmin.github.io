@@ -3,8 +3,8 @@ title: "[TIL] 어제보다 오늘 더"
 kind: "article"
 permalink: "/posts/tistory-409.html"
 published_on: "2023-06-06"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / TIL"
 ---
 
 ![본문 이미지](../assets/tistory/29d96f8b77f73f0a078c57ab.png)

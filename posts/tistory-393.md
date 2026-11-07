@@ -3,8 +3,8 @@ title: "[WIL] This is how life is."
 kind: "article"
 permalink: "/posts/tistory-393.html"
 published_on: "2023-05-19"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / WIL"
 ---
 
 ![본문 이미지](../assets/tistory/be85d18ddbe5f4dfe3e49bc9.webp)

@@ -3,8 +3,8 @@ title: "[JS] for-loop, for-each, map, reduce, filter에 대해 이해하기"
 kind: "article"
 permalink: "/posts/tistory-363.html"
 published_on: "2023-04-19"
-section: "프로그래밍"
-category: "프로그래밍"
+section: "웹·프론트엔드"
+category: "웹·프론트엔드 / JavaScript"
 ---
 
 ![본문 이미지](../assets/tistory/0e665facf099dbcc8aafb961.jpg)

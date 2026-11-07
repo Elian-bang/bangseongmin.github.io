@@ -3,8 +3,8 @@ title: "[WIL] Be brave"
 kind: "article"
 permalink: "/posts/tistory-360.html"
 published_on: "2023-04-16"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / WIL"
 ---
 
 ![본문 이미지](../assets/tistory/0fae8b30d4c682eb6169e2d5.jpg)

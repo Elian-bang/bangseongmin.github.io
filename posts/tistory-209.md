@@ -3,8 +3,8 @@ title: "나만의 MVC 프레임워크 만들기"
 kind: "article"
 permalink: "/posts/tistory-209.html"
 published_on: "2022-10-19"
-section: "컴퓨터 과학"
-category: "컴퓨터 과학 / Study"
+section: "Java·Spring"
+category: "Java·Spring / Spring MVC"
 ---
 
 ### **강의 소개**

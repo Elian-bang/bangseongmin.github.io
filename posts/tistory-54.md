@@ -3,8 +3,8 @@ title: "[TIL - 1일차] 항해 99 7기 - 시작"
 kind: "article"
 permalink: "/posts/tistory-54.html"
 published_on: "2022-05-15"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / TIL"
 ---
 
 ![본문 이미지](../assets/tistory/be68d5ceadde60370296b212.gif)

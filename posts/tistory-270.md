@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-270.html"
 published_on: "2022-12-14"
 section: "데이터베이스"
-category: "데이터베이스"
+category: "데이터베이스 / MySQL"
 ---
 
 ![본문 이미지](../assets/tistory/425592964d749039d0ac9559.png)

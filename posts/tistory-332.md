@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-332.html"
 published_on: "2023-01-23"
 section: "트러블슈팅"
-category: "트러블슈팅"
+category: "트러블슈팅 / Spring"
 ---
 
 ## **스프링 빈의 순환 종속성 문제**

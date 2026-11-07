@@ -3,8 +3,8 @@ title: "[Java] Java Dispatch"
 kind: "article"
 permalink: "/posts/tistory-413.html"
 published_on: "2023-06-08"
-section: "프로그래밍"
-category: "프로그래밍"
+section: "Java·Spring"
+category: "Java·Spring / Java·JVM"
 ---
 
 ![본문 이미지](../assets/tistory/69bee7261ce778c1bf975d05.png)

@@ -3,8 +3,8 @@ title: "[프로그래머스] 멀쩡한 사각형"
 kind: "article"
 permalink: "/posts/tistory-229.html"
 published_on: "2022-11-07"
-section: "학습 기록"
-category: "학습 기록 / 프로그래머스"
+section: "알고리즘"
+category: "알고리즘 / 프로그래머스"
 ---
 
 ### **문제 설명**

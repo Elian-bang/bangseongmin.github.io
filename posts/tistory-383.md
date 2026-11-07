@@ -3,8 +3,8 @@ title: "[WEB] UI, UX, 인터렉션 개념 정리"
 kind: "article"
 permalink: "/posts/tistory-383.html"
 published_on: "2023-05-12"
-section: "컴퓨터 과학"
-category: "컴퓨터 과학"
+section: "웹·프론트엔드"
+category: "웹·프론트엔드 / UI·UX"
 ---
 
 ![본문 이미지](../assets/tistory/4181162091b12438753b39e7.png)

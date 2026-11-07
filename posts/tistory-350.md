@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-350.html"
 published_on: "2023-03-11"
 section: "트러블슈팅"
-category: "트러블슈팅"
+category: "트러블슈팅 / Jackson"
 ---
 
 ## com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Java 8 date/time type java.time.LocalDateTime not supported by default: add Module “com.fasterxml.jackson.datatype:jackson-datatype-jsr310” to enable handling…

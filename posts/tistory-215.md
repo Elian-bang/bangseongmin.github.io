@@ -3,8 +3,8 @@ title: "[프로그래머스] 스킬트리"
 kind: "article"
 permalink: "/posts/tistory-215.html"
 published_on: "2022-10-25"
-section: "학습 기록"
-category: "학습 기록 / 프로그래머스"
+section: "알고리즘"
+category: "알고리즘 / 프로그래머스"
 ---
 
 * [Summer/Winter Coding(~2018) > 스킬트리](https://school.programmers.co.kr/learn/courses/30/lessons/49993)

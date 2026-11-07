@@ -3,8 +3,8 @@ title: "[Trouble Shooting] 테스트 코드에서 프로퍼티가 필요한 경�
 kind: "article"
 permalink: "/posts/tistory-312.html"
 published_on: "2023-01-10"
-section: "트러블슈팅"
-category: "트러블슈팅"
+section: "테스트"
+category: "테스트 / 테스트 환경"
 ---
 
 ## Situation

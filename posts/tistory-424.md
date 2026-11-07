@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-424.html"
 published_on: "2023-07-07"
 section: "트러블슈팅"
-category: "트러블슈팅"
+category: "트러블슈팅 / Vue"
 ---
 
 ![본문 이미지](../assets/tistory/a3b497f8d73af2da60d8fa75.png)

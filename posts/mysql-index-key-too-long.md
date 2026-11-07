@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/mysql-index-key-too-long.html"
 published_on: "2022-12-19"
 section: "트러블슈팅"
-category: "트러블슈팅"
+category: "트러블슈팅 / MySQL"
 ---
 
 게시판의 댓글 본문을 `VARCHAR(2000)`으로 정의하고 전체 컬럼에 인덱스를 만들려다 `Specified key was too long; max key length is 3072 bytes` 오류를 만났다. 댓글의 최대 길이를 2,000자로 유지하면서 인덱스를 어떻게 설계할 수 있을까?

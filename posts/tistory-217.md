@@ -3,8 +3,8 @@ title: "[백준] 대표값 2"
 kind: "article"
 permalink: "/posts/tistory-217.html"
 published_on: "2022-10-26"
-section: "학습 기록"
-category: "학습 기록 / 백준"
+section: "알고리즘"
+category: "알고리즘 / 백준"
 ---
 
 * [2587번, 대표값2](https://www.acmicpc.net/problem/2587)

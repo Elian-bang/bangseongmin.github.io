@@ -3,8 +3,8 @@ title: "[프로그래머스] DFS, BFS, DP"
 kind: "article"
 permalink: "/posts/tistory-286.html"
 published_on: "2022-12-17"
-section: "학습 기록"
-category: "학습 기록 / 프로그래머스"
+section: "알고리즘"
+category: "알고리즘 / 프로그래머스"
 ---
 
 {% raw %}![본문 이미지](../assets/tistory/82d5a31838dea449a695ee21.jpg)

@@ -3,8 +3,8 @@ title: "[TIL - 10일차] 항해99 7기 - 10일차"
 kind: "article"
 permalink: "/posts/tistory-105.html"
 published_on: "2022-05-20"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / TIL"
 ---
 
 # 항해 10일차

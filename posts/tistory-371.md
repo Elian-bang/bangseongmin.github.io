@@ -3,8 +3,8 @@ title: "[WEB] 대용량 시스템에 대한 이해"
 kind: "article"
 permalink: "/posts/tistory-371.html"
 published_on: "2023-04-25"
-section: "컴퓨터 과학"
-category: "컴퓨터 과학"
+section: "시스템·인프라"
+category: "시스템·인프라 / 시스템 설계"
 ---
 
 ## 웹의 기본 아키텍처

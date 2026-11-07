@@ -3,8 +3,8 @@ title: "[Nginx] 로드밸런싱"
 kind: "article"
 permalink: "/posts/tistory-376.html"
 published_on: "2023-04-29"
-section: "컴퓨터 과학"
-category: "컴퓨터 과학"
+section: "시스템·인프라"
+category: "시스템·인프라 / Nginx"
 ---
 
 ![본문 이미지](../assets/tistory/1a8e2078af1dd4e1a75eee35.png)

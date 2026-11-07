@@ -3,8 +3,8 @@ title: "[TIL] an unusual day"
 kind: "article"
 permalink: "/posts/tistory-399.html"
 published_on: "2023-05-23"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / TIL"
 ---
 
 ![본문 이미지](../assets/tistory/1d0b0f23b7bd78a741fd768f.jpg)

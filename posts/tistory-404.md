@@ -3,8 +3,8 @@ title: "[TIL] 생각만 하지말고 행동하자"
 kind: "article"
 permalink: "/posts/tistory-404.html"
 published_on: "2023-05-31"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / TIL"
 ---
 
 ![본문 이미지](../assets/tistory/f25d1b83e3c28ca11f96bd05.jpg)

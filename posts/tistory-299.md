@@ -3,8 +3,8 @@ title: "[JPA] JPA Concepts and Principles"
 kind: "article"
 permalink: "/posts/tistory-299.html"
 published_on: "2022-12-29"
-section: "프로그래밍"
-category: "프로그래밍"
+section: "데이터베이스"
+category: "데이터베이스 / JPA·Hibernate"
 ---
 
 ![본문 이미지](../assets/tistory/adf741a514f54db6d0171e76.png)

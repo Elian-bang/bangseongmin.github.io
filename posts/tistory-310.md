@@ -3,8 +3,8 @@ title: "[Trouble Shooting] Fixture 를 관리해야하는 이유"
 kind: "article"
 permalink: "/posts/tistory-310.html"
 published_on: "2023-01-07"
-section: "트러블슈팅"
-category: "트러블슈팅"
+section: "테스트"
+category: "테스트 / 테스트 설계"
 ---
 
 ## What is Fixture?

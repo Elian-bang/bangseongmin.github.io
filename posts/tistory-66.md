@@ -3,8 +3,8 @@ title: "[항해99 - 7기] 항해 2주차 Spring 주특기 과제"
 kind: "article"
 permalink: "/posts/tistory-66.html"
 published_on: "2022-05-15"
-section: "학습 기록"
-category: "학습 기록 / 항해99"
+section: "학습·회고"
+category: "학습·회고 / 항해99"
 ---
 
 Chapter 02 에서는 주특기 과제가 주어진다. 

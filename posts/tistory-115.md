@@ -3,8 +3,8 @@ title: "[항해99 - 7기] CH3-1 주특기 주차 팀"
 kind: "article"
 permalink: "/posts/tistory-115.html"
 published_on: "2022-05-26"
-section: "학습 기록"
-category: "학습 기록 / 항해99"
+section: "학습·회고"
+category: "학습·회고 / 항해99"
 ---
 
 #### 이번 주차를 진행하면서

@@ -3,8 +3,8 @@ title: "[항해99 - 7기] Spring 심화 - 1주차(13~15)"
 kind: "article"
 permalink: "/posts/tistory-118.html"
 published_on: "2022-05-31"
-section: "학습 기록"
-category: "학습 기록 / 항해99"
+section: "학습·회고"
+category: "학습·회고 / 항해99"
 ---
 
 ### **13. Spring 3계층 Annotation 적용하기**

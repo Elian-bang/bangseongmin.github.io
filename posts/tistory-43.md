@@ -3,8 +3,8 @@ title: "[항해99 - 7기] 사전준비 12일차 - 웹개발 종합반 5주차(2�
 kind: "article"
 permalink: "/posts/tistory-43.html"
 published_on: "2022-05-03"
-section: "학습 기록"
-category: "학습 기록 / 항해99"
+section: "학습·회고"
+category: "학습·회고 / 항해99"
 ---
 
 오늘은 피곤한 화요일... 화요병?

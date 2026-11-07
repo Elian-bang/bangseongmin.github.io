@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-318.html"
 published_on: "2023-01-16"
 section: "트러블슈팅"
-category: "트러블슈팅"
+category: "트러블슈팅 / JPA·Hibernate"
 ---
 
 ## Situation

@@ -3,8 +3,8 @@ title: "[WIL] See you later (2023.03.19)"
 kind: "article"
 permalink: "/posts/tistory-352.html"
 published_on: "2023-03-20"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / WIL"
 ---
 
 ## See you later

@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-348.html"
 published_on: "2023-03-10"
 section: "트러블슈팅"
-category: "트러블슈팅"
+category: "트러블슈팅 / MySQL"
 ---
 
 ![본문 이미지](../assets/tistory/537dcdb0e69a067c114ca2f0.gif)

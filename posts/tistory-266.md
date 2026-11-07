@@ -3,8 +3,8 @@ title: "[SQL] MySQL에서 MUL이란 무엇이며 어떻게 설정할까?"
 kind: "article"
 permalink: "/posts/tistory-266.html"
 published_on: "2022-12-10"
-section: "컴퓨터 과학"
-category: "컴퓨터 과학"
+section: "데이터베이스"
+category: "데이터베이스 / MySQL"
 ---
 
 ## **MUL KEY**

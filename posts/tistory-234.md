@@ -3,8 +3,8 @@ title: "[JUnit] JUnit 5 사용법"
 kind: "article"
 permalink: "/posts/tistory-234.html"
 published_on: "2022-11-09"
-section: "프로그래밍"
-category: "프로그래밍"
+section: "테스트"
+category: "테스트 / JUnit"
 ---
 
 > 토비의 스프링을 공부하면서 코드가 JUnit 4로 되어 있어 어려움을 겪을 때가 많았다.  

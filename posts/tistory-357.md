@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-357.html"
 published_on: "2023-04-02"
 section: "커리어"
-category: "커리어"
+category: "커리어 / 행사·활동"
 ---
 
 ## 포텐데이 Review

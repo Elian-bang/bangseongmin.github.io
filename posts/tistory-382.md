@@ -3,8 +3,8 @@ title: "[TIL] Don’t be afraid to give up the good to go for the great"
 kind: "article"
 permalink: "/posts/tistory-382.html"
 published_on: "2023-05-11"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / TIL"
 ---
 
 ![본문 이미지](../assets/tistory/7fd22000d876c1eff074a27a.jpg)

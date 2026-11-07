@@ -3,8 +3,8 @@ title: "[백준] 10172번 - 개(자바)"
 kind: "article"
 permalink: "/posts/tistory-9.html"
 published_on: "2022-04-06"
-section: "학습 기록"
-category: "학습 기록 / 백준"
+section: "알고리즘"
+category: "알고리즘 / 백준"
 ---
 
 * **문제**

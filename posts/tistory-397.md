@@ -3,8 +3,8 @@ title: "[JS] JavaScript에서 맵 키 및 값을 배열로 변환"
 kind: "article"
 permalink: "/posts/tistory-397.html"
 published_on: "2023-05-22"
-section: "프로그래밍"
-category: "프로그래밍"
+section: "웹·프론트엔드"
+category: "웹·프론트엔드 / JavaScript"
 ---
 
 ![본문 이미지](../assets/tistory/86754aace9a13926ced68d45.png)

@@ -3,8 +3,8 @@ title: "[항해 - 99기] 알고리즘 항해 3주차"
 kind: "article"
 permalink: "/posts/tistory-126.html"
 published_on: "2022-06-12"
-section: "학습 기록"
-category: "학습 기록 / 항해99"
+section: "학습·회고"
+category: "학습·회고 / 항해99"
 ---
 
 **[수업 목표]**

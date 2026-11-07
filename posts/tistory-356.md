@@ -3,8 +3,8 @@ title: "[WIL] No pain, No gain"
 kind: "article"
 permalink: "/posts/tistory-356.html"
 published_on: "2023-04-02"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / WIL"
 ---
 
 ![본문 이미지](../assets/tistory/bae22a089ed706a1df2020be.png)

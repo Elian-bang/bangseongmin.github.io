@@ -3,8 +3,8 @@ title: "[IntelliJ] VisualVM 연동 및 사용 방법"
 kind: "article"
 permalink: "/posts/tistory-423.html"
 published_on: "2023-07-01"
-section: "프로그래밍"
-category: "프로그래밍"
+section: "Java·Spring"
+category: "Java·Spring / JVM"
 ---
 
 ![본문 이미지](../assets/tistory/b82b3a64caad8f72df1ad732.png)

@@ -3,8 +3,8 @@ title: "[항해99 - 7기] 로또의 최고 순위와 최저 순위 - 알고리�
 kind: "article"
 permalink: "/posts/tistory-92.html"
 published_on: "2022-05-18"
-section: "학습 기록"
-category: "학습 기록 / 프로그래머스"
+section: "알고리즘"
+category: "알고리즘 / 프로그래머스"
 ---
 
 #### **#P. 33: 로또의 최고 순위와 최저 순위 (난이도 : 중)**

@@ -3,8 +3,8 @@ title: "[항해99 - 7기] Spring 심화 - 1주차(1~16)"
 kind: "article"
 permalink: "/posts/tistory-116.html"
 published_on: "2022-05-28"
-section: "학습 기록"
-category: "학습 기록 / 항해99"
+section: "학습·회고"
+category: "학습·회고 / 항해99"
 ---
 
 **[수업 목표]**

@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-389.html"
 published_on: "2023-05-14"
 section: "데이터베이스"
-category: "데이터베이스"
+category: "데이터베이스 / 인덱스"
 ---
 
 ![본문 이미지](../assets/tistory/962463037d7510615f55e26d.png)

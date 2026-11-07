@@ -3,8 +3,8 @@ title: "[프로그래머스] N개의 최소공배수"
 kind: "article"
 permalink: "/posts/tistory-167.html"
 published_on: "2022-09-23"
-section: "학습 기록"
-category: "학습 기록 / 프로그래머스"
+section: "알고리즘"
+category: "알고리즘 / 프로그래머스"
 ---
 
 #### **문제 - N개의 최소 공배수**

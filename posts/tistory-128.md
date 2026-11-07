@@ -3,8 +3,8 @@ title: "엑셀보다 쉬운 SQL 2주차"
 kind: "article"
 permalink: "/posts/tistory-128.html"
 published_on: "2022-07-04"
-section: "학습 기록"
-category: "학습 기록 / 항해99"
+section: "학습·회고"
+category: "학습·회고 / 항해99"
 ---
 
 > 1주차가 간단하고 짧아서  

@@ -3,8 +3,8 @@ title: "[TIL] 코드는 문제가 없다."
 kind: "article"
 permalink: "/posts/tistory-425.html"
 published_on: "2023-07-10"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / TIL"
 ---
 
 ![본문 이미지](../assets/tistory/d9467488f254ce8aad2d16e3.jpg)

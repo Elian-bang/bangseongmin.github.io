@@ -3,8 +3,8 @@ title: "[TIL - 13일차] 항해99 7기 - 13일차"
 kind: "article"
 permalink: "/posts/tistory-110.html"
 published_on: "2022-05-21"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / TIL"
 ---
 
 # 항해 13일차

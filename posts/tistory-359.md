@@ -3,8 +3,8 @@ title: "[JS] 객체의 얕은 복사 VS 깊은 복사"
 kind: "article"
 permalink: "/posts/tistory-359.html"
 published_on: "2023-04-08"
-section: "프로그래밍"
-category: "프로그래밍"
+section: "웹·프론트엔드"
+category: "웹·프론트엔드 / JavaScript"
 ---
 
 ![본문 이미지](../assets/tistory/1a228f039b0cc3529d61b8e4.jpg)

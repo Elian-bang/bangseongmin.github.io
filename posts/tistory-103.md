@@ -3,8 +3,8 @@ title: "[항해99 - 7기] 프로그래머스 - 알고리즘 스터디(6D)"
 kind: "article"
 permalink: "/posts/tistory-103.html"
 published_on: "2022-05-20"
-section: "학습 기록"
-category: "학습 기록 / 프로그래머스"
+section: "알고리즘"
+category: "알고리즘 / 프로그래머스"
 ---
 
 {% raw %}#### 

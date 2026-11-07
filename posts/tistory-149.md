@@ -3,8 +3,8 @@ title: "[프로그래머스] 3진법 뒤집기"
 kind: "article"
 permalink: "/posts/tistory-149.html"
 published_on: "2022-09-13"
-section: "학습 기록"
-category: "학습 기록 / 프로그래머스"
+section: "알고리즘"
+category: "알고리즘 / 프로그래머스"
 ---
 
 #### **월간 코드 챌린지 시즌 1 - 3집법 뒤집기(1단계)**

@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-221.html"
 published_on: "2022-10-29"
 section: "트러블슈팅"
-category: "트러블슈팅"
+category: "트러블슈팅 / 서버·도구"
 ---
 
 ### **Intellj 실행 에러**

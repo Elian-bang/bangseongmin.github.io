@@ -3,8 +3,8 @@ title: "[TIL] The flower that blooms in adversity is the most rare and beautiful
 kind: "article"
 permalink: "/posts/tistory-385.html"
 published_on: "2023-05-13"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / TIL"
 ---
 
 ![본문 이미지](../assets/tistory/72c91e71b887a63e946c1148.jpg)

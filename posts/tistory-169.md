@@ -3,8 +3,8 @@ title: "[프로그래머스] 짝지어 제거하기"
 kind: "article"
 permalink: "/posts/tistory-169.html"
 published_on: "2022-09-24"
-section: "학습 기록"
-category: "학습 기록 / 프로그래머스"
+section: "알고리즘"
+category: "알고리즘 / 프로그래머스"
 ---
 
 #### **문제 : 짝지어 제거하기**

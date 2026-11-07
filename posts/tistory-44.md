@@ -3,8 +3,8 @@ title: "[항해99 - 7기] 항해 2일차 - 핵심 쏙쏙 Git 1주차"
 kind: "article"
 permalink: "/posts/tistory-44.html"
 published_on: "2022-05-07"
-section: "학습 기록"
-category: "학습 기록 / 항해99"
+section: "학습·회고"
+category: "학습·회고 / 항해99"
 ---
 
 항해99 입단 시험에 합격했다!!!

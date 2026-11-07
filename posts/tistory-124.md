@@ -3,8 +3,8 @@ title: "[항해99 - 7기] Spring 심화 4주차"
 kind: "article"
 permalink: "/posts/tistory-124.html"
 published_on: "2022-06-07"
-section: "학습 기록"
-category: "학습 기록 / 항해99"
+section: "학습·회고"
+category: "학습·회고 / 항해99"
 ---
 
 **이번 주차는 신기하게 수업 목표가 없다...**

@@ -3,8 +3,8 @@ title: "[항해99 - 7기] 같은 숫자는 싫어 - 알고리즘 스터디(5D)"
 kind: "article"
 permalink: "/posts/tistory-90.html"
 published_on: "2022-05-18"
-section: "학습 기록"
-category: "학습 기록 / 프로그래머스"
+section: "알고리즘"
+category: "알고리즘 / 프로그래머스"
 ---
 
 #### **#P. 31: 같은 숫자는 싫어 (난이도 : 중)**

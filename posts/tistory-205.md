@@ -3,8 +3,8 @@ title: "[백준] 나이순 정렬"
 kind: "article"
 permalink: "/posts/tistory-205.html"
 published_on: "2022-10-18"
-section: "학습 기록"
-category: "학습 기록 / 백준"
+section: "알고리즘"
+category: "알고리즘 / 백준"
 ---
 
 * 정렬 - [10814번, 나이순 정렬](https://www.acmicpc.net/problem/10814)

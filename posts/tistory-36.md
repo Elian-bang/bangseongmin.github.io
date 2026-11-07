@@ -3,8 +3,8 @@ title: "[항해99 - 7기] 사전준비 6일차 - Java문법 뽀개기 1주차"
 kind: "article"
 permalink: "/posts/tistory-36.html"
 published_on: "2022-04-19"
-section: "학습 기록"
-category: "학습 기록 / 항해99"
+section: "학습·회고"
+category: "학습·회고 / 항해99"
 ---
 
 ![본문 이미지](../assets/tistory/fb49d4339305cfe1adbd4fb4.gif)

@@ -3,8 +3,8 @@ title: "[토비의 스프링] 재시작"
 kind: "article"
 permalink: "/posts/tistory-177.html"
 published_on: "2022-10-05"
-section: "독서"
-category: "독서 / 토비의 스프링"
+section: "Java·Spring"
+category: "Java·Spring / 토비의 스프링"
 ---
 
 ![본문 이미지](../assets/tistory/84c967f2f5250c51d108e6b2.jpg)

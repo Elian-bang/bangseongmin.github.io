@@ -3,8 +3,8 @@ title: "[백준] 커트라인"
 kind: "article"
 permalink: "/posts/tistory-194.html"
 published_on: "2022-10-13"
-section: "학습 기록"
-category: "학습 기록 / 백준"
+section: "알고리즘"
+category: "알고리즘 / 백준"
 ---
 
 * [25305번 - 정렬 > 커트라인](https://www.acmicpc.net/problem/25305)

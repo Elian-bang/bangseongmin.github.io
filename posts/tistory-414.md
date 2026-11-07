@@ -3,8 +3,8 @@ title: "[Java] 가상 메소드 테이블(Virtual Method Table)"
 kind: "article"
 permalink: "/posts/tistory-414.html"
 published_on: "2023-06-08"
-section: "프로그래밍"
-category: "프로그래밍"
+section: "Java·Spring"
+category: "Java·Spring / Java·JVM"
 ---
 
 ![본문 이미지](../assets/tistory/09311df3a9e77a9a21f64965.png)

@@ -3,8 +3,8 @@ title: "[항해99 - 7기] Spring 심화 - 2주차 - 2"
 kind: "article"
 permalink: "/posts/tistory-121.html"
 published_on: "2022-06-01"
-section: "학습 기록"
-category: "학습 기록 / 항해99"
+section: "학습·회고"
+category: "학습·회고 / 항해99"
 ---
 
 ## 9. 회원별 상품 등록 및 조회

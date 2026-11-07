@@ -3,8 +3,8 @@ title: "[백준] 1003번, 피보나치 함수"
 kind: "article"
 permalink: "/posts/tistory-309.html"
 published_on: "2023-01-06"
-section: "학습 기록"
-category: "학습 기록 / 백준"
+section: "알고리즘"
+category: "알고리즘 / 백준"
 ---
 
 ![본문 이미지](../assets/tistory/063220b63a46ced37c4b7aed.png)

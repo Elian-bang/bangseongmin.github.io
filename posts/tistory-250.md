@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-250.html"
 published_on: "2022-12-04"
 section: "트러블슈팅"
-category: "트러블슈팅"
+category: "트러블슈팅 / GitHub"
 ---
 
 이 문제는 게시판 서비스를 구현하면서 겪은 상황이다.

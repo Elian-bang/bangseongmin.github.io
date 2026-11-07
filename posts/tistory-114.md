@@ -3,8 +3,8 @@ title: "[항해99 - 7기] Spring 기초 - 5주차"
 kind: "article"
 permalink: "/posts/tistory-114.html"
 published_on: "2022-05-25"
-section: "학습 기록"
-category: "학습 기록 / 항해99"
+section: "학습·회고"
+category: "학습·회고 / 항해99"
 ---
 
 #### **드디어 오늘은 Spring 기초 5주차이다!!**

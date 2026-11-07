@@ -3,8 +3,8 @@ title: "[Java] Record 알아보기"
 kind: "article"
 permalink: "/posts/tistory-248.html"
 published_on: "2022-12-03"
-section: "프로그래밍"
-category: "프로그래밍"
+section: "Java·Spring"
+category: "Java·Spring / Java·JVM"
 ---
 
 ![본문 이미지](../assets/tistory/41265cbc32d7f27da4c35e87.jpg)

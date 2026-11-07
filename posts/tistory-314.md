@@ -3,8 +3,8 @@ title: "[Spring] 설정 값 분리의 필요성과 @Value의 사용법 및 동�
 kind: "article"
 permalink: "/posts/tistory-314.html"
 published_on: "2023-01-10"
-section: "프로그래밍"
-category: "프로그래밍"
+section: "Java·Spring"
+category: "Java·Spring / Spring"
 ---
 
 ## 설정 값 분리의 필요성

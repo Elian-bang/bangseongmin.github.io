@@ -3,8 +3,8 @@ title: "[프로그래머스] 큰 수 만들기"
 kind: "article"
 permalink: "/posts/tistory-216.html"
 published_on: "2022-10-25"
-section: "학습 기록"
-category: "학습 기록 / 프로그래머스"
+section: "알고리즘"
+category: "알고리즘 / 프로그래머스"
 ---
 
 * [**탐욕법(Greedy) > 큰 수 만들기**](https://school.programmers.co.kr/learn/courses/30/lessons/42883)

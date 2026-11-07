@@ -3,8 +3,8 @@ title: "[Java] Java 버전에 따른 JVM(Java Virtual Machine) 변화"
 kind: "article"
 permalink: "/posts/tistory-415.html"
 published_on: "2023-06-09"
-section: "프로그래밍"
-category: "프로그래밍"
+section: "Java·Spring"
+category: "Java·Spring / Java·JVM"
 ---
 
 ![본문 이미지](../assets/tistory/1ec63117b8163e3e420d923f.png)

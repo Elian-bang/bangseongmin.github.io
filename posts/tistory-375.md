@@ -3,8 +3,8 @@ title: "[TIL] When in doubt, choose change."
 kind: "article"
 permalink: "/posts/tistory-375.html"
 published_on: "2023-04-29"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / TIL"
 ---
 
 ![본문 이미지](../assets/tistory/8c5c724410408675e54dfb01.jpg)

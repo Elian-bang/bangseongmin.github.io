@@ -3,8 +3,8 @@ title: "[TIL] MySQL에 이모지를 저장하는 방법"
 kind: "article"
 permalink: "/posts/tistory-347.html"
 published_on: "2023-03-05"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / TIL"
 ---
 
 ## MySQL에 이모지를 저장하는 방법

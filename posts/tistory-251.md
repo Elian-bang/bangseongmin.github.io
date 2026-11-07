@@ -3,8 +3,8 @@ title: "[JPA] findById와 getReferenceById(getOne)의 차이"
 kind: "article"
 permalink: "/posts/tistory-251.html"
 published_on: "2022-12-04"
-section: "프로그래밍"
-category: "프로그래밍"
+section: "데이터베이스"
+category: "데이터베이스 / JPA·Hibernate"
 ---
 
 ![본문 이미지](../assets/tistory/637ecd940a0d02bcd1ac7d1b.png)

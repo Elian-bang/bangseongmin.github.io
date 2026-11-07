@@ -3,8 +3,8 @@ title: "엑셀보다 쉬운 SQL 1주차"
 kind: "article"
 permalink: "/posts/tistory-127.html"
 published_on: "2022-07-03"
-section: "학습 기록"
-category: "학습 기록 / 항해99"
+section: "학습·회고"
+category: "학습·회고 / 항해99"
 ---
 
 > 오랜만에 강의를 들으려고 스파르타 코딩클럽에 접속!  

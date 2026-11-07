@@ -3,8 +3,8 @@ title: "[항해99 - 7기]  나누어 떨어지는 숫자 배열  - 알고리즘 
 kind: "article"
 permalink: "/posts/tistory-68.html"
 published_on: "2022-05-17"
-section: "학습 기록"
-category: "학습 기록 / 프로그래머스"
+section: "알고리즘"
+category: "알고리즘 / 프로그래머스"
 ---
 
 **#P. 14 : 나누어 떨어지는 숫자 배열 (난이도 : 중하)**

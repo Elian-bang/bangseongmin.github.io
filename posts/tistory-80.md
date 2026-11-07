@@ -3,8 +3,8 @@ title: "[TIL - 8일차] 항해99 7기 - 9일차"
 kind: "article"
 permalink: "/posts/tistory-80.html"
 published_on: "2022-05-18"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / TIL"
 ---
 
 ### **Done**

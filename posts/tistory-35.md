@@ -3,8 +3,8 @@ title: "[항해99  - 7기] 사전준비 5일차 - 웹개발 종합반 5주차"
 kind: "article"
 permalink: "/posts/tistory-35.html"
 published_on: "2022-04-19"
-section: "학습 기록"
-category: "학습 기록 / 항해99"
+section: "학습·회고"
+category: "학습·회고 / 항해99"
 ---
 
 #### 

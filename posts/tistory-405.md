@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-405.html"
 published_on: "2023-05-31"
 section: "트러블슈팅"
-category: "트러블슈팅"
+category: "트러블슈팅 / JavaScript"
 ---
 
 ![본문 이미지](../assets/tistory/89cbf3a6c75f34ef4c5af4c5.png)

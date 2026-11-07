@@ -3,8 +3,8 @@ title: "[WIL] 첫번째 마주한 Trade Off (2023.02.18)"
 kind: "article"
 permalink: "/posts/tistory-344.html"
 published_on: "2023-03-05"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / WIL"
 ---
 
 ## **첫번째 마주한 Trade Off**

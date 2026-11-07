@@ -3,8 +3,8 @@ title: "[Spring] 직접 만들어 본 MVC와 Spring MVC 비교"
 kind: "article"
 permalink: "/posts/tistory-238.html"
 published_on: "2022-11-21"
-section: "프로젝트"
-category: "프로젝트 / Spring Basic"
+section: "Java·Spring"
+category: "Java·Spring / Spring 기초"
 ---
 
 ## **Spring Web MVC Framework**

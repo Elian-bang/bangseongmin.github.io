@@ -3,8 +3,8 @@ title: "[WIL] 만나고 싶지만 만날 수 없는 그대 (2023.02.25)"
 kind: "article"
 permalink: "/posts/tistory-345.html"
 published_on: "2023-03-05"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / WIL"
 ---
 
 ## **만나고 싶지만 만날 수 없는 그대**

@@ -3,8 +3,8 @@ title: "[프로그래머스] 성격 유형 검사하기"
 kind: "article"
 permalink: "/posts/tistory-156.html"
 published_on: "2022-09-19"
-section: "학습 기록"
-category: "학습 기록 / 프로그래머스"
+section: "알고리즘"
+category: "알고리즘 / 프로그래머스"
 ---
 
 #### **문제 : [KAKAO BLIND RECRUITMENT] 신고 결과 받기**

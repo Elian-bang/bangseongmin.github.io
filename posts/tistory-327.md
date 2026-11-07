@@ -3,8 +3,8 @@ title: "[Spring] MockMvc를 이용하여 Controller 테스트하기"
 kind: "article"
 permalink: "/posts/tistory-327.html"
 published_on: "2023-01-20"
-section: "프로그래밍"
-category: "프로그래밍"
+section: "테스트"
+category: "테스트 / MockMvc"
 ---
 
 ![본문 이미지](../assets/tistory/202335f5e8bad021153c14c5.png)

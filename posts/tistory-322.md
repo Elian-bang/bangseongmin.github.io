@@ -3,8 +3,8 @@ title: "[JPA] Spring Transactional 사용시 주의사항"
 kind: "article"
 permalink: "/posts/tistory-322.html"
 published_on: "2023-01-18"
-section: "프로그래밍"
-category: "프로그래밍"
+section: "데이터베이스"
+category: "데이터베이스 / JPA·Hibernate"
 ---
 
 ## Spring Transactional

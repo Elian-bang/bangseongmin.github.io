@@ -3,8 +3,8 @@ title: "[TIL - 5일차] 항해 99 7기 - 5일차"
 kind: "article"
 permalink: "/posts/tistory-58.html"
 published_on: "2022-05-15"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / TIL"
 ---
 
 **# 항해 5일차**   

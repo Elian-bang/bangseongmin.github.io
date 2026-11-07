@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-417.html"
 published_on: "2023-06-12"
 section: "데이터베이스"
-category: "데이터베이스"
+category: "데이터베이스 / 트랜잭션·동시성"
 ---
 
 ![본문 이미지](../assets/tistory/189ded41585b707b738e36d1.png)

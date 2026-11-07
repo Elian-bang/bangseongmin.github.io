@@ -3,8 +3,8 @@ title: "[SNS-Service] 좋아요 기능 구현하기"
 kind: "article"
 permalink: "/posts/tistory-407.html"
 published_on: "2023-06-03"
-section: "프로그래밍"
-category: "프로그래밍"
+section: "프로젝트"
+category: "프로젝트 / SNS 서비스"
 ---
 
 [동시성 제어하기](tistory-406.html)를 공부한 내용을 바탕으로 좋아요 기능을 구현해보려고 합니다. 

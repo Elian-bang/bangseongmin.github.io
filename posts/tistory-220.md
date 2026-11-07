@@ -3,8 +3,8 @@ title: "[백준] 숫자 카드2 (Java/자바)"
 kind: "article"
 permalink: "/posts/tistory-220.html"
 published_on: "2022-10-29"
-section: "학습 기록"
-category: "학습 기록 / 백준"
+section: "알고리즘"
+category: "알고리즘 / 백준"
 ---
 
 * [10816번, 숫자 카드 2](https://www.acmicpc.net/problem/10816)

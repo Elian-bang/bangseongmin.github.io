@@ -3,8 +3,8 @@ title: "[항해99 - 7기] 항해 1일차 - 웹개발 플러스 1주차"
 kind: "article"
 permalink: "/posts/tistory-45.html"
 published_on: "2022-05-10"
-section: "학습 기록"
-category: "학습 기록 / 항해99"
+section: "학습·회고"
+category: "학습·회고 / 항해99"
 ---
 
 오늘은 드디어 나의 첫 항해 시작이다..

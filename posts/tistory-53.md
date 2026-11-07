@@ -3,8 +3,8 @@ title: "[항해99 - 7기] 항해 5일차 - 알고리즘 스터디(1D)"
 kind: "article"
 permalink: "/posts/tistory-53.html"
 published_on: "2022-05-13"
-section: "학습 기록"
-category: "학습 기록 / 프로그래머스"
+section: "알고리즘"
+category: "알고리즘 / 프로그래머스"
 ---
 
 ![본문 이미지](../assets/tistory/ca7bc5f8ecb96e2b82900b2f.gif)

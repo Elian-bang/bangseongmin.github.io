@@ -3,8 +3,8 @@ title: "[프로그래머스] 2020 카카오 인턴십 - 키패드 누르기"
 kind: "article"
 permalink: "/posts/tistory-148.html"
 published_on: "2022-09-06"
-section: "학습 기록"
-category: "학습 기록 / 프로그래머스"
+section: "알고리즘"
+category: "알고리즘 / 프로그래머스"
 ---
 
 **문제 설명**

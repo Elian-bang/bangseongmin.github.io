@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-331.html"
 published_on: "2023-01-23"
 section: "트러블슈팅"
-category: "트러블슈팅"
+category: "트러블슈팅 / 사례"
 ---
 
 ## **조회수 기능 구현**

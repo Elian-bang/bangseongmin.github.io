@@ -3,8 +3,8 @@ title: "[항해99 - 7기] Spring 4주차 개인 과제"
 kind: "article"
 permalink: "/posts/tistory-120.html"
 published_on: "2022-05-31"
-section: "학습 기록"
-category: "학습 기록 / 항해99"
+section: "학습·회고"
+category: "학습·회고 / 항해99"
 ---
 
 > **목표 : "회원가입, 로그인, 댓글 작성/수정/삭제 기능이 추가된 나만의 항해 블로그 백엔드 서버 만들기"**

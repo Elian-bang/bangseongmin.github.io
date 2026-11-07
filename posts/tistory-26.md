@@ -3,8 +3,8 @@ title: "[백준 - 2일차] 2480번 - 주사위 세개 (자바)"
 kind: "article"
 permalink: "/posts/tistory-26.html"
 published_on: "2022-04-12"
-section: "학습 기록"
-category: "학습 기록 / 백준"
+section: "알고리즘"
+category: "알고리즘 / 백준"
 ---
 
 * 문제(2단계 - 7 )

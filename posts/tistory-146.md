@@ -3,8 +3,8 @@ title: "[프로그래머스] 자바 입문 - 배열 사용하기 (실습2)"
 kind: "article"
 permalink: "/posts/tistory-146.html"
 published_on: "2022-09-06"
-section: "학습 기록"
-category: "학습 기록 / 프로그래머스"
+section: "알고리즘"
+category: "알고리즘 / 프로그래머스"
 ---
 
 **문제 설명**

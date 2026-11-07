@@ -3,8 +3,8 @@ title: "[토비의 스프링] 테스트 - UserDaoTest 개선"
 kind: "article"
 permalink: "/posts/tistory-231.html"
 published_on: "2022-11-08"
-section: "독서"
-category: "독서 / 토비의 스프링"
+section: "Java·Spring"
+category: "Java·Spring / 토비의 스프링"
 ---
 
 ![본문 이미지](../assets/tistory/5688fbabb026ea38a9306a7b.jpg)

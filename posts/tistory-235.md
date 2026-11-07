@@ -3,8 +3,8 @@ title: "[Spring] JDBC 프로그래밍"
 kind: "article"
 permalink: "/posts/tistory-235.html"
 published_on: "2022-11-10"
-section: "프로젝트"
-category: "프로젝트 / Spring Basic"
+section: "Java·Spring"
+category: "Java·Spring / Spring 기초"
 ---
 
 ![본문 이미지](../assets/tistory/8e91c7982a96899719fa7289.png)

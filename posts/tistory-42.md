@@ -3,8 +3,8 @@ title: "[항해99 - 7기] 사전준비 11일차 - 웹개발 종합반 4주차(2�
 kind: "article"
 permalink: "/posts/tistory-42.html"
 published_on: "2022-05-02"
-section: "학습 기록"
-category: "학습 기록 / 항해99"
+section: "학습·회고"
+category: "학습·회고 / 항해99"
 ---
 
 오늘은 월요일... 월요병?? 그런게 뭔가요??

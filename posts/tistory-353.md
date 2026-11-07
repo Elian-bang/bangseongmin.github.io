@@ -3,8 +3,8 @@ title: "[WIL] Trade Off 연속(2023.03.25)"
 kind: "article"
 permalink: "/posts/tistory-353.html"
 published_on: "2023-03-25"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / WIL"
 ---
 
 ## Trade Off

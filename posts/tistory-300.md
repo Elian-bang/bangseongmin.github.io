@@ -3,8 +3,8 @@ title: "[JPA] Difference Between save() and saveAndFlush() in Spring Data JPA"
 kind: "article"
 permalink: "/posts/tistory-300.html"
 published_on: "2022-12-29"
-section: "프로그래밍"
-category: "프로그래밍"
+section: "데이터베이스"
+category: "데이터베이스 / JPA·Hibernate"
 ---
 
 ![본문 이미지](../assets/tistory/5fd91f9014a2ea2875f92751.png)

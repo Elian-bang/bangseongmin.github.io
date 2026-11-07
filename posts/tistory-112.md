@@ -3,8 +3,8 @@ title: "[항해99-7기] Spring 기초 - 4주차"
 kind: "article"
 permalink: "/posts/tistory-112.html"
 published_on: "2022-05-23"
-section: "학습 기록"
-category: "학습 기록 / 항해99"
+section: "학습·회고"
+category: "학습·회고 / 항해99"
 ---
 
 **[수업 목표]**

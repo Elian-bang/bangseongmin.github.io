@@ -3,8 +3,8 @@ title: "[JS] Mixed spaces and tabs  no-mixed-spaces-and-tabs"
 kind: "article"
 permalink: "/posts/tistory-367.html"
 published_on: "2023-04-23"
-section: "프로그래밍"
-category: "프로그래밍"
+section: "웹·프론트엔드"
+category: "웹·프론트엔드 / JavaScript"
 ---
 
 ![본문 이미지](../assets/tistory/4db38a7eda2fad4754def486.jpg)

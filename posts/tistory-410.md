@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-410.html"
 published_on: "2023-06-06"
 section: "데이터베이스"
-category: "데이터베이스 / MongDB"
+category: "데이터베이스 / MongoDB"
 ---
 
 ![본문 이미지](../assets/tistory/897a8d8c3922f3fa52c2a1ff.png)

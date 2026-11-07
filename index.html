@@ -2,7 +2,17 @@
 layout: default
 ---
 {% assign articles = site.pages | where: "kind", "article" | sort: "published_on" | reverse %}
-{% assign groups = articles | group_by: "section" | sort: "name" %}
+{% assign article_groups = articles | group_by: "section" | sort: "name" %}
+{% assign groups = "" | split: "," %}
+{% for category in site.data.category_order %}
+  {% assign matches = article_groups | where: "name", category %}
+  {% assign groups = groups | concat: matches %}
+{% endfor %}
+{% for group in article_groups %}
+  {% unless site.data.category_order contains group.name %}
+    {% assign groups = groups | push: group %}
+  {% endunless %}
+{% endfor %}
 <section class="hero" aria-labelledby="intro">
   <div>
     <p class="eyebrow">ELIAN BANG · DEV JOURNAL</p>

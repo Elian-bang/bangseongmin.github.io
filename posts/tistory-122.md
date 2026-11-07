@@ -3,8 +3,8 @@ title: "[항해99 - 7기] Spring 심화 - 3주차"
 kind: "article"
 permalink: "/posts/tistory-122.html"
 published_on: "2022-06-02"
-section: "학습 기록"
-category: "학습 기록 / 항해99"
+section: "학습·회고"
+category: "학습·회고 / 항해99"
 ---
 
 ## 01. 테스트의 필요성

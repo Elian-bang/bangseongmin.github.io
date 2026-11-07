@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-264.html"
 published_on: "2022-12-10"
 section: "트러블슈팅"
-category: "트러블슈팅"
+category: "트러블슈팅 / Spring"
 ---
 
 ## **[에러] org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource**

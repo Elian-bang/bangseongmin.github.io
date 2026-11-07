@@ -3,8 +3,8 @@ title: "[TIL] Hang in there(2023.05.02)"
 kind: "article"
 permalink: "/posts/tistory-379.html"
 published_on: "2023-05-03"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / TIL"
 ---
 
 ![본문 이미지](../assets/tistory/b96f5eab89da01a4972e1b3b.jpg)

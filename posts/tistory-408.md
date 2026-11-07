@@ -3,8 +3,8 @@ title: "[WIL] Anyone can be anything. (2023.06.04)"
 kind: "article"
 permalink: "/posts/tistory-408.html"
 published_on: "2023-06-06"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / WIL"
 ---
 
 ![본문 이미지](../assets/tistory/610230b6bcddd527c5c57b11.jpg)

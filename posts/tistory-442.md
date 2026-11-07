@@ -3,8 +3,8 @@ title: "[Spring] Feign Client"
 kind: "article"
 permalink: "/posts/tistory-442.html"
 published_on: "2024-09-18"
-section: "Spring"
-category: "Spring"
+section: "Java·Spring"
+category: "Java·Spring / Spring"
 ---
 
 ![본문 이미지](../assets/tistory/3eddeaf4d00f304a4ea41452.png)

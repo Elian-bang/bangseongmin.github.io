@@ -3,8 +3,8 @@ title: "[TIL] 다시 처음으로"
 kind: "article"
 permalink: "/posts/tistory-421.html"
 published_on: "2023-06-28"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / TIL"
 ---
 
 ![본문 이미지](../assets/tistory/958f5ef3c300b3a153123452.png)

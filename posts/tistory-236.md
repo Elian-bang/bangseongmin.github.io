@@ -3,8 +3,8 @@ title: "[Spring] MVC 프레임워크 만들기"
 kind: "article"
 permalink: "/posts/tistory-236.html"
 published_on: "2022-11-11"
-section: "프로젝트"
-category: "프로젝트 / Spring Basic"
+section: "Java·Spring"
+category: "Java·Spring / Spring 기초"
 ---
 
 ## MVC 프레임워크 만들기

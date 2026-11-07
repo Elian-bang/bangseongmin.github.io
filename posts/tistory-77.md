@@ -3,8 +3,8 @@ title: "[항해99 - 7기] CS 스터디 1일"
 kind: "article"
 permalink: "/posts/tistory-77.html"
 published_on: "2022-05-17"
-section: "컴퓨터 과학"
-category: "컴퓨터 과학"
+section: "학습·회고"
+category: "학습·회고 / CS 스터디"
 ---
 
 ## **CS(1일차)** **- 항해 2주차에서는 CS 스터디를 팀으로 시작한다.**

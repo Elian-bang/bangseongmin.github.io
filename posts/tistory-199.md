@@ -3,8 +3,8 @@ title: "[프로그래머스] 오픈채팅방"
 kind: "article"
 permalink: "/posts/tistory-199.html"
 published_on: "2022-10-15"
-section: "학습 기록"
-category: "학습 기록 / 프로그래머스"
+section: "알고리즘"
+category: "알고리즘 / 프로그래머스"
 ---
 
 ### **문제 : < 2019 KAKAO BLIND RECRUITMENT >  오픈 채팅방**

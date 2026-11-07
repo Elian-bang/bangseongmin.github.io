@@ -3,8 +3,8 @@ title: "[항해99 - 7기] CS(2일차) - 1일 1로그 100일 IT 지식"
 kind: "article"
 permalink: "/posts/tistory-101.html"
 published_on: "2022-05-19"
-section: "컴퓨터 과학"
-category: "컴퓨터 과학"
+section: "학습·회고"
+category: "학습·회고 / CS 스터디"
 ---
 
 ### 범위 : p. 17 ~ 22

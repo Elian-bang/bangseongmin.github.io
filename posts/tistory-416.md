@@ -3,8 +3,8 @@ title: "[TIL] A is B but B is not A"
 kind: "article"
 permalink: "/posts/tistory-416.html"
 published_on: "2023-06-12"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / TIL"
 ---
 
 ![본문 이미지](../assets/tistory/5b1536f08d7f176a269ce198.jpg)

@@ -3,8 +3,8 @@ title: "[TIL] Don’t close your eyes. Look! The reality of fear can be differen
 kind: "article"
 permalink: "/posts/tistory-398.html"
 published_on: "2023-05-22"
-section: "TIL"
-category: "TIL"
+section: "학습·회고"
+category: "학습·회고 / TIL"
 ---
 
 ![본문 이미지](../assets/tistory/027c4de077743ca1823808f0.png)

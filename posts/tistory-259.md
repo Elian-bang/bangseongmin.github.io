@@ -3,8 +3,8 @@ title: "[Git] Commit 메시지 합치기"
 kind: "article"
 permalink: "/posts/tistory-259.html"
 published_on: "2022-12-07"
-section: "프로그래밍"
-category: "프로그래밍"
+section: "시스템·인프라"
+category: "시스템·인프라 / Git"
 ---
 
 ## **Commit 메시지 합치기**

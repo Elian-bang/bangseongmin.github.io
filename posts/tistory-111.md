@@ -3,8 +3,8 @@ title: "[항해99 - 7기] 항해 9일차 - 알고리즘 항해 2주차"
 kind: "article"
 permalink: "/posts/tistory-111.html"
 published_on: "2022-05-23"
-section: "학습 기록"
-category: "학습 기록 / 항해99"
+section: "학습·회고"
+category: "학습·회고 / 항해99"
 ---
 
 ![본문 이미지](../assets/tistory/1a4dc5e7b4814fee24556e1c.gif)

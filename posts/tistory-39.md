@@ -3,8 +3,8 @@ title: "[항해99 - 7기] 사전준비 9일차 - 웹개발 종합반 1주차(2�
 kind: "article"
 permalink: "/posts/tistory-39.html"
 published_on: "2022-04-27"
-section: "학습 기록"
-category: "학습 기록 / 항해99"
+section: "학습·회고"
+category: "학습·회고 / 항해99"
 ---
 
 ![본문 이미지](../assets/tistory/be68d5ceadde60370296b212.gif)

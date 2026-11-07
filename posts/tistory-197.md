@@ -3,8 +3,8 @@ title: "[백준] 좌표 정렬하기"
 kind: "article"
 permalink: "/posts/tistory-197.html"
 published_on: "2022-10-14"
-section: "학습 기록"
-category: "학습 기록 / 백준"
+section: "알고리즘"
+category: "알고리즘 / 백준"
 ---
 
 * [정렬 - 11650번 좌표 정렬하기](https://www.acmicpc.net/problem/11650)

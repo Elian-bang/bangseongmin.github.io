@@ -3,8 +3,8 @@ title: "[JPA] 하이버네이트 ORM"
 kind: "article"
 permalink: "/posts/tistory-316.html"
 published_on: "2023-01-11"
-section: "프로그래밍"
-category: "프로그래밍"
+section: "데이터베이스"
+category: "데이터베이스 / JPA·Hibernate"
 ---
 
 ## **OneToMany 양방향 관계**

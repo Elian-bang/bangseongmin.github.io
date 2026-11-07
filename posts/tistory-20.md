@@ -3,8 +3,8 @@ title: "[백준 - 1일차] 9498번 - 시험성적(자바)"
 kind: "article"
 permalink: "/posts/tistory-20.html"
 published_on: "2022-04-07"
-section: "학습 기록"
-category: "학습 기록 / 백준"
+section: "알고리즘"
+category: "알고리즘 / 백준"
 ---
 
 * **문제**

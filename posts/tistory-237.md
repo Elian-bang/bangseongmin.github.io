@@ -3,8 +3,8 @@ title: "[Spring] DI 프레임워크 만들기"
 kind: "article"
 permalink: "/posts/tistory-237.html"
 published_on: "2022-11-16"
-section: "프로젝트"
-category: "프로젝트 / Spring Basic"
+section: "Java·Spring"
+category: "Java·Spring / Spring 기초"
 ---
 
 ### DI 개념 소개 및 장점

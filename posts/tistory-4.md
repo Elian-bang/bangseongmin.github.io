@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-4.html"
 published_on: "2022-03-31"
 section: "커리어"
-category: "커리어"
+category: "커리어 / 지원·도전 후기"
 ---
 
 ## 1. 서론

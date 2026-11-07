@@ -3,8 +3,8 @@ title: "[토비의 스프링] 테스트"
 kind: "article"
 permalink: "/posts/tistory-219.html"
 published_on: "2022-10-29"
-section: "독서"
-category: "독서 / 토비의 스프링"
+section: "Java·Spring"
+category: "Java·Spring / 토비의 스프링"
 ---
 
 ![본문 이미지](../assets/tistory/a978fd0e88cf8cbf4cff81da.jpg)

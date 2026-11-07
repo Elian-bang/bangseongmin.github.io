@@ -4,7 +4,7 @@ kind: "article"
 permalink: "/posts/tistory-265.html"
 published_on: "2022-12-10"
 section: "트러블슈팅"
-category: "트러블슈팅"
+category: "트러블슈팅 / SQL"
 ---
 
 ## Error Code: 1063, incorrect column specifier for column

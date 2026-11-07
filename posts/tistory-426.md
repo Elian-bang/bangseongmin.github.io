@@ -3,8 +3,8 @@ title: "[MyBatis] MyBatis Mapper XML"
 kind: "article"
 permalink: "/posts/tistory-426.html"
 published_on: "2023-07-12"
-section: "Spring"
-category: "Spring / MyBatis"
+section: "데이터베이스"
+category: "데이터베이스 / MyBatis"
 ---
 
 ![본문 이미지](../assets/tistory/cfd12724e7818598f98b8514.jpg)

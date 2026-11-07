@@ -3,8 +3,8 @@ title: "[VUE] 부모 컴포넌트 API 호출을 자식 컴포넌트에서 제어
 kind: "article"
 permalink: "/posts/tistory-386.html"
 published_on: "2023-05-13"
-section: "프로그래밍"
-category: "프로그래밍"
+section: "웹·프론트엔드"
+category: "웹·프론트엔드 / Vue"
 ---
 
 {% raw %}![본문 이미지](../assets/tistory/0f4733edac046722e889310e.png)

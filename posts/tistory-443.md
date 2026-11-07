@@ -3,8 +3,8 @@ title: "[Spring] Logback"
 kind: "article"
 permalink: "/posts/tistory-443.html"
 published_on: "2024-09-18"
-section: "Spring"
-category: "Spring"
+section: "Java·Spring"
+category: "Java·Spring / Spring"
 ---
 
 ![본문 이미지](../assets/tistory/e07e3d7f74a2368ccf618419.png)
