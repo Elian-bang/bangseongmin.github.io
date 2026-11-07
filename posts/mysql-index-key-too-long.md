@@ -1,11 +1,13 @@
 ---
 title: "MySQL에서 댓글 인덱스가 3072바이트 제한을 넘은 이유"
-permalink: /posts/mysql-index-key-too-long.html
+kind: "article"
+permalink: "/posts/mysql-index-key-too-long.html"
+published_on: "2022-12-19"
+section: "트러블슈팅"
+category: "트러블슈팅"
 ---
 
-# MySQL에서 댓글 인덱스가 3072바이트 제한을 넘은 이유
-
-게시판의 댓글 본문을 `VARCHAR(2000)`으로 정의하고 전체 컬럼에 인덱스를 만들려다 `Specified key was too long; max key length is 3072 bytes` 오류를 만났다. 댓글의 최대 길이를 2,000자로 유지하면서 인덱스를 어떻게 설계할 수 있을까? [2022년 12월 19일 티스토리 원문](https://to-be-a-artist.tistory.com/288)
+게시판의 댓글 본문을 `VARCHAR(2000)`으로 정의하고 전체 컬럼에 인덱스를 만들려다 `Specified key was too long; max key length is 3072 bytes` 오류를 만났다. 댓글의 최대 길이를 2,000자로 유지하면서 인덱스를 어떻게 설계할 수 있을까?
 
 원문 스크린샷에서 Hibernate가 `article_comment.content`에 인덱스를 만드는 DDL을 실행하다 실패한 것을 확인할 수 있다.
 

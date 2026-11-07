@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<article class="article">
+  <a class="back-link" href="{{ '/#archive' | relative_url }}">← 글 목록</a>
+  <header class="article-header">
+    {% if page.category %}<p class="category">{{ page.category | escape }}</p>{% endif %}
+    <h1>{{ page.title | escape }}</h1>
+    {% if page.published_on %}<time datetime="{{ page.published_on }}">{{ page.published_on }}</time>{% endif %}
+  </header>
+  <div class="prose">{{ content }}</div>
+</article>

@@ -1,0 +1,10 @@
+title: 걸어가는 길
+description: 방성민의 개발 기록
+lang: ko
+url: https://elian-bang.github.io
+baseurl: /bangseongmin.github.io
+defaults:
+  - scope:
+      path: posts
+    values:
+      layout: article

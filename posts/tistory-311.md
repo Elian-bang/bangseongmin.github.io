@@ -1,14 +1,10 @@
 ---
 title: "[약국 길찾기 서비스] 카카오 주소검색 API 구현"
-permalink: /posts/tistory-311.html
----
-
-# [약국 길찾기 서비스] 카카오 주소검색 API 구현
-
-티스토리 최초 발행일 2023-01-08 · [원문](https://to-be-a-artist.tistory.com/311)
-
-## 카카오 주소검색 API 구현
-
+kind: "article"
+permalink: "/posts/tistory-311.html"
+published_on: "2023-01-08"
+section: "프로젝트"
+category: "프로젝트 / 약국 길찾기"
 ---
 
 ### 카카오 주소검색 API 스펙 살펴보기

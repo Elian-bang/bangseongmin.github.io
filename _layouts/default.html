@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ site.description | escape }}">
+  <title>{% if page.title %}{{ page.title | escape }} · {% endif %}{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/journal.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="{{ '/' | relative_url }}"><span aria-hidden="true">↗</span> {{ site.title }}</a>
+      <nav aria-label="주 메뉴">
+        <a href="{{ '/#archive' | relative_url }}">글 목록</a>
+        <a href="https://github.com/Elian-bang">GitHub</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="shell">{{ content }}</main>
+  <footer class="shell site-footer"><span>걸어가는 길</span><span>방성민의 개발 기록</span></footer>
+</body>
+</html>

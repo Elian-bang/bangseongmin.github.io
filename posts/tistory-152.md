@@ -1,0 +1,118 @@
+---
+title: "[프로그래머스] 1차 - 다트 게임"
+kind: "article"
+permalink: "/posts/tistory-152.html"
+published_on: "2022-09-15"
+section: "학습 기록"
+category: "학습 기록 / 프로그래머스"
+---
+
+#### **제목 : 2018 KAKAO BLIND RECRUITMENT - [1차] 다트 게임**
+
+**문제 설명**
+
+카카오톡 게임별의 하반기 신규 서비스로 다트 게임을 출시하기로 했다. 다트 게임은 다트판에 다트를 세 차례 던져 그 점수의 합계로 실력을 겨루는 게임으로, 모두가 간단히 즐길 수 있다.  
+갓 입사한 무지는 코딩 실력을 인정받아 게임의 핵심 부분인 점수 계산 로직을 맡게 되었다. 다트 게임의 점수 계산 로직은 아래와 같다.
+
+1. 다트 게임은 총 3번의 기회로 구성된다.
+2. 각 기회마다 얻을 수 있는 점수는 0점에서 10점까지이다.
+3. 점수와 함께 Single(S), Double(D), Triple(T) 영역이 존재하고 각 영역 당첨 시 점수에서 1제곱, 2제곱, 3제곱 (점수1 , 점수2 , 점수3 )으로 계산된다.
+4. 옵션으로 스타상(\*) , 아차상(#)이 존재하며 스타상(\*) 당첨 시 해당 점수와 바로 전에 얻은 점수를 각 2배로 만든다. 아차상(#) 당첨 시 해당 점수는 마이너스된다.
+5. 스타상(\*)은 첫 번째 기회에서도 나올 수 있다. 이 경우 첫 번째 스타상(\*)의 점수만 2배가 된다. (예제 4번 참고)
+6. 스타상(\*)의 효과는 다른 스타상(\*)의 효과와 중첩될 수 있다. 이 경우 중첩된 스타상(\*) 점수는 4배가 된다. (예제 4번 참고)
+7. 스타상(\*)의 효과는 아차상(#)의 효과와 중첩될 수 있다. 이 경우 중첩된 아차상(#)의 점수는 -2배가 된다. (예제 5번 참고)
+8. Single(S), Double(D), Triple(T)은 점수마다 하나씩 존재한다.
+9. 스타상(\*), 아차상(#)은 점수마다 둘 중 하나만 존재할 수 있으며, 존재하지 않을 수도 있다.
+
+0~10의 정수와 문자 S, D, T, \*, #로 구성된 문자열이 입력될 시 총점수를 반환하는 함수를 작성하라.
+
+**입력 형식**
+
+"점수|보너스|[옵션]"으로 이루어진 문자열 3세트.  
+예) 1S2D\*3T
+
+* 점수는 0에서 10 사이의 정수이다.
+* 보너스는 S, D, T 중 하나이다.
+* 옵선은 \*이나 # 중 하나이며, 없을 수도 있다.
+
+**출력 형식**
+
+3번의 기회에서 얻은 점수 합계에 해당하는 정수값을 출력한다.   
+예) 37
+
+**입출력 예제**
+
+![본문 이미지](../assets/tistory/2d933241fa90a668e77cfcee.png)
+
+**풀이 방법**
+
+다트를 던져 얻은 각 점수에 보너스와 옵션 계산하여 반환하는 문제이다.
+
+```java
+class Solution {
+    public int solution(String dartResult) {
+        int answer = 0;
+
+        String temp = "";
+        int idx = 0;                // 배열 참조를 위한 인덱스 변수
+        int[] arr = new int[3];     // 점수를 저장할 배열
+
+        // 1. 탐색
+        for(int i=0; i < dartResult.length(); i++){
+
+            switch(dartResult.charAt(i)){
+                // 스타상(*) - 해당 점수와 바로 전에 얻은 점수 각 2배
+                case '*':
+                    arr[idx - 1] *= 2;
+                    if(idx > 1) arr[idx - 2] *= 2;
+                    break;
+                // 아차상(#) - 해당 점수는 마이너스가 된다.
+                case '#':
+                    arr[idx - 1] *= -1;
+                    break;
+
+                // Single - 해당 점수를 1제곱
+                case 'S':
+                    arr[idx] = (int)Math.pow(Integer.parseInt(temp), 1);
+                    idx++;
+                    temp ="";
+                    break;
+
+                // Double - 해당 점수를 2제곱
+                case 'D':
+                    arr[idx] = (int)Math.pow(Integer.parseInt(temp), 2);
+                    idx++;
+                    temp ="";
+                    break;
+
+                // Triple - 해당 점수를 3제곱
+                case 'T':
+                    arr[idx] = (int)Math.pow(Integer.parseInt(temp), 3);
+                    idx++;
+                    temp ="";
+                    break;
+
+                default:
+                    temp+=String.valueOf(dartResult.charAt(i));
+                    break;
+            }
+        }
+
+        for(int i=0; i<arr.length; i++){
+            answer += arr[i];
+        }
+
+
+        return answer;
+    }
+}
+```
+
+---
+
+> **Point : 3  
+>   
+> 이 문제는 클래스를 다루어 풀면  
+>  조금 더 재미있을 것 같다.**
+
+![본문 이미지](../assets/tistory/c629fcec34e09d5779f3d5d9.png)
