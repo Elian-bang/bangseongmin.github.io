@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{ site.description | escape }}">
   <title>{% if page.title %}{{ page.title | escape }} · {% endif %}{{ site.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/journal.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/journal.css' | relative_url }}?v={{ site.github.build_revision }}">
 </head>
 <body>
   <a class="skip-link" href="#main">본문으로 건너뛰기</a>
