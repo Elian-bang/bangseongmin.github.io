@@ -21,7 +21,7 @@ layout: default
   </div>
   <div class="hero-count"><strong>{{ articles.size }}</strong><span>개의 글</span></div>
 </section>
-<section class="featured" aria-labelledby="featured-title">
+<section id="featured" class="featured" aria-labelledby="featured-title">
   <div><p class="eyebrow">FEATURED</p><h2 id="featured-title">추천 아티팩트</h2></div>
   <ul class="featured-list">
     {% for path in site.data.featured_articles %}
