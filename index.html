@@ -21,15 +21,18 @@ layout: default
   </div>
   <div class="hero-count"><strong>{{ articles.size }}</strong><span>개의 글</span></div>
 </section>
-<section class="recent" aria-labelledby="recent-title">
-  <div><p class="eyebrow">RECENT</p><h2 id="recent-title">최근 글</h2></div>
-  <ul class="recent-list">
-    {% for post in articles limit:3 %}
+<section class="featured" aria-labelledby="featured-title">
+  <div><p class="eyebrow">FEATURED</p><h2 id="featured-title">추천 아티팩트</h2></div>
+  <ul class="featured-list">
+    {% for path in site.data.featured_articles %}
+    {% assign post = articles | where: "url", path | first %}
+    {% if post %}
     <li><a href="{{ post.url | relative_url }}">
       <span class="category">{{ post.category | escape }}</span>
       <strong>{{ post.title | escape }}</strong>
       <time datetime="{{ post.published_on }}">{{ post.published_on }}</time>
     </a></li>
+    {% endif %}
     {% endfor %}
   </ul>
 </section>

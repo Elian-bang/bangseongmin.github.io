@@ -69,15 +69,15 @@ time,.row-arrow{color:var(--muted);font-size:.82rem}
   .row-arrow{display:none}
 }
 @media(max-width:390px){.hero{display:block}.hero-count{margin-top:1.25rem}.post-row a{grid-template-columns:1fr}.archive-head{align-items:flex-start}}
-.recent{display:grid;grid-template-columns:190px minmax(0,1fr);gap:clamp(2rem,5vw,5rem);padding:1.5rem 0;border-bottom:1px solid var(--line)}
-.recent h2{margin:0;font-size:1.35rem;letter-spacing:-.04em}
-.recent-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem;list-style:none;margin:0;padding:0}
-.recent-list li{display:flex;min-width:0}
-.recent-list a{display:flex;flex:1;flex-direction:column;gap:.2rem;min-width:0;padding:.75rem .9rem;border:1px solid var(--line);border-radius:6px;background:var(--white);color:var(--ink);text-decoration:none}
-.recent-list a:hover{border-color:var(--accent)}
-.recent-list strong{margin-bottom:.4rem;overflow-wrap:anywhere}
-.recent-list time{margin-top:auto}
-@media(max-width:720px){.recent{grid-template-columns:1fr;gap:.65rem}.recent-list{grid-template-columns:1fr}}
+.featured{display:grid;grid-template-columns:190px minmax(0,1fr);gap:clamp(2rem,5vw,5rem);padding:1.5rem 0;border-bottom:1px solid var(--line)}
+.featured h2{margin:0;font-size:1.35rem;letter-spacing:-.04em}
+.featured-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem;list-style:none;margin:0;padding:0}
+.featured-list li{display:flex;min-width:0}
+.featured-list a{display:flex;flex:1;flex-direction:column;gap:.2rem;min-width:0;padding:.75rem .9rem;border:1px solid var(--line);border-radius:6px;background:var(--white);color:var(--ink);text-decoration:none}
+.featured-list a:hover{border-color:var(--accent)}
+.featured-list strong{margin-bottom:.4rem;overflow-wrap:anywhere}
+.featured-list time{margin-top:auto}
+@media(max-width:720px){.featured{grid-template-columns:1fr;gap:.65rem}.featured-list{grid-template-columns:1fr}}
 .filters{display:block}
 .category-tree{margin-top:.3rem}
 .category-tree .filter{width:100%;text-align:left;align-items:baseline;cursor:pointer}
