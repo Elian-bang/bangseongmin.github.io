@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="308" viewBox="0 0 680 308" role="img" aria-labelledby="title desc">
+  <title id="title">공지 푸시 재현 환경</title>
+  <desc id="desc">배치 서버와 수신자 시뮬레이터는 별도 프로세스와 커넥션 풀을 사용한다. 배치의 완료 표시와 수신자의 조회수 갱신은 MySQL의 같은 공지 행에 쓰기를 시도한다.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0l10 5-10 5Z" fill="#42647a"/></marker></defs>
+  <rect width="680" height="308" rx="16" fill="#f6f9fc"/>
+  <g font-family="system-ui, sans-serif" fill="#193348">
+    <text x="25" y="39" font-size="24" font-weight="700">공지 푸시 재현 환경</text>
+    <g fill="#e3eef6" stroke="#9eb8ca">
+      <rect x="25" y="65" width="215" height="83" rx="10"/>
+      <rect x="25" y="175" width="215" height="83" rx="10"/>
+      <rect x="451" y="102" width="204" height="122" rx="10"/>
+    </g>
+    <g font-size="19" font-weight="700">
+      <text x="44" y="97">배치 서버</text>
+      <text x="44" y="207">수신자 시뮬레이터</text>
+      <text x="475" y="139">MySQL 8.0</text>
+    </g>
+    <g font-size="16">
+      <text x="44" y="124">Java · 배치 커넥션 풀</text>
+      <text x="44" y="234">Node.js · 별도 커넥션 풀</text>
+      <text x="475" y="169">content_item</text>
+      <text x="475" y="195">같은 공지 행 (seq)</text>
+      <text x="342" y="92" text-anchor="middle">완료 표시 UPDATE</text>
+      <text x="342" y="241" text-anchor="middle">본문 SELECT · 조회수 UPDATE</text>
+      <text x="25" y="286" fill="#425d72">발송은 공지당 8초 대기로 모의했다.</text>
+    </g>
+    <g fill="none" stroke="#42647a" stroke-width="2" marker-end="url(#a)">
+      <path d="M240 105h140q15 0 15 15v12h53"/>
+      <path d="M240 215h140q15 0 15-15v-11h53"/>
+    </g>
+  </g>
+</svg>

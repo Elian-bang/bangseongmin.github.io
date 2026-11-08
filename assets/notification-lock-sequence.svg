@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="540" viewBox="0 0 680 540" role="img" aria-labelledby="title desc">
+  <title id="title">일괄 커밋과 건별 커밋에서 요청이 만나는 순서</title>
+  <desc id="desc">일괄 커밋에서는 배치가 행을 잠근 동안 본문 조회는 끝나지만 조회수 갱신은 대기한다. 건별 커밋에서는 배치가 완료 표시 직후 락을 풀어 같은 시점에 들어온 조회수 갱신이 진행된다.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0l10 5-10 5Z" fill="#42647a"/></marker></defs>
+  <rect width="680" height="540" rx="16" fill="#f6f9fc"/>
+  <g font-family="system-ui, sans-serif" fill="#193348">
+    <text x="25" y="38" font-size="24" font-weight="700">일괄 커밋과 건별 커밋</text>
+    <g font-size="18" font-weight="700" text-anchor="middle">
+      <text x="112" y="76">배치</text><text x="340" y="76">MySQL</text><text x="568" y="76">상세 요청</text>
+    </g>
+    <g stroke="#b4c7d5" stroke-dasharray="4 4">
+      <path d="M112 88v408"/><path d="M340 88v408"/><path d="M568 88v408"/>
+    </g>
+    <rect x="333" y="133" width="14" height="131" rx="5" fill="#e4aa56"/>
+    <rect x="333" y="350" width="14" height="37" rx="5" fill="#e4aa56"/>
+    <g font-size="15">
+      <text x="25" y="108" font-weight="700">일괄</text>
+      <text x="132" y="128">완료 표시 UPDATE</text>
+      <text x="361" y="163">본문 SELECT</text>
+      <text x="361" y="198">조회수 UPDATE</text>
+      <text x="359" y="230" fill="#784408" font-weight="700">락 대기 · 시간 초과 시 실패</text>
+      <text x="132" y="259">배치 끝에서 COMMIT</text>
+      <text x="25" y="326" font-weight="700">건별</text>
+      <text x="132" y="345">완료 표시 UPDATE</text>
+      <text x="132" y="382">바로 COMMIT</text>
+      <text x="361" y="419">본문 SELECT</text>
+      <text x="361" y="454">조회수 UPDATE</text>
+      <text x="361" y="486" fill="#276444" font-weight="700">갱신 진행</text>
+      <text x="25" y="520" fill="#425d72">위에서 아래로 읽는다. 순서를 설명한 그림이며 시간 간격은 비례하지 않는다.</text>
+    </g>
+    <g stroke="#42647a" stroke-width="1.8" fill="none" marker-end="url(#a)">
+      <path d="M112 133h218"/><path d="M568 168H350"/><path d="M568 203H350"/><path d="M112 264h218"/>
+      <path d="M112 350h218"/><path d="M112 387h218"/><path d="M568 424H350"/><path d="M568 459H350"/>
+    </g>
+    <path d="M25 296h630" stroke="#adbfcd"/>
+  </g>
+</svg>

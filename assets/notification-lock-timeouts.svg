@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="270" viewBox="0 0 680 270" role="img" aria-labelledby="title desc">
+  <title id="title">재현 실험에서 집계한 락 대기 타임아웃</title>
+  <desc id="desc">기록에 남은 타임아웃 건수의 중앙값은 일괄 커밋 3건, 건별 커밋 0건이다. 당시 반복 횟수와 반복별 수치는 남아 있지 않다.</desc>
+  <rect width="680" height="270" rx="16" fill="#f6f9fc"/>
+  <g font-family="system-ui, sans-serif" fill="#193348">
+    <text x="25" y="40" font-size="24" font-weight="700">락 대기 타임아웃</text>
+    <text x="25" y="67" font-size="16" fill="#425d72">재현 실험에서 기록한 건수의 중앙값</text>
+    <g stroke="#cbd9e3"><path d="M170 87v121M312 87v121M454 87v121M596 87v121"/></g>
+    <rect x="170" y="99" width="426" height="34" rx="5" fill="#236783"/>
+    <circle cx="170" cy="172" r="5" fill="#236783"/>
+    <g font-size="19" font-weight="700">
+      <text x="25" y="123">일괄 커밋</text><text x="25" y="179">건별 커밋</text>
+      <text x="609" y="123">3건</text><text x="187" y="179">0건</text>
+    </g>
+    <g font-size="14" text-anchor="middle"><text x="170" y="228">0</text><text x="312" y="228">1</text><text x="454" y="228">2</text><text x="596" y="228">3</text></g>
+    <text x="25" y="251" font-size="15" fill="#425d72">반복별 결과와 당시 반복 횟수는 기록에 남아 있지 않다.</text>
+  </g>
+</svg>

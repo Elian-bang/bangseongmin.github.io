@@ -1,5 +1,5 @@
 ---
-title: "알림 배치가 조회수 갱신을 막은 이유"
+title: "배치의 UPDATE는 끝났는데, 왜 조회 요청은 계속 기다렸을까?"
 kind: article
 permalink: /posts/notification-batch-commit-locks.html
 published_on: "2026-11-07"
@@ -39,20 +39,17 @@ tx(TransactionDefinition.PROPAGATION_REQUIRES_NEW)
         .executeWithoutResult(s -> jdbc.update(sql, c.seq()));
 ```
 
-아래 표는 첫 공지의 완료 표시가 끝난 뒤에 상세 요청이 들어오는 경우다. 각 열은 왼쪽에서 오른쪽으로 진행한다.
+첫 공지의 완료 표시 직후 상세 요청이 들어오는 경우를 순서도로 그렸다. 주황색 구간은 배치가 첫 공지의 행 락을 가진 동안이다.
 
-| 조건과 요청 | 첫 공지 발송 직후 | 나머지 두 건을 발송하는 동안 | 배치 종료 |
-|---|---|---|---|
-| 일괄 커밋 · 배치 | 완료 표시 `UPDATE`로 행 락 획득 | 첫 공지의 행 락 유지 | 커밋하며 락 해제 |
-| 일괄 커밋 · 상세 요청 | | 본문 `SELECT` 완료 후 조회수 `UPDATE` 대기 | 타임아웃 전에 락이 풀리면 갱신을 계속함 |
-| 건별 커밋 · 배치 | 완료 표시 `UPDATE` 직후 커밋하며 락 해제 | 다음 공지 발송 | 바깥 트랜잭션 종료 |
-| 건별 커밋 · 상세 요청 | | 본문 `SELECT` 후 조회수 `UPDATE` 실행 | |
+![일괄 커밋에서는 본문 조회 뒤 조회수 UPDATE가 행 락을 기다린다. 건별 커밋에서는 배치가 완료 표시 직후 락을 풀어 같은 시점의 갱신이 진행된다.](../assets/notification-lock-sequence.svg)
 
 별도 트랜잭션은 콜백이 정상 종료될 때 커밋된다. 첫 공지의 락이 풀리는 시점이 배치 마지막에서 첫 완료 표시 직후로 옮겨간다. 나머지 공지의 발송 방식과 순서는 두 조건에서 같았다. [실험 조건 코드](https://github.com/Elian-bang/notification-reliability-lab/blob/main/batch-server/src/main/java/dev/elian/lab/batch/incident/IncidentExperiment.java)
 
 ## 같은 부하에서 완료 표시의 커밋 시점만 바꿨다
 
 운영에서 본 동작을 작은 환경에서 재현했다. 배치와 수신자 시뮬레이터를 별도 프로세스로 실행했다. 두 프로세스는 같은 MySQL을 쓰되 커넥션 풀은 따로 뒀다. 수신자가 배치와 같은 풀에서 커넥션을 기다리는 상황을 피하기 위해서다. [실험 저장소의 구성과 실행 방법](https://github.com/Elian-bang/notification-reliability-lab#실행)
+
+![배치 서버와 수신자 시뮬레이터가 별도 커넥션 풀로 같은 MySQL에 접속한다. 배치의 완료 표시와 수신자의 조회수 갱신은 같은 공지 행을 쓴다.](../assets/notification-lock-architecture.svg)
 
 재현 모드의 실행 순서는 다음과 같다.
 
@@ -65,6 +62,8 @@ tx(TransactionDefinition.PROPAGATION_REQUIRES_NEW)
 ```bash
 java -jar batch-server/target/batch-server-0.1.0.jar --lab.mode=incident
 ```
+
+![재현 실험의 락 대기 타임아웃 중앙값은 일괄 커밋 3건, 건별 커밋 0건이다.](../assets/notification-lock-timeouts.svg)
 
 | 완료 표시 방식 | 조회 시도 | 락 대기 타임아웃 | 배치 소요 |
 |---|---:|---:|---:|
