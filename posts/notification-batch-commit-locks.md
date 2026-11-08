@@ -1,5 +1,5 @@
 ---
-title: "알림 배치가 커밋할 때까지 조회수 갱신이 기다렸다"
+title: "알림 배치가 조회수 갱신을 막은 이유"
 kind: article
 permalink: /posts/notification-batch-commit-locks.html
 published_on: "2026-11-07"
@@ -7,7 +7,7 @@ section: "프로젝트"
 category: "프로젝트 / 백엔드 실험"
 ---
 
-공지 푸시는 정상적으로 발송됐지만, 푸시를 누르고 들어온 상세 페이지 요청에서 MySQL 락 대기 타임아웃이 발생했다. 상세 페이지는 본문을 읽고 같은 공지의 조회수를 올린다. 배치도 같은 행에 발송 완료를 기록했다. 두 요청이 같은 행에서 만났는데, 배치의 완료 표시 `UPDATE`가 이미 끝난 뒤에도 상세 페이지가 기다렸다. [공지 푸시 재현 기록](https://github.com/Elian-bang/notification-reliability-lab/blob/main/results/%EC%82%AC%EA%B1%B4%EC%9E%AC%ED%98%84_%EC%B2%98%EB%B0%A9%EB%B9%84%EA%B5%90.md)
+공지 푸시를 누른 사용자가 상세 페이지를 열었지만 HTTP 500이 돌아왔다. 운영 로그에서 실패한 SQL은 본문을 읽는 `SELECT`가 아니라 조회수를 올리는 `UPDATE`였다. 배치가 같은 공지의 발송 완료를 기록하는 `UPDATE`는 이미 끝난 상태였다. 왜 조회수 갱신은 여전히 락을 기다렸을까? [운영 사건 기록](https://github.com/Elian-bang/notification-reliability-lab/blob/main/docs/gitbook/%EC%BB%A4%EB%B0%8B%EC%9D%84-%EC%95%88-%ED%95%9C-%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%EC%9D%B4-%ED%8E%98%EC%9D%B4%EC%A7%80%EB%A5%BC-%EC%A3%BD%EC%9D%B8-%EC%9D%B4%EC%95%BC%EA%B8%B0.md)
 
 ## 상세 페이지는 조회수를 올릴 때 멈췄다
 
@@ -39,17 +39,20 @@ tx(TransactionDefinition.PROPAGATION_REQUIRES_NEW)
         .executeWithoutResult(s -> jdbc.update(sql, c.seq()));
 ```
 
-```text
-일괄 커밋  첫 공지 완료 UPDATE ─── 두 번째 발송 ─── 세 번째 발송 ─── COMMIT
-           └────────────────── 첫 공지의 행 락 유지 ────────────────────┘
-건별 커밋  첫 공지 완료 UPDATE → COMMIT ─── 두 번째 발송 ─── 세 번째 발송
-```
+아래 표는 첫 공지의 완료 표시가 끝난 뒤에 상세 요청이 들어오는 경우다. 각 열은 왼쪽에서 오른쪽으로 진행한다.
+
+| 조건과 요청 | 첫 공지 발송 직후 | 나머지 두 건을 발송하는 동안 | 배치 종료 |
+|---|---|---|---|
+| 일괄 커밋 · 배치 | 완료 표시 `UPDATE`로 행 락 획득 | 첫 공지의 행 락 유지 | 커밋하며 락 해제 |
+| 일괄 커밋 · 상세 요청 | | 본문 `SELECT` 완료 후 조회수 `UPDATE` 대기 | 타임아웃 전에 락이 풀리면 갱신을 계속함 |
+| 건별 커밋 · 배치 | 완료 표시 `UPDATE` 직후 커밋하며 락 해제 | 다음 공지 발송 | 바깥 트랜잭션 종료 |
+| 건별 커밋 · 상세 요청 | | 본문 `SELECT` 후 조회수 `UPDATE` 실행 | |
 
 별도 트랜잭션은 콜백이 정상 종료될 때 커밋된다. 첫 공지의 락이 풀리는 시점이 배치 마지막에서 첫 완료 표시 직후로 옮겨간다. 나머지 공지의 발송 방식과 순서는 두 조건에서 같았다. [실험 조건 코드](https://github.com/Elian-bang/notification-reliability-lab/blob/main/batch-server/src/main/java/dev/elian/lab/batch/incident/IncidentExperiment.java)
 
 ## 같은 부하에서 완료 표시의 커밋 시점만 바꿨다
 
-배치와 수신자 시뮬레이터를 별도 프로세스로 실행했다. 두 프로세스는 같은 MySQL을 쓰되 커넥션 풀은 따로 뒀다. 수신자가 배치와 같은 풀에서 커넥션을 기다리는 상황을 피하기 위해서다. [실험 저장소의 구성과 실행 방법](https://github.com/Elian-bang/notification-reliability-lab#실행)
+운영에서 본 동작을 작은 환경에서 재현했다. 배치와 수신자 시뮬레이터를 별도 프로세스로 실행했다. 두 프로세스는 같은 MySQL을 쓰되 커넥션 풀은 따로 뒀다. 수신자가 배치와 같은 풀에서 커넥션을 기다리는 상황을 피하기 위해서다. [실험 저장소의 구성과 실행 방법](https://github.com/Elian-bang/notification-reliability-lab#실행)
 
 재현 모드의 실행 순서는 다음과 같다.
 
@@ -68,4 +71,14 @@ java -jar batch-server/target/batch-server-0.1.0.jar --lab.mode=incident
 | 일괄 커밋 | 882 | 3 | 24.2초 |
 | 건별 커밋 | 2,377 | 0 | 24.2초 |
 
-표는 기존 재현 기록에 남은 중앙값이다. 반복별 출력과 당시 반복 횟수는 기록에 남아 있지 않다. 건별 커밋에서는 락 대기 타임아웃이 관측되지 않았고, 배치 소요는 두 조건 모두 24.2초였다. 조회 시도는 쿼리 실행 전에 세므로, 요청이 막히면 그 수신자가 다음 요청을 보내는 시점도 늦어진다. 이 표로 알 수 있는 건 재현 조건의 타임아웃 건수다. 락의 실제 보유 시간과 운영 요청의 지연 개선 폭은 이 실험에서 측정하지 않았다. [재현 결과와 측정 범위](https://github.com/Elian-bang/notification-reliability-lab/blob/main/results/%EC%82%AC%EA%B1%B4%EC%9E%AC%ED%98%84_%EC%B2%98%EB%B0%A9%EB%B9%84%EA%B5%90.md)
+표는 기존 재현 기록에 남은 중앙값이다. 당시 반복 횟수와 반복별 출력은 남아 있지 않다. 건별 커밋의 타임아웃 중앙값은 0건이었고, 배치 소요 시간의 중앙값은 두 조건 모두 24.2초였다. 조회 시도는 쿼리 실행 전에 센다. 요청이 막히면 같은 작업자가 다음 요청을 보내는 시점도 늦어지므로, 시도 수로 운영 응답 속도의 개선 폭을 판단할 수 없다. [재현 결과와 측정 범위](https://github.com/Elian-bang/notification-reliability-lab/blob/main/results/%EC%82%AC%EA%B1%B4%EC%9E%AC%ED%98%84_%EC%B2%98%EB%B0%A9%EB%B9%84%EA%B5%90.md)
+
+### 타임아웃을 비교하기 전에 수신자 세션 값을 확인한다
+
+첫 공지의 행 락은 코드상 약 16초 동안 유지될 것으로 계산했다. 비교표에 설정값으로 적힌 50초가 수신자 세션에 적용됐다면, 이 16초만으로는 타임아웃 3건을 설명하기 어렵다. Compose는 MySQL을 5초로 시작하고, 실험 실행기는 `SET GLOBAL`로 값을 바꾼다. 전역 설정을 바꿔도 이미 열린 수신자 연결에는 기존 세션 값이 남는다. 당시 사용한 연결마다 어떤 값이 적용됐는지는 확인하지 못했다. [Compose 설정](https://github.com/Elian-bang/notification-reliability-lab/blob/main/docker-compose.yml) · [실험 실행 코드](https://github.com/Elian-bang/notification-reliability-lab/blob/main/batch-server/src/main/java/dev/elian/lab/batch/incident/IncidentExperiment.java) · [MySQL 타임아웃 문서](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout)
+
+다시 실행할 때는 수신자 시뮬레이터가 풀에서 받은 연결에서, 조회수 `UPDATE`를 실행하기 전에 아래 값을 확인해 기록한다. 두 조건에서 실제 세션 값이 같은지 먼저 확인한 뒤 콘솔의 타임아웃 건수(MySQL 오류 `1205`)를 비교한다.
+
+```sql
+SELECT CONNECTION_ID(), @@SESSION.innodb_lock_wait_timeout;
+```
