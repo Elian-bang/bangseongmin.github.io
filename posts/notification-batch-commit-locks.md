@@ -1,5 +1,5 @@
 ---
-title: "알림 배치의 UPDATE는 끝났는데 조회가 기다린 이유"
+title: "알림 배치가 커밋할 때까지 조회수 갱신이 기다렸다"
 kind: article
 permalink: /posts/notification-batch-commit-locks.html
 published_on: "2026-11-07"
@@ -7,32 +7,65 @@ section: "프로젝트"
 category: "프로젝트 / 백엔드 실험"
 ---
 
-알림 발송 배치에서 첫 콘텐츠의 완료 표시는 발송 직후에 실행됐다. 그런데 첫 알림을 받고 상세 페이지에 들어온 사용자의 요청은 기다렸다. 상세 페이지 요청도 같은 행의 조회수를 `UPDATE`했고, 배치의 커밋은 뒤에 남은 콘텐츠 발송까지 모두 끝난 뒤에 일어났다.
+공지 푸시는 정상적으로 발송됐지만, 푸시를 누르고 들어온 상세 페이지 요청에서 MySQL 락 대기 타임아웃이 발생했다. 상세 페이지는 본문을 읽고 같은 공지의 조회수를 올린다. 배치도 같은 행에 발송 완료를 기록했다. 두 요청이 같은 행에서 만났는데, 배치의 완료 표시 `UPDATE`가 이미 끝난 뒤에도 상세 페이지가 기다렸다. [공지 푸시 재현 기록](https://github.com/Elian-bang/notification-reliability-lab/blob/main/results/%EC%82%AC%EA%B1%B4%EC%9E%AC%ED%98%84_%EC%B2%98%EB%B0%A9%EB%B9%84%EA%B5%90.md)
 
-## 일괄 커밋과 건별 커밋에서 발생한 조회 실패
+## 상세 페이지는 조회수를 올릴 때 멈췄다
 
-개인 실험에서는 콘텐츠 3건을 순서대로 발송하게 하고, 건당 발송을 8초 대기로 모의했다. 첫 콘텐츠의 완료 표시를 쓴 뒤에도 두 건을 더 발송한다. 건당 8초를 기준으로 계산하면 첫 행은 커밋까지 약 16초 더 잠긴다. 수신자 12명은 첫 콘텐츠를 쉬지 않고 조회했다. [재현 구성과 정정](https://github.com/Elian-bang/notification-reliability-lab/blob/main/results/%EC%82%AC%EA%B1%B4%EC%9E%AC%ED%98%84_%EC%B2%98%EB%B0%A9%EB%B9%84%EA%B5%90.md)
-
-| 실험에서 바꾼 것 | 조회 시도 | 실패 | 결과를 해석할 때 확인한 점 |
-|---|---:|---:|---|
-| 완료 표시 일괄 커밋 | 882 | 3 | 기준 |
-| 완료 표시 건별 커밋 | 2,377 | 0 | 완료 표시 트랜잭션이 건별로 끝났다 |
-| 조회수 갱신을 본문 조회에서 분리 | 832 | 3 | 조회수 갱신은 여전히 같은 행을 기다렸고, 실패하면 요청 전체가 실패로 집계됐다 |
-| 커밋 후 푸시 변형 | 2,333 | 0 | 건별 커밋도 함께 켰고, 실험의 푸시 신호 시점은 같았다 |
-| 락 대기 제한 단축 | 865 | 3 | 기존 수신자 연결에 설정이 적용됐는지 확인하지 못했다 |
-
-독립적으로 확인할 수 있었던 변경은 완료 표시의 건별 커밋이다. 푸시 순서를 바꾼 변형의 실패 0건은 건별 커밋 효과와 분리할 수 없었다. 표에 남아 있는 값은 중앙값이고, 조회 시도는 쿼리 실행 전에 센 값이다. 응답을 기다린 뒤 다음 요청을 보내는 부하에서는 한 요청이 막히면 다음 시도도 늦어진다. 시도 수 증가를 사용자 지연 개선 수치로 해석할 수 없는 이유다. [처방 비교의 정정](https://github.com/Elian-bang/notification-reliability-lab/blob/main/results/%EC%82%AC%EA%B1%B4%EC%9E%AC%ED%98%84_%EC%B2%98%EB%B0%A9%EB%B9%84%EA%B5%90.md#정정-2026-09-14)
-
-## request_id 인덱스 유무에 따른 데드락 건수
-
-또 다른 실험에서는 알림 발송 배치의 갱신과 수신자의 토큰 갱신이 겹칠 때 데드락이 생기는지 봤다. MySQL 8.0에서 `request_id`로 상태를 바꾸는 UPDATE의 실행 계획을 비교했다.
+재현 코드에서 배치는 `content_item`의 상태를 갱신한다. 수신자 코드는 같은 `seq`로 본문을 조회한 뒤 조회수를 올린다. 두 코드에서 쓰는 SQL을 순서대로 보면 어느 문장에서 기다리는지 알 수 있다.
 
 ```sql
-UPDATE notification
-SET status = 'SENT'
-WHERE request_id = ?;
+-- 배치: 공지 발송 완료 기록
+UPDATE content_item SET status = 'SENT', sent_at = NOW(6) WHERE seq = ?;
+
+-- 상세 페이지: 본문 조회 후 조회수 갱신
+SELECT seq, title, view_count FROM content_item WHERE seq = ?;
+UPDATE content_item SET view_count = view_count + 1 WHERE seq = ?;
 ```
 
-인덱스가 없을 때는 풀스캔에 `rows=3861`, 인덱스를 추가했을 때는 `rows=1`이었다. 이 값은 실행 계획의 추정 행 수다. `REPEATABLE READ`에서 스캔 범위가 넓어지면 갱신 대상 한 건보다 훨씬 넓은 범위를 잠글 수 있다. 인덱스가 있는 11개 구성은 각각 세 번씩 실행해 33회 모두 수신자 데드락이 0건이었다. 최종 비교에서 인덱스만 뺀 구성은 34건, 46건, 42건이었다. [최종 측정표](https://github.com/Elian-bang/notification-reliability-lab/blob/main/results/4%EB%8B%A8%EA%B3%84_%EC%B5%9C%EC%A2%85%EC%B8%A1%EC%A0%95.md) · [InnoDB의 SQL 문별 락](https://dev.mysql.com/doc/refman/8.0/en/innodb-locks-set.html)
+InnoDB에서 일반 `SELECT`는 커밋된 스냅샷을 읽을 수 있다. 다음 `UPDATE`는 같은 행을 써야 하므로 배치가 잡은 락을 기다린다. 배치 쪽 SQL 실행이 끝나도, 그 SQL을 실행한 트랜잭션이 커밋될 때까지 락은 유지된다. [수신자 재현 코드](https://github.com/Elian-bang/notification-reliability-lab/blob/main/apps/receiver-sim/index.js) · [InnoDB의 일반 조회](https://dev.mysql.com/doc/refman/8.0/en/innodb-consistent-read.html) · [커밋과 락 해제](https://dev.mysql.com/doc/refman/8.0/en/innodb-autocommit-commit-rollback.html)
 
-인덱스 실험에서 확인한 실행 계획은 재현 환경의 것이다. 당시 운영 UPDATE의 실행 계획은 확인하지 못했다. 다음 재현에서 확인할 값은 연결별 락 대기 설정과 락 획득·해제 시점이다. [실험 저장소](https://github.com/Elian-bang/notification-reliability-lab)
+## 완료 표시를 쓰는 트랜잭션만 분리했다
+
+`ContentPushJob.run()`은 바깥 트랜잭션 하나에서 공지 세 건을 처리한다. 각 공지를 발송한 뒤 `markDone()`을 호출한다. 기존에는 `markDone()`이 같은 트랜잭션에서 SQL을 실행했으므로 첫 공지의 행은 나머지 두 건의 발송이 끝날 때까지 잠겼다. 재현에서는 건당 발송을 8초 대기로 대신했다. 첫 완료 표시부터 커밋까지 남은 약 16초는 이 설정으로 계산한 값이다. [배치 재현 코드](https://github.com/Elian-bang/notification-reliability-lab/blob/main/batch-server/src/main/java/dev/elian/lab/batch/incident/ContentPushJob.java)
+
+건별 커밋에서는 `markDone()`의 SQL을 `PROPAGATION_REQUIRES_NEW`로 시작한 별도 트랜잭션에서 실행했다. 재현 코드의 두 분기에서 핵심 줄을 발췌했다.
+
+```java
+// 일괄 커밋: 바깥 트랜잭션에서 완료 표시
+jdbc.update(sql, c.seq());
+
+// 건별 커밋: 완료 표시용 트랜잭션을 따로 시작
+tx(TransactionDefinition.PROPAGATION_REQUIRES_NEW)
+        .executeWithoutResult(s -> jdbc.update(sql, c.seq()));
+```
+
+```text
+일괄 커밋  첫 공지 완료 UPDATE ─── 두 번째 발송 ─── 세 번째 발송 ─── COMMIT
+           └────────────────── 첫 공지의 행 락 유지 ────────────────────┘
+건별 커밋  첫 공지 완료 UPDATE → COMMIT ─── 두 번째 발송 ─── 세 번째 발송
+```
+
+별도 트랜잭션은 콜백이 정상 종료될 때 커밋된다. 첫 공지의 락이 풀리는 시점이 배치 마지막에서 첫 완료 표시 직후로 옮겨간다. 나머지 공지의 발송 방식과 순서는 두 조건에서 같았다. [실험 조건 코드](https://github.com/Elian-bang/notification-reliability-lab/blob/main/batch-server/src/main/java/dev/elian/lab/batch/incident/IncidentExperiment.java)
+
+## 같은 부하에서 완료 표시의 커밋 시점만 바꿨다
+
+배치와 수신자 시뮬레이터를 별도 프로세스로 실행했다. 두 프로세스는 같은 MySQL을 쓰되 커넥션 풀은 따로 뒀다. 수신자가 배치와 같은 풀에서 커넥션을 기다리는 상황을 피하기 위해서다. [실험 저장소의 구성과 실행 방법](https://github.com/Elian-bang/notification-reliability-lab#실행)
+
+재현 모드의 실행 순서는 다음과 같다.
+
+1. 각 조건을 시작하기 전에 공지 데이터를 다시 넣고, 공지 3건과 발송 1건당 8초 대기를 유지한다.
+2. 배치가 첫 공지에 대한 부하 시작 신호를 보내면 수신자 시뮬레이터 12개 작업자가 그 공지의 상세 요청을 반복한다. 각 작업자는 응답을 받은 뒤 다음 요청을 시작한다. 재현 코드의 시작 신호는 두 조건 모두 배치가 발송 루프에 들어가기 전에 보낸다.
+3. `AS-IS`에서는 완료 표시를 바깥 트랜잭션에 남긴다. `FIX-1`에서는 완료 표시만 별도 트랜잭션에서 커밋한다. 두 실행의 수신자 통계에서 MySQL 락 대기 타임아웃을 비교한다.
+
+저장소에서 MySQL, 배치 JAR, 수신자 시뮬레이터를 준비한 뒤 아래 명령으로 재현 모드를 실행한다. 빈 DB에서는 먼저 README의 `sweep` 모드를 실행해 수신자가 읽는 `experiment_control` 행을 만들어야 한다. 결과를 볼 때는 콘솔에서 `AS-IS`와 `FIX-1`의 타임아웃 값을 비교한다. [실행 전제와 명령](https://github.com/Elian-bang/notification-reliability-lab#실행) · [조건별 실행과 집계 코드](https://github.com/Elian-bang/notification-reliability-lab/blob/main/batch-server/src/main/java/dev/elian/lab/batch/incident/IncidentExperiment.java)
+
+```bash
+java -jar batch-server/target/batch-server-0.1.0.jar --lab.mode=incident
+```
+
+| 완료 표시 방식 | 조회 시도 | 락 대기 타임아웃 | 배치 소요 |
+|---|---:|---:|---:|
+| 일괄 커밋 | 882 | 3 | 24.2초 |
+| 건별 커밋 | 2,377 | 0 | 24.2초 |
+
+표는 기존 재현 기록에 남은 중앙값이다. 반복별 출력과 당시 반복 횟수는 기록에 남아 있지 않다. 건별 커밋에서는 락 대기 타임아웃이 관측되지 않았고, 배치 소요는 두 조건 모두 24.2초였다. 조회 시도는 쿼리 실행 전에 세므로, 요청이 막히면 그 수신자가 다음 요청을 보내는 시점도 늦어진다. 이 표로 알 수 있는 건 재현 조건의 타임아웃 건수다. 락의 실제 보유 시간과 운영 요청의 지연 개선 폭은 이 실험에서 측정하지 않았다. [재현 결과와 측정 범위](https://github.com/Elian-bang/notification-reliability-lab/blob/main/results/%EC%82%AC%EA%B1%B4%EC%9E%AC%ED%98%84_%EC%B2%98%EB%B0%A9%EB%B9%84%EA%B5%90.md)
