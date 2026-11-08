@@ -1,59 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="468" viewBox="0 0 640 468" role="img" aria-labelledby="title desc">
-  <title id="title">알림 발송 구조와 가상 스레드 실험 경로</title>
-  <desc id="desc">운영의 분리 전과 후, 그리고 실험에서 비교한 JDBC 포함 요청과 대기 전용 요청을 보여준다.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 392" width="720" height="392" role="img" aria-labelledby="title desc">
+  <title id="title">가상 스레드 실험 아키텍처</title>
+  <desc id="desc">부하 생성기가 Spring Boot 앱으로 HTTP 요청을 보낸다. 앱은 플랫폼 스레드와 가상 스레드 중 하나로 실행한다. /sleep은 앱 안에서 50ms 대기한다. /send는 앱 안의 Connector/J를 통해 별도 MySQL 서버에서 조회하고 50ms 대기한 뒤 다시 MySQL을 갱신한다.</desc>
   <defs>
-    <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" orient="auto">
-      <path d="M0 0 8 4 0 8Z" fill="#52657b"/>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="m1 1 7 4-7 4" fill="none" stroke="#526174" stroke-width="1.6" stroke-linejoin="round"/>
     </marker>
   </defs>
-  <rect width="640" height="468" rx="16" fill="#f8fafc"/>
-  <g fill="#182c40" font-family="system-ui, sans-serif">
-    <text x="24" y="40" font-size="24" font-weight="700">운영 알림 발송</text>
-    <text x="24" y="88" font-size="17" font-weight="600">분리 전</text>
-    <text x="24" y="153" font-size="17" font-weight="600">분리 후</text>
-    <g fill="#e9f1fb" stroke="#94afcc">
-      <rect x="100" y="60" width="234" height="44" rx="8"/>
-      <rect x="100" y="125" width="112" height="44" rx="8"/>
-      <rect x="232" y="125" width="111" height="44" rx="8"/>
-      <rect x="363" y="125" width="112" height="44" rx="8"/>
-      <rect x="495" y="125" width="121" height="44" rx="8"/>
-      <rect x="495" y="60" width="121" height="44" rx="8"/>
+  <rect width="720" height="392" rx="18" fill="#f7fafc"/>
+  <g font-family="system-ui, Apple SD Gothic Neo, Malgun Gothic, sans-serif" fill="#172f42">
+    <text x="25" y="41" font-size="24" font-weight="700">가상 스레드 실험 아키텍처</text>
+
+    <rect x="230" y="65" width="290" height="293" rx="15" fill="#e8f2fa" stroke="#9ab8ce"/>
+    <g transform="translate(252 89)" fill="none" stroke="#246b8f" stroke-width="2.5">
+      <rect width="29" height="22" rx="4"/>
+      <path d="M0 7h29m-23 7h5"/>
     </g>
-    <g font-size="16" text-anchor="middle">
-      <text x="217" y="88">메인 서버에서 발송</text>
-      <text x="555" y="88">외부 채널 API</text>
-      <text x="156" y="153">메인 서버</text>
-      <text x="287" y="153">RabbitMQ</text>
-      <text x="419" y="153">발송 서버</text>
-      <text x="555" y="153">외부 채널 API</text>
-      <text x="491" y="194" fill="#415972">가상 스레드로 동시 호출</text>
+    <text x="292" y="107" font-size="21" font-weight="700">Spring Boot 앱</text>
+    <text x="252" y="135" font-size="16">1 vCPU · 1 GiB</text>
+    <text x="252" y="159" font-size="16">플랫폼 스레드 / 가상 스레드</text>
+
+    <rect x="250" y="178" width="248" height="48" rx="8" fill="#fff"/>
+    <rect x="250" y="238" width="248" height="103" rx="8" fill="#fff"/>
+    <text x="264" y="208" font-size="18" font-weight="700">/sleep</text>
+    <text x="346" y="208" font-size="17">50ms 대기</text>
+    <text x="264" y="266" font-size="18" font-weight="700">/send</text>
+    <text x="264" y="291" font-size="16">조회 → 50ms 대기 → 갱신</text>
+    <text x="264" y="318" font-size="16" fill="#245c79" font-weight="650">Connector/J · JDBC 드라이버</text>
+
+    <g transform="translate(57 160)" stroke="#246b8f" stroke-width="2.5" fill="#dceef9">
+      <rect width="65" height="43" rx="6"/>
+      <path d="m12 30 12-12 8 8 16-13m-26 37h22m-11-7v7" fill="none"/>
     </g>
-    <path d="M419 169v10h22" stroke="#94afcc" fill="none"/>
-    <path d="M24 218H616" stroke="#c4d1dd"/>
-    <text x="24" y="253" font-size="24" font-weight="700">실험 앱의 요청 경로</text>
-    <text x="24" y="282" font-size="17" fill="#415972">1 vCPU · 1 GiB / 플랫폼 스레드와 가상 스레드 비교</text>
-    <text x="24" y="337" font-size="17" font-weight="600">/send</text>
-    <text x="24" y="404" font-size="17" font-weight="600">/sleep</text>
-    <g fill="#e9f1fb" stroke="#94afcc">
-      <rect x="100" y="309" width="144" height="44" rx="8"/>
-      <rect x="260" y="309" width="170" height="44" rx="8" fill="#fef3dc" stroke="#d5b576"/>
-      <rect x="446" y="309" width="170" height="44" rx="8"/>
-      <rect x="260" y="376" width="170" height="44" rx="8" fill="#fef3dc" stroke="#d5b576"/>
+    <text x="89" y="235" font-size="19" text-anchor="middle" font-weight="700">부하 생성기</text>
+    <path d="M134 194h90" stroke="#526174" stroke-width="1.8" marker-end="url(#arrow)"/>
+    <text x="178" y="218" font-size="14" text-anchor="middle">HTTP 요청</text>
+
+    <g transform="translate(620 262)" stroke="#246b8f" stroke-width="2.5" fill="#dceef9">
+      <path d="M0 10v34c0 14 55 14 55 0V10"/>
+      <ellipse cx="27.5" cy="10" rx="27.5" ry="10"/>
+      <path d="M0 27c0 14 55 14 55 0" fill="none"/>
     </g>
-    <g font-size="17" text-anchor="middle">
-      <text x="172" y="337">JDBC 대상 조회</text>
-      <text x="345" y="337">50ms 대기</text>
-      <text x="531" y="337">JDBC 결과 갱신</text>
-      <text x="345" y="404">50ms 대기</text>
+    <text x="647" y="338" font-size="19" text-anchor="middle" font-weight="700">MySQL</text>
+    <text x="647" y="360" font-size="15" text-anchor="middle">별도 컨테이너</text>
+    <path d="M499 312h114" stroke="#526174" stroke-width="1.8" marker-end="url(#arrow)"/>
+    <text x="565" y="337" font-size="14" text-anchor="middle">SQL 실행</text>
+
+    <g fill="#357a35">
+      <circle cx="178" cy="171" r="13"/>
+      <circle cx="481" cy="87" r="13"/>
+      <circle cx="565" cy="289" r="13"/>
     </g>
-    <text x="24" y="446" font-size="16" fill="#415972">50ms 대기는 외부 채널 API 응답을 대신한다.</text>
-  </g>
-  <g stroke="#52657b" fill="none" marker-end="url(#arrow)">
-    <path d="M334 82H487"/>
-    <path d="M212 147H226"/>
-    <path d="M343 147H357"/>
-    <path d="M475 147H489"/>
-    <path d="M244 331H255"/>
-    <path d="M430 331H441"/>
+    <g fill="#fff" font-size="15" font-weight="700" text-anchor="middle">
+      <text x="178" y="176">1</text>
+      <text x="481" y="92">2</text>
+      <text x="565" y="294">3</text>
+    </g>
   </g>
 </svg>
