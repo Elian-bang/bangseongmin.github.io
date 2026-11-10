@@ -1,0 +1,106 @@
+---
+title: "4주차 · 계획만 더했을 때 꾸준히 개선된 문항은 하나였다"
+kind: "article"
+layout: null
+permalink: "/text-to-sql/pages/a3-repeat.html"
+published_on: "2026-11-10"
+section: "Text-to-SQL"
+category: "Text-to-SQL"
+---
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="계획 호출과 SQL 지시문을 따로 바꿔 반복했다. 시간 초과와 행·열 오류가 다음 가설의 출발점이 됐다.">
+  <title>4주차 · 계획만 더했을 때 꾸준히 개선된 문항은 하나였다 | Text-to-SQL</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="series">
+<main>
+<nav class="breadcrumb" aria-label="현재 위치"><a href="../weekly.html">← Text-to-SQL 시리즈 목차</a></nav>
+<nav class="series-nav" aria-label="주차별 글"><ol>
+<li><a href="olist-questions.html">1주차</a></li>
+<li><a href="benchmark-design.html">2주차</a></li>
+<li><a href="a3-design.html">3주차</a></li>
+<li><a href="a3-repeat.html" aria-current="page">4주차</a></li>
+<li><a href="a3-output-instruction.html">5주차</a></li>
+</ol></nav>
+<article>
+<header>
+  <p class="kicker">Text-to-SQL · 4주차 · 방성민</p>
+  <h1>계획만 더했을 때 꾸준히 개선된 문항은 하나였다</h1>
+  <p class="period">작업 기록 · 2026년 11월 1–4일</p>
+</header>
+<div class="article-body">
+<p>3주차에 SQL을 바로 쓰는 E0와 먼저 계획을 쓰는 A3를 한 번씩 실행했다. 둘 다 30문항 중 23개를 맞혔지만, A3에서 새로 맞힌 문항과 새로 틀린 문항이 각각 세 개였다. 4주차에는 같은 문항을 다시 풀었을 때도 그 차이가 남는지 보고 싶었다. 여러 계획 지시문을 시험하면서 SQL 생성 지시문까지 바뀐 상태였으므로, 두 변경을 분리하는 비교부터 설계했다.</p>
+<h2>계획 호출과 SQL 지시문을 따로 비교했다</h2>
+<p>먼저 기존 E0와 A3 사이에 C1이라는 조건을 넣었다. E0는 기본 SQL 지시문을 받아 바로 SQL을 쓴다. C1도 바로 SQL을 쓰되 A3용 SQL 지시문을 받는다. A3는 C1과 같은 SQL 지시문을 받으면서, 그 앞에 다섯 항목의 풀이 계획을 생성하는 호출이 붙는다. E0에서 C1로 넘어갈 때는 SQL 지시문이 바뀌고, C1에서 A3로 넘어갈 때는 계획 호출이 추가된다.</p>
+<p>Olist v0.2의 같은 30문항, DB, 스키마를 두고 <code>gpt-6-luna</code>의 중간 추론 설정, Codex CLI 0.166.0, SQL 실행 제한 10초를 공통으로 사용했다. 매 회차 E0 → C1 → A3 순으로 실행했고 세 회차를 마쳤다. 이때부터 총점과 함께 문항마다 세 번 중 몇 번을 맞혔는지 기록했다.</p>
+<figure>
+  <img src="../figures/04-repeat-scores.svg" width="660" height="444" alt="Olist v0.2의 회차별 정답 수. E0는 21, 24, 26이고 평균 23.7이다. C1은 25, 26, 22이고 평균 24.3이다. A3는 26, 27, 25이고 평균 26.0이다.">
+  <figcaption>그림 1. 조건마다 같은 30문항을 세 번 실행했다. 점은 회차별 정답 수, 세로선은 평균이다. 가로축은 관측값이 모인 20~30점 구간을 보여 준다.</figcaption>
+</figure>
+
+<div class="table-scroll" role="region" tabindex="0" aria-label="비교 결과 표"><table>
+<thead>
+<tr>
+<th>조건</th>
+<th>계획 호출</th>
+<th>SQL 지시문</th>
+<th align="right">1회</th>
+<th align="right">2회</th>
+<th align="right">3회</th>
+<th align="right">평균 /30</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>E0</td>
+<td>없음</td>
+<td>기본</td>
+<td align="right">21</td>
+<td align="right">24</td>
+<td align="right">26</td>
+<td align="right">23.7</td>
+</tr>
+<tr>
+<td>C1</td>
+<td>없음</td>
+<td>A3용</td>
+<td align="right">25</td>
+<td align="right">26</td>
+<td align="right">22</td>
+<td align="right">24.3</td>
+</tr>
+<tr>
+<td>A3</td>
+<td>있음</td>
+<td>A3용</td>
+<td align="right">26</td>
+<td align="right">27</td>
+<td align="right">25</td>
+<td align="right">26.0</td>
+</tr>
+</tbody></table></div>
+<p>판정 기준은 실행 전에 정했다. 같은 문항의 정답 횟수가 두 번 이상 늘면 개선, 두 번 이상 줄면 악화로 셌다. 예를 들어 1/3에서 3/3이 되면 개선이고, 2/3에서 3/3이 되면 한 번의 차이로 남긴다. 개선 문항 수에서 악화 문항 수를 뺀 값이 +2 이상이면 탐색 기준을 충족한다고 정했다.</p>
+<p>E0와 A3를 비교하면 판매자 ID가 빠진 <code>bird-012</code>와 중간 계산 열까지 반환한 <code>js-002</code>가 일관되게 개선됐고, 일관되게 악화된 문항은 없었다. 이 비교에는 계획 호출과 SQL 지시문 두 변경이 들어 있다. 같은 SQL 지시문을 쓴 C1과 A3에서는 평균이 24.3에서 26.0으로 올랐다. 일관되게 개선된 문항은 <code>bird-012</code> 하나, 악화된 문항은 0개였다. 계획만의 효과는 사전에 정한 문항별 기준에 따라 판단을 보류했다.</p>
+<h2>기본 SQL 지시문을 양쪽에 써서 다시 비교했다</h2>
+<p>위 실험과 별도로, 이번에는 E0와 A3의 SQL 생성 지시문을 기본 지시문으로 통일했다. Olist v0.2의 30문항을 조건마다 세 번 실행했고, 실제 호출에서 두 조건의 SQL 지시문 해시가 같은지도 확인했다. 각 회차 E0의 정답 수는 26·23·25개, A3는 24·28·26개였다. E0의 평균은 24.7개, A3는 26.0개였다. E0 자체가 23개에서 26개까지 흔들렸고 실행 순서도 E0 → A3로 고정돼 있었다. 이 차이를 읽을 때는 평균과 함께 어떤 문항이 반복해서 달라졌는지를 봤다.</p>
+<p><code>bird-012</code>는 E0에서 1/3, A3에서 3/3을 맞혔다. 2017년 매출 상위 판매자 다섯 명을 보여 주는 문항이다. E0는 두 번 판매자 ID를 빼고 주·매출·주문 수만 반환했다. A3는 계획에 판매자 ID를 적었고 SQL에서도 네 열을 반환했다. 같은 비교에서 시간 초과는 두 조건 모두 8건, SQL 실행 오류는 모두 3건이었다. 차이가 난 곳은 주로 결과의 열과 값이었다. 그래도 사전에 정한 기준을 충족한 개선은 한 문항이라 이 비교 역시 판단을 보류했다.</p>
+<p>계획을 추가하는 데 드는 비용도 기록했다. 30문항당 모델 호출은 30회에서 60회, 회차당 평균 토큰은 약 24.3만에서 50.9만으로 늘었다. 실행 기록의 문항별 시간 합계 평균은 213.6초에서 435.2초로 늘었다. 두 비교에서 공통으로 눈에 띈 것은 판매자 ID를 빠뜨리는 오류였다. 어떤 지시가 그 차이를 만들었는지는 다음 실험에서 분리할 문제로 남겼다.</p>
+<h2>오류는 계획, SQL, 실행 중 어디서 생겼나</h2>
+<p>위 반복 비교와 별도로 모아 둔 A3 탐색 실행 여섯 건에서 실패 34건의 질문, 계획, SQL을 나란히 읽었다. 시간 초과가 22건으로 가장 많았다. 계획 오류 5건, 계획을 SQL로 옮기는 과정의 오류 5건, 출력 형태 불일치 1건, 분류 보류 1건이었다.</p>
+<p>예를 들어 <code>kmk-003</code>에서 계획은 2017년 같은 달과 연결하라고 썼다. SQL은 <code>LEAD(..., 12)</code>로 열두 행 뒤의 값을 가져왔다. 결과에 모든 월의 행이 연속해서 들어 있지 않았기 때문에, 열두 행을 건너뛰는 것과 같은 달을 연결하는 것은 다른 연산이었다. 이 경우는 계획보다 SQL로 옮긴 구간을 먼저 봐야 했다. 다른 실행의 <code>bird-012</code>에서는 판매자 ID가 계획의 출력 목록에서 이미 빠졌고, SQL에도 그 열이 없었다. 여기서는 계획이 질문의 출력 조건을 어떻게 해석했는지부터 볼 수 있었다. <a href="https://www.sqlite.org/windowfunctions.html">SQLite 윈도 함수</a></p>
+<p>시간 초과는 실행 결과가 돌아오지 않으므로 값의 정오를 바로 가릴 수 없었다. 일부 SQL은 색인을 추가한 DB 사본에서 120초 제한으로 다시 실행했다. 기본 지시문을 맞춘 비교의 <code>hjy-001</code>은 원래 10초 제한에서 두 조건 모두 세 번 중 한 번만 맞혔지만, 보충 진단에서는 여섯 실행 모두 정답과 일치했다. 이 재채점은 시간 제한과 DB를 바꾼 진단으로 기록하고, 원본 DB에서 얻은 공식 점수와 분리했다.</p>
+<h2>결과의 한 행과 느린 실행을 다음 질문으로 남겼다</h2>
+<p>다시 비교할 수 있게 팀 실행기 커밋과 평가셋·스키마·DB 해시를 기록했다. 프롬프트도 버전과 해시를 남겨 실행 전에는 <code>check</code>로 조건을 확인하고, 실행 뒤에는 <code>compare</code>로 결과 파일의 환경과 지시문을 대조했다. 별도로 DB 생성에서 프롬프트 조립, SQL 실행, 평가까지 이어지는 최소 구현을 정리하고 토큰, 임베딩, 어텐션, 디코딩은 장별 실습과 함께 교재에 담았다.</p>
+<p><code>js-002</code>에서 기대한 결과는 기준일 한 행과 네 열이었다. 한 실행은 증감폭을 계산하는 데 사용한 비교일의 비율 세 개까지 함께 반환해 일곱 열이 됐다. 다음에는 계획에 답의 행 단위와 출력 열만 적게 하는 한 줄을 따로 시험해 보기로 했다. 동시에 시간 초과가 가장 많은 실패였으므로, 실행이 멈춘 뒤 모델에 어떤 단서를 줄 수 있을지도 5주차에서 살펴봤다.</p>
+</div>
+</article>
+<footer>
+<nav class="post-nav" aria-label="앞뒤 글"><a rel="prev" href="a3-design.html"><small>← 3주차</small><span>신규 고객을 찾기 전에 1분기로 자르면</span></a><a rel="next" href="a3-output-instruction.html"><small>5주차 →</small><span>SQL이 내놓을 한 행을 먼저 정하면 오답이 줄까?</span></a></nav>
+<p><a href="../weekly.html">시리즈 목차로</a></p>
+</footer>
+</main>
+</body>
+</html>

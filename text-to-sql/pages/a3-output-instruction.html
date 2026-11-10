@@ -1,0 +1,139 @@
+---
+title: "5주차 · SQL이 내놓을 한 행을 먼저 정하면 오답이 줄까?"
+kind: "article"
+layout: null
+permalink: "/text-to-sql/pages/a3-output-instruction.html"
+published_on: "2026-11-10"
+section: "Text-to-SQL"
+category: "Text-to-SQL"
+---
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="결과의 한 행과 열을 먼저 적는 지시를 시험했다. SQL이 멈춘 뒤에는 SQLite 실행 계획을 단서로 줬다.">
+  <title>5주차 · SQL이 내놓을 한 행을 먼저 정하면 오답이 줄까? | Text-to-SQL</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="series">
+<main>
+<nav class="breadcrumb" aria-label="현재 위치"><a href="../weekly.html">← Text-to-SQL 시리즈 목차</a></nav>
+<nav class="series-nav" aria-label="주차별 글"><ol>
+<li><a href="olist-questions.html">1주차</a></li>
+<li><a href="benchmark-design.html">2주차</a></li>
+<li><a href="a3-design.html">3주차</a></li>
+<li><a href="a3-repeat.html">4주차</a></li>
+<li><a href="a3-output-instruction.html" aria-current="page">5주차</a></li>
+</ol></nav>
+<article>
+<header>
+  <p class="kicker">Text-to-SQL · 5주차 · 방성민</p>
+  <h1>SQL이 내놓을 한 행을 먼저 정하면 오답이 줄까?</h1>
+  <p class="period">작업 기록 · 2026년 11월 5–10일</p>
+</header>
+<div class="article-body">
+<p>7월 15일의 불만 리뷰 비율과 전일·전월·전년 대비 증감폭을 구하는 문제를 풀었는데, SQL은 일곱 열을 반환했다. 채점기가 기대한 결과는 기준일 한 행에 비율 하나와 증감폭 세 개를 담은 네 열이었다. 증감폭을 구할 때 쓴 비교일 비율 세 개가 답에 섞여 있었다. 5주차에는 모델이 SQL을 쓰기 전에 <strong>결과의 한 행이 무엇을 뜻하고 어떤 열이 필요한지</strong> 적게 하면 이런 오류가 줄어드는지 확인했다.</p>
+<h2>4주차의 다섯 항목에서 최종 출력 한 줄만 남겼다</h2>
+<p>4주차에 SQL을 바로 만드는 E0와 풀이 계획을 거치는 A3를 비교했다. 두 방식에서 모델이 받은 SQL 작성 지시문도 달랐다. 그래서 A3에서 더 자주 맞힌 문항이 생겨도 계획을 쓰게 한 덕분인지, SQL 지시문이 달라서인지 가르기 어려웠다. SQL 지시문을 맞춘 비교에서도 계획 단계만의 효과는 판단을 보류했다.</p>
+<p>다섯 항목으로 계획을 쓰게 했던 개인 프롬프트에서 최종 출력 항목만 따로 떼어 냈다. 대조군 A는 질문·문항 조건·스키마를 읽고 자유롭게 계획을 쓴다. B는 같은 요청에 “한 행이 나타내는 의미와 필요한 출력 항목을 적는다”를 한 줄 덧붙인다. 두 조건에서 두 번째 호출은 원래 입력과 각자의 계획을 받아 같은 지시문으로 SQL을 작성했다.</p>
+<p>Tai 등의 논문을 읽으면서 중간 문제의 단위가 최종 출력까지 이어져 엉뚱한 열을 반환하는 사례를 봤다. 내 실험의 <code>js-002</code>도 비교일 비율을 중간에 계산해야 한다. 결과에서 보고 싶은 것은 기준일 비율과 증감폭이다. 그래서 전체 정답 수와 함께, 따로 정한 세 문항에서 계획과 SQL이 최종 출력의 행과 열을 지키는지 확인했다. 판매자별 매출 문항 <code>bird-012</code>에서는 판매자 한 명당 한 행과 판매자 ID를, <code>bird-016</code>에서는 리뷰 점수별 집계가 최종 결과에도 유지되는지를 봤다. <a href="https://aclanthology.org/2023.emnlp-main.327/">Tai 외, <em>Exploring Chain of Thought Style Prompting for Text-to-SQL</em></a></p>
+<h2>정답은 네 번 늘었고, 확인하려던 행·열 오류는 그대로였다</h2>
+<p>Olist v0.3의 49문항을 같은 DB와 스키마에서 조건당 세 번 풀었다. 모델은 <code>gpt-6-luna</code>의 <code>medium</code> 설정, Codex CLI는 <code>0.166.0</code>으로 맞췄다. SQL 실행 한도는 10초와 1,000행이었다. 실행 순서는 A→B, B→A, A→B로 정하고, 첫 호출의 문항별 입력 해시와 두 번째 호출의 SQL 지시문 해시가 양쪽에서 일치하는지 확인했다.</p>
+<div class="table-scroll" role="region" tabindex="0" aria-label="비교 결과 표"><table>
+<thead>
+<tr>
+<th>실행</th>
+<th align="right">A · 자유 계획</th>
+<th align="right">B · 출력 지시 한 줄 추가</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1회차</td>
+<td align="right">38/49</td>
+<td align="right">40/49</td>
+</tr>
+<tr>
+<td>2회차</td>
+<td align="right">40/49</td>
+<td align="right">38/49</td>
+</tr>
+<tr>
+<td>3회차</td>
+<td align="right">39/49</td>
+<td align="right">43/49</td>
+</tr>
+<tr>
+<td>세 회차 합계</td>
+<td align="right">117/147</td>
+<td align="right">121/147</td>
+</tr>
+</tbody></table></div>
+<p>전체 정답은 네 번 늘었지만 두 번째 실행은 A가 앞섰다. 세 번 중 정답 횟수가 두 번 이상 늘거나 줄었을 때만 문항이 개선 또는 악화됐다고 셌다. B에서는 개선 2문항과 악화 1문항이 나와 순증이 +1이었다. 실험 전에 정한 기준은 +2 이상이었고, 표적으로 삼은 행·열 오류도 줄어야 했다.</p>
+<p>과거에 일곱 열을 반환했던 <code>js-002</code>는 이번에 A와 B 모두 세 번 맞혔다. 판매자 ID와 리뷰 점수별 집계를 보려던 두 문항도 두 조건 모두 3/3이었다. 전체 147회 시도에서 열 개수 불일치는 각각 0건, 행 개수 불일치는 각각 1건이었다. 공식 채점에서 B가 더 맞힌 네 건은 값 불일치가 세 건, 시간 초과 외 실행 실패가 한 건 줄어든 차이다. 어느 쪽에서 출력 오류가 줄었다고 볼 근거가 없어, 한 줄의 효과는 판단을 보류했다.</p>
+<h2>어떤 계획을 고를지는 무엇을 세느냐에 달렸다</h2>
+<p>한 줄 실험과 별도로 계획 형식 다섯 가지를 실행했다. D에서는 질문을 여러 하위 질문으로 나누고 각 질문의 역할을 적게 했다. E에서는 하위 질문마다 어떤 테이블과 열이 필요한지도 적게 했다. 논문의 QDecomp와 InterCOL을 읽고, 질문을 어떻게 나누는지와 각 부분을 스키마에 어떻게 연결하는지를 두 조건으로 나눠 본 것이다. 두 방식 모두 첫 호출에서 자연어 계획을 만들고 두 번째 호출에서 SQL 하나를 생성했다.</p>
+<p><strong>계획 방식 다섯 가지 비교 · 위의 한 줄 실험과 별도 실행</strong></p>
+<div class="table-scroll" role="region" tabindex="0" aria-label="비교 결과 표"><table>
+<thead>
+<tr>
+<th>계획 방식</th>
+<th align="right">Olist 전체 정답 (49문항 × 3회)</th>
+<th align="right">Olist에서 3회 모두 맞힌 문항</th>
+<th align="right">BIRD 재채점 정답 (조건당 1회 생성)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A · 자유 계획</td>
+<td align="right">114/147</td>
+<td align="right">34/49</td>
+<td align="right">246/500</td>
+</tr>
+<tr>
+<td>B · 자유 계획에 출력 지시 한 줄 추가</td>
+<td align="right">122/147</td>
+<td align="right">37/49</td>
+<td align="right">231/500</td>
+</tr>
+<tr>
+<td>C · 다섯 항목으로 계획</td>
+<td align="right">118/147</td>
+<td align="right">35/49</td>
+<td align="right">230/500</td>
+</tr>
+<tr>
+<td>D · 하위 질문으로 분해</td>
+<td align="right">109/147</td>
+<td align="right">30/49</td>
+<td align="right">233/500</td>
+</tr>
+<tr>
+<td>E · 하위 질문마다 테이블과 열 연결</td>
+<td align="right">124/147</td>
+<td align="right">35/49</td>
+<td align="right">216/500</td>
+</tr>
+</tbody></table></div>
+<p>Olist에서 전체 정답 수는 E가 가장 많았다. 매번 같은 문항을 맞히는지로 보면 B가 앞섰다. 결과를 본 뒤 후속 실험에서는 세 번 모두 맞힌 문항을 기준으로 B를 골랐다. 두 방식은 전체 시도에서 정답을 두 건 더 내는 것과, 세 번 연속 맞히는 문항을 두 개 더 확보하는 것 사이에서 갈렸다.</p>
+<p>BIRD Mini-Dev SQLite 500문항은 조건마다 SQL을 한 번 생성했다. 최초 채점에서는 <code>card_games</code> DB를 여는 오류가 나서, 생성한 SQL을 그대로 두고 공통 읽기 전용 경로에서 SQL당 30초 제한으로 재채점했다. DB 열기 오류가 0건이 된 뒤에는 자유 계획 A가 246/500으로 가장 많이 맞혔다. 이 점수로 Olist에서 골랐던 B를 다른 평가셋에도 적용할 근거를 삼기는 어려웠다. <a href="https://github.com/bird-bench/mini_dev">BIRD Mini-Dev 공식 저장소</a></p>
+<p>Olist에서 같은 CLI로 SQL을 바로 쓰는 E0와 B를 비교하자 각각 122/147이었다. 모델 호출은 E0 147회, B 294회였다. 판매자 ID를 빼먹은 <code>bird-012</code>는 E0가 0/3, B가 3/3이었다. 반대로 판매자 수에 따른 배송비를 묻는 <code>hard-017</code>은 E0가 3/3, B는 두 번의 실행에서 집계 대상을 배송일이 있는 주문으로 좁혀 1/3이었다. 출력에 필요한 열을 챙기는 것과 집계할 대상을 유지하는 것이 서로 다른 문제임을 보여 준 사례다.</p>
+<h2>시간 초과한 첫 SQL에 SQLite 실행 계획을 붙였다</h2>
+<p>4주차에 분류한 오답 34건 중 22건은 시간 초과였다. SQL을 쓰기 전에 모델이 적는 풀이 계획은 어떤 대상을 세고 무엇을 반환할지를 정리한다. 실행이 멈춘 SQL을 볼 때는 SQLite가 만든 실행 계획을 참고했다. <code>EXPLAIN QUERY PLAN</code>의 <code>SCAN</code>과 <code>SEARCH</code>는 테이블을 읽는 방식을 보여 주고, <code>CORRELATED SCALAR SUBQUERY</code>는 바깥 쿼리의 행에 따라 다시 평가되는 하위 쿼리를 보여 준다. 그 한 줄을 재시도에 더하면 모델이 같은 실행 구조를 반복하는 일을 줄일 수 있을지 보고 싶었다. <a href="https://www.sqlite.org/eqp.html">SQLite 실행 계획 문서</a></p>
+<p>방식 B로 생성한 첫 SQL 중 시간 초과한 시도를 골랐다. 기본 재시도에는 실패 SQL과 오류 메시지를 넣고 한 번 다시 생성하게 했다. 단서를 더한 재시도에는 같은 입력에 SQLite 실행 계획에서 추린 한 줄을 추가했다. 처음 시간 초과한 시도에서 얼마나 더 맞혔는지, 다시 시간 초과한 건이 늘었는지, 전체 채점 점수가 어떻게 달라졌는지를 따로 셌다.</p>
+<p>Olist의 첫 회차 <code>hjy-001</code>은 두 재시도가 어떻게 달라지는지 보여 준다. 첫 SQL은 <code>EXISTS</code> 안에서 바깥 쿼리의 고객과 첫 구매 시각을 참조했다. 실행 계획에는 <code>CORRELATED SCALAR SUBQUERY 5</code>가 있었다. 기본 재시도에서 다시 작성한 SQL도 시간 초과했다. 단서를 받은 모델은 <code>EXISTS</code>를 조인으로 바꾸고 재구매 고객을 별도 중간 결과로 만들었다. SQL은 끝까지 실행됐지만, 정답 한 행 대신 37행을 반환해 오답이었다. 시간 안에 끝난 SQL도 결과가 질문의 단위를 지키는지 확인해야 했다.</p>
+<figure>
+  <img src="../figures/05-timeout-retry.svg" width="660" height="472" alt="기본 재시도와 실행 계획 단서를 더한 재시도가 맞힌 건수. Olist는 12건 중 3건과 5건, BIRD는 27건 중 14건과 17건을 맞혔다.">
+  <figcaption>Olist 49문항과 BIRD 500문항을 각각 세 번 풀었다. 그래프의 분모는 처음 만든 SQL이 시간 초과한 시도 수다.</figcaption>
+</figure>
+
+<p>전체 채점에서도 실행 계획 단서를 더했을 때 Olist는 <strong>125/147 → 127/147</strong>, BIRD는 <strong>729/1,500 → 732/1,500</strong>이었다. 다시 시간 초과한 건은 각각 9건에서 5건, 5건에서 1건으로 줄었다.</p>
+<p>비용을 줄이는 방향도 함께 시험했다. Olist에서 일부 질문에만 풀이 계획을 쓰게 하니 모델 호출은 294회에서 192회로 줄었고, 정답은 122/147에서 120/147로 줄었다. SQL을 쓸 때 넘기는 스키마를 선별한 비교에서도 입력 토큰과 정답 수가 함께 줄었다. 반대로 재시도는 처음 실행의 대기 시간이 이미 발생한 뒤 모델을 한 번 더 부르는 선택이다. 다음에는 계획 없이 만든 E0의 같은 첫 SQL을 두 재시도에 넣어 정답과 시간 초과의 차이가 다시 나오는지, 추가 호출에 얼마나 많은 토큰과 시간이 드는지 비교하기로 했다.</p>
+</div>
+</article>
+<footer>
+<nav class="post-nav" aria-label="앞뒤 글"><a rel="prev" href="a3-repeat.html"><small>← 4주차</small><span>계획만 더했을 때 꾸준히 개선된 문항은 하나였다</span></a></nav>
+<p><a href="../weekly.html">시리즈 목차로</a></p>
+</footer>
+</main>
+</body>
+</html>
