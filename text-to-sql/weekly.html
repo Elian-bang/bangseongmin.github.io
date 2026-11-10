@@ -8,7 +8,7 @@ permalink: "/text-to-sql/weekly.html"
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Olist 데이터로 답할 수 있는 질문을 만드는 일에서 시작했다. 질문을 팀 JSON 형식으로 다듬고, LLM이 스키마를 보고 정답에 이르는 SQL을 만들 수 있는지 확인했다. 이어서 E0에서 바꿔 볼 모델과 방법을 시험해 A3를 골랐다. Olist v0.2에서 A3를 본격적으로 실행한 뒤, 논문에서 읽은 방법을 더해 Olist v0.3와 BIRD Mini-Dev까지 비교를 넓혔다.">
+  <meta name="description" content="Olist에서 답할 수 있는 질문을 만들다가, 같은 질문을 모델이 다르게 읽는 장면을 만났다. 모델과 입력을 바꿔 보니 같은 점수도 서로 다른 실패를 숨겼다. 다섯 편은 그때마다 무엇을 다시 확인했는지, 그리고 그 결과가 다음 실험을 어떻게 바꿨는지를 따라간다.">
   <title>Text-to-SQL 스터디 1–5주차</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -19,33 +19,33 @@ permalink: "/text-to-sql/weekly.html"
   <p class="kicker">방성민 · 2026년 10–11월</p>
   <h1>Text-to-SQL 스터디 1–5주차</h1>
 </header>
-<p class="series-intro">Olist 데이터로 답할 수 있는 질문을 만드는 일에서 시작했다. 질문을 팀 JSON 형식으로 다듬고, LLM이 스키마를 보고 정답에 이르는 SQL을 만들 수 있는지 확인했다. 이어서 E0에서 바꿔 볼 모델과 방법을 시험해 A3를 골랐다. Olist v0.2에서 A3를 본격적으로 실행한 뒤, 논문에서 읽은 방법을 더해 Olist v0.3와 BIRD Mini-Dev까지 비교를 넓혔다.</p>
+<p class="series-intro">Olist에서 답할 수 있는 질문을 만들다가, 같은 질문을 모델이 다르게 읽는 장면을 만났다. 모델과 입력을 바꿔 보니 같은 점수도 서로 다른 실패를 숨겼다. 다섯 편은 그때마다 무엇을 다시 확인했는지, 그리고 그 결과가 다음 실험을 어떻게 바꿨는지를 따라간다.</p>
 <nav aria-label="Text-to-SQL 주차별 글">
 <ol class="series-list">
 <li id="week-1">
   <p class="kicker">1주차 · 10월 6–18일</p>
   <h2><a href="pages/olist-questions.html">Olist 데이터를 바탕으로 질문 만들기</a></h2>
-  <p>업무 질문을 Olist 데이터에 옮기며 필요한 테이블과 조건을 확인하고, 제출할 질문 세 개를 만들었다.</p>
+  <p>구매 고객의 유입 채널을 찾다가 막혔다. Olist로 답할 수 있는 질문을 가려 내면서 제출본이 바뀌었다.</p>
 </li>
 <li id="week-2">
   <p class="kicker">2주차 · 10월 19–26일</p>
   <h2><a href="pages/benchmark-design.html">질문을 팀 JSON 문항으로 다듬고 LLM으로 검증하기</a></h2>
-  <p>질문의 모호한 기준을 보완해 팀 JSON 형식으로 옮기고, LLM이 질문과 스키마로 SQL을 만들 수 있는지 시험했다.</p>
+  <p>모델이 ‘다음 날 이후’에서 다음 날을 빼고 셌다. 팀 JSON에 기준을 적고 질문을 다시 시험했다.</p>
 </li>
 <li id="week-3">
   <p class="kicker">3주차 · 10월 26–30일</p>
   <h2><a href="pages/a3-design.html">E0에서 무엇을 바꿀까? 모델과 방법을 시험하고 A3를 고르기까지</a></h2>
-  <p>E0에서 모델과 예제·사전·검색 등을 바꿔 본 뒤, SQL을 쓰기 전에 계획을 만드는 A3를 맡았다.</p>
+  <p>두 모델이 똑같이 2/4를 맞혔지만 실패한 이유는 달랐다. E0에서 무엇을 바꿀지 시험하며 A3로 좁혔다.</p>
 </li>
 <li id="week-4">
   <p class="kicker">4주차 · 10월 31일–11월 4일</p>
   <h2><a href="pages/a3-repeat.html">Olist v0.2에서 A3를 본격적으로 실험하기</a></h2>
-  <p>맡은 A3를 Olist v0.2 30문항에서 실행하고, 계획 지시문과 SQL 지시문을 바꿔 반복 비교했다.</p>
+  <p>같은 여섯 칸 계획을 다시 실행하자 23/30이 26/30이 됐다. 지시문을 고치기 전에 무엇이 달라졌는지부터 추적했다.</p>
 </li>
 <li id="week-5">
   <p class="kicker">5주차 · 11월 5–10일</p>
   <h2><a href="pages/a3-output-instruction.html">A3를 더 깊게 파보기 · Olist 49문항과 BIRD 500문항</a></h2>
-  <p>논문의 질문 분해와 스키마 연결을 A3에 적용하고, Olist v0.3 49문항과 BIRD Mini-Dev 500문항에서 비교했다.</p>
+  <p>Olist와 BIRD에서 앞선 계획 방식이 달랐다. 논문에서 가져온 분해·스키마 연결을 시험하고, 언제 계획을 쓰거나 SQL을 다시 만들지 살폈다.</p>
 </li>
 </ol>
 </nav>

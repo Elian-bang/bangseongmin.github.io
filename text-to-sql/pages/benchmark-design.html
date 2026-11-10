@@ -12,7 +12,7 @@ category: "Text-to-SQL"
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="질문의 모호한 기준을 보완해 팀 JSON 형식으로 옮기고, LLM이 질문과 스키마로 SQL을 만들 수 있는지 시험했다.">
+  <meta name="description" content="모델이 ‘다음 날 이후’에서 다음 날을 빼고 셌다. 팀 JSON에 기준을 적고 질문을 다시 시험했다.">
   <title>2주차 · 질문을 팀 JSON 문항으로 다듬고 LLM으로 검증하기 | Text-to-SQL</title>
   <link rel="stylesheet" href="../style.css">
 </head>
@@ -33,19 +33,8 @@ category: "Text-to-SQL"
   <p class="period">작업 기록 · 2026년 10월 19–26일</p>
 </header>
 <div class="article-body">
-<p>1주차에는 Olist 데이터로 답할 수 있는 질문을 만들었다. 2주차 과제는 질문에 남은 문제를 보완해 <strong>팀의 JSON 형식으로 문항을 만들고, LLM이 질문과 SQL 스키마를 보고 답할 수 있는지 시험하는 것</strong>이었다. 지난주에 본 조인 중복과 배송 기준의 모호함을 각각 결제 수단별 합계 문항(<code>bang-001</code>)과 배송 지연 문항(<code>bang-002</code>)으로 구체화했다. 두 문항을 <code>bang.json</code>으로 제출했다.</p>
-<h2>질문에서 빠진 기준을 JSON에 채웠다</h2>
-<p>지난주에는 “결제액이 부풀지 않았는지 확인해 달라”거나 “발송이 늦어 고객이 떠난 것 같다”처럼 맥락이 필요한 질문을 썼다. 이번에는 질문과 스키마를 받은 모델이 필요한 테이블을 고르고, 어떤 행을 세어 어떤 표를 반환할지 알 수 있어야 했다. 질문을 다듬을 때 대상 기간과 주문 상태, 조인 키와 집계 단위, 비율의 분모, 결과 열과 반올림 기준을 먼저 확인했다.</p>
-<p>팀 양식에는 질문인 <code>question</code>, 업무 기준인 <code>definitions</code>, 관련 테이블인 <code>tables</code>, 정답 쿼리인 <code>gold_sql</code>이 있었다. 반환해야 할 열과 행은 <code>expected_columns</code>와 <code>expected_rows</code>에, 검산 과정은 <code>verification</code>에 적었다. 배송 지연 문항에서 채점할 결과의 형태는 아래처럼 저장했다.</p>
-<pre><code class="language-json">{
-  &quot;id&quot;: &quot;bang-002&quot;,
-  &quot;question_type&quot;: &quot;sql&quot;,
-  &quot;tables&quot;: [&quot;orders&quot;],
-  &quot;expected_columns&quot;: [&quot;eligible_orders&quot;, &quot;late_orders&quot;, &quot;late_pct&quot;],
-  &quot;expected_rows&quot;: [[43426, 2453, 5.6487]]
-}
-</code></pre>
-<p>시연에서는 모델에게 질문과 Olist 스키마를 주고 SQL을 만들게 했다. 정답 SQL과 기대 결과는 채점용으로 따로 뒀다. 생성된 SQL을 SQLite에서 실행해 결과를 비교하니, 질문에서 더 분명히 써야 할 기준과 모델이 잘못 적용한 기준을 구분할 수 있었다.</p>
+<p>Claude Haiku가 배송 지연 주문을 2,132건으로 셌다. 내가 정답으로 계산한 2,453건보다 321건 적었다. 내가 쓴 “예상 도착 날짜의 다음 날 이후”를 Haiku는 ‘다음 날보다 뒤’로 읽었다. 하루 늦게 도착한 주문부터 세려던 내 의도가 문장에 제대로 담겼는지 다시 살펴볼 계기였다.</p>
+<p>2주차에는 질문과 SQL 스키마를 모델에 주고 답을 구할 수 있는지 시험했다. 지난주에 살핀 조인 중복과 배송 기준을 결제 수단별 합계 문항(<code>bang-001</code>)과 배송 지연 문항(<code>bang-002</code>)으로 구체화했다. 두 문항 모두 팀의 JSON 양식에 질문과 판정 기준을 적고, 정답 SQL을 모델에게 숨긴 상태에서 실행 결과를 대조했다.</p>
 <h2>예정일 당일 도착을 지연으로 볼지 정했다</h2>
 <p>10월 19일에 제출한 <code>bang-002</code>의 질문은 “2017년에 구매한 배송 완료 주문 중, 예상 도착 날짜보다 늦게 도착한 주문은 몇 건이고 몇 퍼센트인가?”였다. 구매 시각으로 2017년의 주문을 고르고, 실제 도착일과 예상 도착일이 모두 기록된 주문만 분모에 넣었다. 배송은 완료됐지만 실제 도착일이 비어 있는 두 건은 지연 여부를 판단할 수 없어 제외했다.</p>
 <p>예를 들어 검산 기록에서 2017년 5월 19일이 예정일이고 실제 도착 시각이 같은 날 15시 55분인 주문을 확인했다. 시각을 비교하면 실제 도착 값이 자정보다 크다. 날짜만 꺼내 비교하면 두 값은 5월 19일로 같다. 이 문항에서는 다음 날부터 지연이므로 <code>date(실제 도착일) &gt; date(예상 도착일)</code>을 정답 조건으로 삼았다.</p>
@@ -54,9 +43,23 @@ category: "Text-to-SQL"
   <figcaption>같은 43,426건의 주문에서 비교 단위만 바꿨다. 날짜 기준은 2,453건(5.6487%), 시각 기준은 2,878건(6.6274%)이었다.</figcaption>
 </figure>
 
-<p>SQL 기준을 정한 뒤에는 그 뜻이 질문에도 전달되는지 시험했다. 처음에 쓴 “예상 도착 날짜의 다음 날 이후”를 Claude Haiku는 다음 날보다 뒤로 읽어 2,132건을 반환했다. 문장을 “하루라도 넘겨 도착한 경우(다음 날 도착 포함)”로 풀어 쓰자 Haiku와 Sonnet이 정답 표와 같은 결과를 냈다. Qwen2.5-Coder 7B는 수정한 문장에서도 시각을 비교했고 배송 상태와 도착일 조건을 빼, 대상 주문 45,101건과 지연 주문 2,878건을 반환했다. 시연은 모델별로 같은 문항을 한 번씩 풀게 한 확인이었다.</p>
+<p>Haiku의 결과를 본 뒤 질문을 “하루라도 넘겨 도착한 경우(다음 날 도착 포함)”로 풀어 썼다. 정답 SQL과 기대 결과는 그대로 뒀다. 문장을 바꾼 시연에서는 Haiku와 Sonnet이 정답 표와 같은 결과를 냈다. Qwen2.5-Coder 7B는 여전히 시각을 비교했고 배송 상태와 도착일 조건도 빠뜨려, 대상 45,101건과 지연 2,878건을 반환했다. 문구를 고치며 확인한 해석 차이와 모델이 빠뜨린 집계 조건을 나눠 기록했다. 시연에서는 각 문구로 모델마다 한 번씩 풀게 했다.</p>
+<h2>모델에 줄 질문과 채점에 쓸 답을 나눠 적었다</h2>
+<p>팀 양식의 <code>question</code>에는 다듬은 질문을, <code>definitions</code>에는 기간과 주문 상태, 조인 키와 집계 단위, 분모와 반올림 기준처럼 답에 필요한 정의를 넣었다. <code>tables</code>에는 관련 테이블, <code>gold_sql</code>에는 정답 쿼리, <code>verification</code>에는 독립적으로 값을 확인한 방법을 담았다. 배송 지연 문항의 일부는 아래처럼 생겼다.</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;bang-002&quot;,
+  &quot;question_type&quot;: &quot;sql&quot;,
+  &quot;tables&quot;: [&quot;orders&quot;],
+  &quot;expected_columns&quot;: [&quot;eligible_orders&quot;, &quot;late_orders&quot;, &quot;late_pct&quot;],
+  &quot;expected_rows&quot;: [[43426, 2453, 5.6487]]
+}
+</code></pre>
+<p>시연에서는 질문과 스키마를 보고 모델이 만든 SQL을 SQLite에서 실행했다. 예를 들어 <code>expected_rows</code>의 첫 값인 대상 주문 수를 함께 대조하면, 지연 건수가 같아 보일 때도 분모가 틀렸는지 확인할 수 있다. 두 문항을 이 방식으로 정리해 <code>bang.json</code>으로 제출했다.</p>
 <h2>정답 SQL과 별개로 Python에서 같은 숫자를 구했다</h2>
-<p>질문과 함께 용어 정의, 필요한 테이블, 정답 SQL, 기대하는 열 순서와 결과 행을 제출했다. 배송 지연 문항의 정답 SQL은 아래와 같다. <code>WHERE</code>에서 분모에 넣을 주문을 고르고, <code>CASE</code>에서 날짜를 비교해 지연에 해당하는 행만 합산한다.</p>
+<p>배송 지연 문항의 정답 SQL은 <code>WHERE</code>에서 분모에 넣을 주문을 고르고, <code>CASE</code>에서 날짜를 비교해 지연에 해당하는 행만 합산한다.</p>
+<details>
+  <summary>배송 지연 문항의 정답 SQL</summary>
+
 <pre><code class="language-sql">SELECT COUNT(*) AS eligible_orders,
        SUM(CASE WHEN date(order_delivered_customer_date) &gt;
                      date(order_estimated_delivery_date) THEN 1 ELSE 0 END) AS late_orders,
@@ -70,6 +73,8 @@ WHERE order_purchase_timestamp &gt;= &#39;2017-01-01&#39;
   AND order_delivered_customer_date IS NOT NULL
   AND order_estimated_delivery_date IS NOT NULL;
 </code></pre>
+</details>
+
 <p>SQLite를 읽기 전용으로 열어 실행한 다음, 별도 Python 코드에서는 날짜 문자열을 날짜 객체로 바꿔 직접 비교했다. 지연 2,453건에 지연이 아닌 40,973건을 더하면 대상 43,426건이 됐다. 일부 조건을 하나씩 바꾸며 어떤 오류를 채점에서 잡을 수 있는지도 확인했다. 시각 비교와 빈 도착일을 분모에 넣는 변경은 결과에 드러났다. 배송 완료 조건을 빼는 변경은 이 데이터에서 같은 답이 나왔다. 2017년 구매 주문 중 실제 도착일이 있는 주문은 모두 배송 완료 상태였기 때문이다. 이 문항의 실행 결과만으로는 모델이 그 상태 조건을 지켰는지 구별하기 어렵다.</p>
 <h2>결제 문항에는 정상 실행되는 오답을 넣어 봤다</h2>
 <p>다른 문항인 <code>bang-001</code>에서는 2017년에 구매해 배송이 완료된 주문의 결제 수단별 합계를 구했다. 기간과 상태는 <code>orders</code>에서 걸렀고 금액은 <code>order_payments</code>에서 가져왔다. 한 주문에서 결제를 여러 수단으로 나눴다면 각 결제 행을 해당 수단에 한 번씩 더했다. 기간 끝을 <code>2018-01-01</code> 미만으로 두니 12월 31일의 배송 완료 주문 71건을 모두 포함할 수 있었다.</p>
@@ -77,8 +82,14 @@ WHERE order_purchase_timestamp &gt;= &#39;2017-01-01&#39;
 <p>그래서 실습 코드에서는 <strong>실행 성공</strong>과 **실행 정확도(EX)**를 따로 기록했다. 전자는 DB가 쿼리를 실행했는지, 후자는 반환된 행과 값이 정답 SQL의 실행 결과와 일치하는지를 본다. 결제 문항은 정상적으로 실행되는 중복 합산을 EX로 잡아냈다. 배송 문항에서는 상태 조건이 빠져도 같은 결과가 나왔다. 어떤 오류를 잡을 수 있는지는 문항의 정의와 DB에 실제로 들어 있는 행에도 달려 있었다.</p>
 <h2>같은 문제로 SQL 생성 방법을 비교할 준비를 했다</h2>
 <p>두 문항을 만들고 나니, 모델에게 예시를 주거나 계획을 먼저 세우게 했을 때 달라지는 점을 같은 기준으로 확인하고 싶었다. 10월 26일에는 BIRD Mini-Dev SQLite 문항 60개를 고정해 Text-to-SQL 방법 10종을 비교할 코드를 준비했다. 문항 ID와 원본 데이터베이스의 해시를 잠그고, 방식마다 같은 문항에서 실행 결과와 정답 일치 여부를 기록하는 구성이다.</p>
+<details>
+  <summary>개인 실습에서 비교하려고 준비한 방법</summary>
+
 <p>전체 DDL과 질문을 주는 Zero-shot에서 시작해 몇 가지 예시를 붙이는 Few-shot, 관련 테이블을 찾아 붙이는 스키마 연결을 살펴봤다. 생성 단계에서는 질문을 풀이 계획으로 분해하거나 계획을 구조화된 중간 표현으로 만들고, 로컬 런타임에서는 문법 제약으로 생성 범위를 좁히는 방법을 공부했다. 결과가 나온 뒤에는 실행 오류로 한 번 수정하는 방식과 여러 후보의 실행 결과를 비교하는 방식을 구분했다. 가중치를 조정하는 LoRA, 스키마 탐색·계획·생성·검증 역할을 나눈 에이전트도 비교 설계에 포함했다.</p>
-<p>실습 설계에서는 문법 제약에 llama.cpp, LoRA에 PyTorch를 쓰기로 했다. 각각의 런타임에서 별도 기준선을 두었다. 이 주에는 코드와 실행 설계까지 마련했다. 모델을 비교할 때 입력과 채점 규칙을 고정하는 이유를 두 문항에서 이미 확인했으니, 다음 주에는 팀 실행기에서 변경을 하나로 좁혀 보기로 했다. 같은 질문과 스키마를 넣고, SQL 앞에 풀이 계획을 한 번 쓰게 하면 결과가 어떻게 바뀔까?</p>
+<p>실습 설계에서는 문법 제약에 llama.cpp, LoRA에 PyTorch를 쓰기로 했다. 각각의 런타임에서 별도 기준선을 두었고, 이 주에는 코드와 실행 설계까지 마련했다.</p>
+</details>
+
+<p>이제 팀의 기본 실행을 기준으로 어느 부분부터 바꿔 볼지 정해야 했다. 모델을 바꾸면 풀리는 문제인지, 모델에게 주는 정보나 SQL을 쓰는 순서를 바꿔야 하는 문제인지 살펴볼 차례였다.</p>
 <p><a href="https://github.com/bird-bench/mini_dev">BIRD Mini-Dev 공개 평가셋</a></p>
 </div>
 </article>

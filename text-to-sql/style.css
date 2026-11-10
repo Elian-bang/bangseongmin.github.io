@@ -71,6 +71,10 @@ code { font-size: .91em; }
 .series code { background: #edf1e9; padding: .08em .2em; border-radius: .2em; }
 .series pre { overflow-x: auto; padding: .85rem 1rem; background: #edf1e9; border-radius: .5rem; line-height: 1.6; }
 .series pre code { padding: 0; }
+.series .article-body details { margin: 1rem 0 1.35rem; padding: .6rem .85rem; border: 1px solid var(--line); border-radius: .5rem; }
+.series .article-body summary { color: var(--accent); cursor: pointer; font-weight: 700; }
+.series .article-body summary:focus-visible { outline: 2px solid var(--accent); outline-offset: .2rem; }
+.series .article-body details[open] > summary { margin-bottom: .65rem; }
 .series-list { list-style: none; padding: 0; display: grid; gap: .85rem; }
 .series-list li { margin: 0; padding: 1rem 1.15rem; border: 1px solid var(--line); border-radius: .65rem; scroll-margin-top: 1rem; }
 .series-list h2 { margin: .15rem 0 .3rem; }
