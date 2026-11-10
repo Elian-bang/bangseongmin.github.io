@@ -8,7 +8,7 @@ permalink: "/text-to-sql/weekly.html"
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Olist에서 같은 상품을 다시 산 고객을 세는 일로 시작했다. 한 행의 뜻을 확인하다 보니 질문에 기준을 써야 했고, 그 기준을 모델이 어떤 순서로 SQL에 옮기는지도 궁금해졌다. 다섯 글에 매주 해 본 일과 다음 실험을 결정한 이유를 남겼다.">
+  <meta name="description" content="Olist 데이터로 답할 수 있는 질문을 만드는 일에서 시작했다. 질문을 팀 JSON 형식으로 다듬고, LLM이 스키마를 보고 정답에 이르는 SQL을 만들 수 있는지 확인했다. 이후에는 같은 문항으로 풀이 계획과 시간 초과 재시도를 비교했다.">
   <title>Text-to-SQL 스터디 1–5주차</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -19,18 +19,18 @@ permalink: "/text-to-sql/weekly.html"
   <p class="kicker">방성민 · 2026년 10–11월</p>
   <h1>Text-to-SQL 스터디 1–5주차</h1>
 </header>
-<p class="series-intro">Olist에서 같은 상품을 다시 산 고객을 세는 일로 시작했다. 한 행의 뜻을 확인하다 보니 질문에 기준을 써야 했고, 그 기준을 모델이 어떤 순서로 SQL에 옮기는지도 궁금해졌다. 다섯 글에 매주 해 본 일과 다음 실험을 결정한 이유를 남겼다.</p>
+<p class="series-intro">Olist 데이터로 답할 수 있는 질문을 만드는 일에서 시작했다. 질문을 팀 JSON 형식으로 다듬고, LLM이 스키마를 보고 정답에 이르는 SQL을 만들 수 있는지 확인했다. 이후에는 같은 문항으로 풀이 계획과 시간 초과 재시도를 비교했다.</p>
 <nav aria-label="Text-to-SQL 주차별 글">
 <ol class="series-list">
 <li id="week-1">
   <p class="kicker">1주차 · 10월 6–18일</p>
-  <h2><a href="pages/olist-questions.html">같은 상품을 다시 산 고객은 43명인가, 1,281명인가</a></h2>
-  <p>Olist 주문을 직접 세면서 같은 상품을 또 산 사람을 어떤 키와 단위로 구분할지 배웠다.</p>
+  <h2><a href="pages/olist-questions.html">Olist 데이터를 바탕으로 질문 만들기</a></h2>
+  <p>업무 질문을 Olist 데이터에 옮기며 필요한 테이블과 조건을 확인하고, 제출할 질문 세 개를 만들었다.</p>
 </li>
 <li id="week-2">
   <p class="kicker">2주차 · 10월 19–26일</p>
-  <h2><a href="pages/benchmark-design.html">예정일 오후에 도착한 주문을 지연으로 셀까</a></h2>
-  <p>결제액과 배송 지연 문항을 만들고, 정상 실행과 정답 일치를 구분할 기준을 마련했다.</p>
+  <h2><a href="pages/benchmark-design.html">질문을 팀 JSON 문항으로 다듬고 LLM으로 검증하기</a></h2>
+  <p>질문의 모호한 기준을 보완해 팀 JSON 형식으로 옮기고, LLM이 질문과 스키마로 SQL을 만들 수 있는지 시험했다.</p>
 </li>
 <li id="week-3">
   <p class="kicker">3주차 · 10월 26–30일</p>
