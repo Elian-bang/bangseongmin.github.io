@@ -8,7 +8,7 @@ permalink: "/text-to-sql/weekly.html"
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Olist 데이터로 답할 수 있는 질문을 만드는 일에서 시작했다. 질문을 팀 JSON 형식으로 다듬고, LLM이 스키마를 보고 정답에 이르는 SQL을 만들 수 있는지 확인했다. 이후에는 같은 문항으로 풀이 계획과 시간 초과 재시도를 비교했다.">
+  <meta name="description" content="Olist 데이터로 답할 수 있는 질문을 만드는 일에서 시작했다. 질문을 팀 JSON 형식으로 다듬고, LLM이 스키마를 보고 정답에 이르는 SQL을 만들 수 있는지 확인했다. 이어서 E0에서 바꿔 볼 모델과 방법을 시험해 A3를 골랐다. Olist v0.2에서 A3를 본격적으로 실행한 뒤, 논문에서 읽은 방법을 더해 Olist v0.3와 BIRD Mini-Dev까지 비교를 넓혔다.">
   <title>Text-to-SQL 스터디 1–5주차</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -19,7 +19,7 @@ permalink: "/text-to-sql/weekly.html"
   <p class="kicker">방성민 · 2026년 10–11월</p>
   <h1>Text-to-SQL 스터디 1–5주차</h1>
 </header>
-<p class="series-intro">Olist 데이터로 답할 수 있는 질문을 만드는 일에서 시작했다. 질문을 팀 JSON 형식으로 다듬고, LLM이 스키마를 보고 정답에 이르는 SQL을 만들 수 있는지 확인했다. 이후에는 같은 문항으로 풀이 계획과 시간 초과 재시도를 비교했다.</p>
+<p class="series-intro">Olist 데이터로 답할 수 있는 질문을 만드는 일에서 시작했다. 질문을 팀 JSON 형식으로 다듬고, LLM이 스키마를 보고 정답에 이르는 SQL을 만들 수 있는지 확인했다. 이어서 E0에서 바꿔 볼 모델과 방법을 시험해 A3를 골랐다. Olist v0.2에서 A3를 본격적으로 실행한 뒤, 논문에서 읽은 방법을 더해 Olist v0.3와 BIRD Mini-Dev까지 비교를 넓혔다.</p>
 <nav aria-label="Text-to-SQL 주차별 글">
 <ol class="series-list">
 <li id="week-1">
@@ -34,18 +34,18 @@ permalink: "/text-to-sql/weekly.html"
 </li>
 <li id="week-3">
   <p class="kicker">3주차 · 10월 26–30일</p>
-  <h2><a href="pages/a3-design.html">신규 고객을 찾기 전에 1분기로 자르면</a></h2>
-  <p>첫 구매 이력을 찾는 순서에서 출발해 SQL을 바로 만드는 E0와 풀이 계획을 거치는 A3를 비교했다.</p>
+  <h2><a href="pages/a3-design.html">E0에서 무엇을 바꿀까? 모델과 방법을 시험하고 A3를 고르기까지</a></h2>
+  <p>E0에서 모델과 예제·사전·검색 등을 바꿔 본 뒤, SQL을 쓰기 전에 계획을 만드는 A3를 맡았다.</p>
 </li>
 <li id="week-4">
-  <p class="kicker">4주차 · 11월 1–4일</p>
-  <h2><a href="pages/a3-repeat.html">계획만 더했을 때 꾸준히 개선된 문항은 하나였다</a></h2>
-  <p>계획 호출과 SQL 지시문을 따로 바꿔 반복했다. 시간 초과와 행·열 오류가 다음 가설의 출발점이 됐다.</p>
+  <p class="kicker">4주차 · 10월 31일–11월 4일</p>
+  <h2><a href="pages/a3-repeat.html">Olist v0.2에서 A3를 본격적으로 실험하기</a></h2>
+  <p>맡은 A3를 Olist v0.2 30문항에서 실행하고, 계획 지시문과 SQL 지시문을 바꿔 반복 비교했다.</p>
 </li>
 <li id="week-5">
   <p class="kicker">5주차 · 11월 5–10일</p>
-  <h2><a href="pages/a3-output-instruction.html">SQL이 내놓을 한 행을 먼저 정하면 오답이 줄까?</a></h2>
-  <p>결과의 한 행과 열을 먼저 적는 지시를 시험했다. SQL이 멈춘 뒤에는 SQLite 실행 계획을 단서로 줬다.</p>
+  <h2><a href="pages/a3-output-instruction.html">A3를 더 깊게 파보기 · Olist 49문항과 BIRD 500문항</a></h2>
+  <p>논문의 질문 분해와 스키마 연결을 A3에 적용하고, Olist v0.3 49문항과 BIRD Mini-Dev 500문항에서 비교했다.</p>
 </li>
 </ol>
 </nav>

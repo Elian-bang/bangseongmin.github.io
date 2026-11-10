@@ -1,5 +1,5 @@
 ---
-title: "4주차 · 계획만 더했을 때 꾸준히 개선된 문항은 하나였다"
+title: "4주차 · Olist v0.2에서 A3를 본격적으로 실험하기"
 kind: "article"
 layout: null
 permalink: "/text-to-sql/pages/a3-repeat.html"
@@ -12,8 +12,8 @@ category: "Text-to-SQL"
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="계획 호출과 SQL 지시문을 따로 바꿔 반복했다. 시간 초과와 행·열 오류가 다음 가설의 출발점이 됐다.">
-  <title>4주차 · 계획만 더했을 때 꾸준히 개선된 문항은 하나였다 | Text-to-SQL</title>
+  <meta name="description" content="맡은 A3를 Olist v0.2 30문항에서 실행하고, 계획 지시문과 SQL 지시문을 바꿔 반복 비교했다.">
+  <title>4주차 · Olist v0.2에서 A3를 본격적으로 실험하기 | Text-to-SQL</title>
   <link rel="stylesheet" href="../style.css">
 </head>
 <body class="series">
@@ -29,11 +29,56 @@ category: "Text-to-SQL"
 <article>
 <header>
   <p class="kicker">Text-to-SQL · 4주차 · 방성민</p>
-  <h1>계획만 더했을 때 꾸준히 개선된 문항은 하나였다</h1>
-  <p class="period">작업 기록 · 2026년 11월 1–4일</p>
+  <h1>Olist v0.2에서 A3를 본격적으로 실험하기</h1>
+  <p class="period">작업 기록 · 2026년 10월 31일–11월 4일</p>
 </header>
 <div class="article-body">
-<p>3주차에 SQL을 바로 쓰는 E0와 먼저 계획을 쓰는 A3를 한 번씩 실행했다. 둘 다 30문항 중 23개를 맞혔지만, A3에서 새로 맞힌 문항과 새로 틀린 문항이 각각 세 개였다. 4주차에는 같은 문항을 다시 풀었을 때도 그 차이가 남는지 보고 싶었다. 여러 계획 지시문을 시험하면서 SQL 생성 지시문까지 바뀐 상태였으므로, 두 변경을 분리하는 비교부터 설계했다.</p>
+<p>3주차에 여러 방법을 시험하고 <strong>A3를 맡기로 했다.</strong> 4주차에는 확정된 <strong>Olist v0.2 SQL 30문항</strong>을 기준으로 A3를 본격적으로 실행했다. 같은 문항에서 SQL을 바로 쓰는 E0와 계획을 먼저 쓰는 A3를 돌리고, 계획에 무엇을 적게 할지 바꿔 봤다. 그중 반복해서 나타나는 차이는 무엇인지 따로 확인했다.</p>
+<h2>여섯 모델에서 E0와 A3를 한 번씩 돌렸다</h2>
+<p>10월 31일에는 같은 30문항으로 Codex Luna·Terra·Sol과 Claude Haiku·Sonnet·Opus의 E0와 A3를 각각 한 번씩 실행했다. Codex는 CLI의 중간 추론 설정, Claude는 Messages API의 기본 설정을 썼다. 비교는 같은 모델 안에서 계획을 추가했을 때의 변화로 읽었다.</p>
+<div class="table-scroll" role="region" tabindex="0" aria-label="비교 결과 표"><table>
+<thead>
+<tr>
+<th>모델</th>
+<th align="right">E0 정답</th>
+<th align="right">A3 정답</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Codex Luna</td>
+<td align="right">25/30</td>
+<td align="right">25/30</td>
+</tr>
+<tr>
+<td>Codex Terra</td>
+<td align="right">27/30</td>
+<td align="right">25/30</td>
+</tr>
+<tr>
+<td>Codex Sol</td>
+<td align="right">28/30</td>
+<td align="right">24/30</td>
+</tr>
+<tr>
+<td>Claude Haiku</td>
+<td align="right">27/30</td>
+<td align="right">25/30</td>
+</tr>
+<tr>
+<td>Claude Sonnet</td>
+<td align="right">25/30</td>
+<td align="right">25/30</td>
+</tr>
+<tr>
+<td>Claude Opus</td>
+<td align="right">27/30</td>
+<td align="right">24/30</td>
+</tr>
+</tbody></table></div>
+<p>정답 수는 두 모델에서 같았고 네 모델에서 줄었다. Luna에서는 총점이 같았지만 새로 맞힌 문항과 새로 틀린 문항이 각각 세 개였다. 예를 들어 <code>kmk-001</code>의 계획에는 두 해 모두 특정 주문 상태를 제외하라고 적혀 있었는데, 생성 SQL에서는 <code>AND</code>와 <code>OR</code>가 묶인 방식 때문에 상태 조건이 2018년 쪽에만 적용됐다. 계획을 읽는 것과 생성 SQL에서 실제로 적용된 조건을 확인하는 일이 모두 필요했다.</p>
+<h2>계획에 적게 할 항목을 바꿔 봤다</h2>
+<p>처음에는 결과의 모양, 연결할 테이블, 행이 늘어나는 지점, 비교할 짝, 실행 위험, SQL 작성 순서를 여섯 칸에 적게 했다. 여기에 SQL을 내놓기 전 점검 지시를 붙이거나, 중간 결과를 한 번 만들어 재사용하도록 지시해 봤다. 다른 실행에서는 결과와 필요한 정보부터 적는 다섯 항목으로 다시 구성했고, 집계에 포함할 대상과 제외할 대상을 따로 쓰는 지시도 추가해 봤다.</p>
+<p>11월 2~3일의 예비 실행에서는 여섯 칸 기준과 다섯 항목 방식이 각각 26/30이었다. SQL 점검 또는 재사용 지시를 더한 실행은 각각 24/30, 다섯 항목에 집계 대상 지시를 더한 실행은 23/30이었다. 이 값은 각 조건을 한 번 실행한 결과다. 같은 지시문으로 다시 돌려도 정답이 바뀌는 문항이 있었고, 여러 계획 지시문을 시험하는 사이 SQL 생성 지시문도 달라져 있었다. 계획 호출과 SQL 지시문의 영향을 나눠 비교할 필요가 생겼다.</p>
 <h2>계획 호출과 SQL 지시문을 따로 비교했다</h2>
 <p>먼저 기존 E0와 A3 사이에 C1이라는 조건을 넣었다. E0는 기본 SQL 지시문을 받아 바로 SQL을 쓴다. C1도 바로 SQL을 쓰되 A3용 SQL 지시문을 받는다. A3는 C1과 같은 SQL 지시문을 받으면서, 그 앞에 다섯 항목의 풀이 계획을 생성하는 호출이 붙는다. E0에서 C1로 넘어갈 때는 SQL 지시문이 바뀌고, C1에서 A3로 넘어갈 때는 계획 호출이 추가된다.</p>
 <p>Olist v0.2의 같은 30문항, DB, 스키마를 두고 <code>gpt-6-luna</code>의 중간 추론 설정, Codex CLI 0.166.0, SQL 실행 제한 10초를 공통으로 사용했다. 매 회차 E0 → C1 → A3 순으로 실행했고 세 회차를 마쳤다. 이때부터 총점과 함께 문항마다 세 번 중 몇 번을 맞혔는지 기록했다.</p>
@@ -98,7 +143,7 @@ category: "Text-to-SQL"
 </div>
 </article>
 <footer>
-<nav class="post-nav" aria-label="앞뒤 글"><a rel="prev" href="a3-design.html"><small>← 3주차</small><span>신규 고객을 찾기 전에 1분기로 자르면</span></a><a rel="next" href="a3-output-instruction.html"><small>5주차 →</small><span>SQL이 내놓을 한 행을 먼저 정하면 오답이 줄까?</span></a></nav>
+<nav class="post-nav" aria-label="앞뒤 글"><a rel="prev" href="a3-design.html"><small>← 3주차</small><span>E0에서 무엇을 바꿀까? 모델과 방법을 시험하고 A3를 고르기까지</span></a><a rel="next" href="a3-output-instruction.html"><small>5주차 →</small><span>A3를 더 깊게 파보기 · Olist 49문항과 BIRD 500문항</span></a></nav>
 <p><a href="../weekly.html">시리즈 목차로</a></p>
 </footer>
 </main>
