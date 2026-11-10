@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 367" role="img" aria-labelledby="title desc">
+  <title id="title">날짜만 비교할 때와 시각까지 비교할 때의 지연 주문 수</title>
+  <desc id="desc">2017년 Olist 대상 주문 43,426건. 날짜만 비교하면 2,453건, 시각까지 비교하면 예정일 당일 도착 425건이 추가되어 2,878건.</desc>
+  <g font-family="system-ui, Apple SD Gothic Neo, Malgun Gothic, sans-serif">
+    <rect x="0" y="0" width="660" height="367" rx="22" fill="#f5f3ec"/>
+    <text x="28" y="39" fill="#196451" font-size="20" font-weight="800" text-anchor="start">WEEK 02</text>
+    <text x="28" y="81" fill="#182e29" font-size="31" font-weight="790" text-anchor="start">시각까지 비교하면 당일 도착도 걸린다</text>
+    <text x="28" y="115" fill="#4b6259" font-size="23" font-weight="600" text-anchor="start">대상 주문 43,426건 · 막대는 지연 주문 수</text>
+    <text x="43" y="159" fill="#182e29" font-size="27" font-weight="750" text-anchor="start">날짜만 비교</text>
+    <text x="613" y="159" fill="#196451" font-size="32" font-weight="820" text-anchor="end">2,453건</text>
+    <rect x="43" y="176" width="560" height="22" rx="4" fill="#fffdf8"/>
+    <rect x="43" y="176" width="458" height="22" rx="4" fill="#196451"/>
+    <text x="43" y="253" fill="#182e29" font-size="27" font-weight="750" text-anchor="start">시각까지 비교</text>
+    <text x="613" y="253" fill="#196451" font-size="32" font-weight="820" text-anchor="end">2,878건</text>
+    <rect x="43" y="270" width="560" height="22" rx="4" fill="#fffdf8"/>
+    <rect x="43" y="270" width="458" height="22" rx="4" fill="#196451"/>
+    <rect x="501" y="270" width="79" height="22" rx="4" fill="#8b471f"/>
+    <rect x="43" y="320" width="21" height="18" rx="3" fill="#8b471f"/>
+    <text x="76" y="337" fill="#8b471f" font-size="24" font-weight="720" text-anchor="start">예정일 당일 도착 425건 추가</text>
+  </g>
+</svg>

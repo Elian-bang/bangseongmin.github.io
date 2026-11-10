@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 501" role="img" aria-labelledby="title desc">
+  <title id="title">E0와 A3의 SQL 생성 경로</title>
+  <desc id="desc">질문·문항 조건·스키마가 공통 입력이다. E0는 모델 한 번으로 SQL을 만든다. A3는 첫 호출로 풀이 계획을 만들고 그 계획과 원래 입력을 두 번째 호출에 넣어 SQL을 만든다. 두 경로 모두 완성 SQL을 SQLite에서 실행하고 채점한다.</desc>
+  <g font-family="system-ui, Apple SD Gothic Neo, Malgun Gothic, sans-serif">
+    <rect x="0" y="0" width="660" height="501" rx="22" fill="#f5f3ec"/>
+    <text x="28" y="39" fill="#196451" font-size="20" font-weight="800" text-anchor="start">WEEK 03</text>
+    <text x="28" y="81" fill="#182e29" font-size="31" font-weight="790" text-anchor="start">같은 입력, 다른 SQL 생성 경로</text>
+    <rect x="28" y="108" width="604" height="59" rx="10" fill="#fffdf8"/>
+    <text x="330" y="145" fill="#182e29" font-size="27" font-weight="700" text-anchor="middle">질문 · 문항 조건 · 스키마</text>
+    <line x1="330" y1="167" x2="330" y2="184" stroke="#196451" stroke-width="2"/>
+    <line x1="173" y1="184" x2="487" y2="184" stroke="#196451" stroke-width="2"/>
+    <path d="M173 184v13m-5-4 5 5 5-5" fill="none" stroke="#196451" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M487 184v13m-5-4 5 5 5-5" fill="none" stroke="#196451" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="28" y="207" width="290" height="179" rx="13" fill="#fffdf8"/>
+    <text x="173" y="243" fill="#196451" font-size="25" font-weight="800" text-anchor="middle">E0 · 직접 생성</text>
+    <text x="173" y="287" fill="#182e29" font-size="25" font-weight="700" text-anchor="middle">① SQL 생성</text>
+    <text x="173" y="370" fill="#4b6259" font-size="22" font-weight="620" text-anchor="middle">문항당 모델 1회</text>
+    <rect x="342" y="207" width="290" height="179" rx="13" fill="#e3efe6"/>
+    <text x="487" y="243" fill="#196451" font-size="25" font-weight="800" text-anchor="middle">A3 · 계획 먼저</text>
+    <text x="487" y="287" fill="#182e29" font-size="25" font-weight="700" text-anchor="middle">① 풀이 계획 작성</text>
+    <path d="M487 297v13m-5-4 5 5 5-5" fill="none" stroke="#196451" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="487" y="339" fill="#182e29" font-size="25" font-weight="700" text-anchor="middle">② SQL 생성</text>
+    <text x="487" y="370" fill="#4b6259" font-size="22" font-weight="620" text-anchor="middle">문항당 모델 2회</text>
+    <path d="M173 390v13m-5-4 5 5 5-5" fill="none" stroke="#196451" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M487 390v13m-5-4 5 5 5-5" fill="none" stroke="#196451" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="28" y="417" width="604" height="58" rx="11" fill="#196451"/>
+    <text x="330" y="454" fill="#ffffff" font-size="26" font-weight="700" text-anchor="middle">SQLite 실행 · 정답 SQL 결과와 비교</text>
+  </g>
+</svg>

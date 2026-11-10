@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 472" role="img" aria-labelledby="title desc">
+  <title id="title">기본 재시도와 실행 계획 단서를 더한 재시도의 복구 결과</title>
+  <desc id="desc">처음 시간 초과한 SQL만 한 번 재시도했다. Olist v0.3는 12건 중 기본 재시도 3건, 단서를 추가한 재시도 5건이 정답이었다. BIRD Mini-Dev는 27건 중 각각 14건과 17건이었다.</desc>
+  <g font-family="system-ui, Apple SD Gothic Neo, Malgun Gothic, sans-serif">
+    <rect x="0" y="0" width="660" height="472" rx="22" fill="#f5f3ec"/>
+    <text x="28" y="39" fill="#196451" font-size="20" font-weight="800" text-anchor="start">WEEK 05</text>
+    <text x="28" y="81" fill="#182e29" font-size="31" font-weight="790" text-anchor="start">실행 계획 단서로 복구한 정답</text>
+    <text x="28" y="113" fill="#4b6259" font-size="23" font-weight="600" text-anchor="start">처음 시간 초과한 SQL만 한 번 재시도</text>
+    <rect x="28" y="147" width="604" height="141" rx="12" fill="#fffdf8"/>
+    <text x="46" y="183" fill="#182e29" font-size="28" font-weight="780" text-anchor="start">Olist v0.3</text>
+    <text x="46" y="225" fill="#4b6259" font-size="22" font-weight="700" text-anchor="start">기본 재시도</text>
+    <rect x="270" y="209" width="236" height="20" rx="4" fill="#e3efe6"/>
+    <rect x="270" y="209" width="59" height="20" rx="4" fill="#547065"/>
+    <text x="611" y="226" fill="#182e29" font-size="24" font-weight="770" text-anchor="end">3/12건</text>
+    <text x="46" y="267" fill="#196451" font-size="22" font-weight="700" text-anchor="start">실행 계획 단서 추가</text>
+    <rect x="270" y="251" width="236" height="20" rx="4" fill="#e3efe6"/>
+    <rect x="270" y="251" width="98" height="20" rx="4" fill="#196451"/>
+    <text x="611" y="268" fill="#182e29" font-size="24" font-weight="770" text-anchor="end">5/12건</text>
+    <rect x="28" y="304" width="604" height="141" rx="12" fill="#fffdf8"/>
+    <text x="46" y="340" fill="#182e29" font-size="28" font-weight="780" text-anchor="start">BIRD Mini-Dev</text>
+    <text x="46" y="382" fill="#4b6259" font-size="22" font-weight="700" text-anchor="start">기본 재시도</text>
+    <rect x="270" y="366" width="236" height="20" rx="4" fill="#e3efe6"/>
+    <rect x="270" y="366" width="122" height="20" rx="4" fill="#547065"/>
+    <text x="611" y="383" fill="#182e29" font-size="24" font-weight="770" text-anchor="end">14/27건</text>
+    <text x="46" y="424" fill="#196451" font-size="22" font-weight="700" text-anchor="start">실행 계획 단서 추가</text>
+    <rect x="270" y="408" width="236" height="20" rx="4" fill="#e3efe6"/>
+    <rect x="270" y="408" width="149" height="20" rx="4" fill="#196451"/>
+    <text x="611" y="425" fill="#182e29" font-size="24" font-weight="770" text-anchor="end">17/27건</text>
+  </g>
+</svg>

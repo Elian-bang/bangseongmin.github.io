@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 416" role="img" aria-labelledby="title desc">
+  <title id="title">같은 데이터, 세 가지 재구매 집계</title>
+  <desc id="desc">Olist 2018년 6–8월. 같은 사람을 연결해 서로 다른 주문만 세면 43명, 같은 주문의 복수 구매도 포함하면 1,281명, 서로 다른 주문을 주문별 고객 ID로 연결하면 0명.</desc>
+  <g font-family="system-ui, Apple SD Gothic Neo, Malgun Gothic, sans-serif">
+    <rect x="0" y="0" width="660" height="416" rx="22" fill="#f5f3ec"/>
+    <text x="28" y="39" fill="#196451" font-size="20" font-weight="800" text-anchor="start">WEEK 01</text>
+    <text x="28" y="81" fill="#182e29" font-size="31" font-weight="790" text-anchor="start">같은 데이터, 세 가지 재구매 집계</text>
+    <text x="28" y="113" fill="#4b6259" font-size="23" font-weight="600" text-anchor="start">Olist · 2018년 6–8월</text>
+    <rect x="28" y="136" width="604" height="77" rx="11" fill="#e3efe6"/>
+    <text x="47" y="167" fill="#182e29" font-size="26" font-weight="750" text-anchor="start">서로 다른 주문만 집계</text>
+    <text x="47" y="196" fill="#4b6259" font-size="21" font-weight="550" text-anchor="start">같은 사람의 주문을 연결</text>
+    <text x="611" y="187" fill="#196451" font-size="38" font-weight="820" text-anchor="end">43명</text>
+    <rect x="28" y="224" width="604" height="77" rx="11" fill="#fffdf8"/>
+    <text x="47" y="255" fill="#182e29" font-size="26" font-weight="750" text-anchor="start">한 주문의 복수 구매도 포함</text>
+    <text x="47" y="284" fill="#4b6259" font-size="21" font-weight="550" text-anchor="start">같은 사람의 주문을 연결</text>
+    <text x="611" y="275" fill="#182e29" font-size="38" font-weight="820" text-anchor="end">1,281명</text>
+    <rect x="28" y="312" width="604" height="77" rx="11" fill="#fffdf8"/>
+    <text x="47" y="343" fill="#182e29" font-size="26" font-weight="750" text-anchor="start">주문별 고객 ID로 연결</text>
+    <text x="47" y="372" fill="#4b6259" font-size="21" font-weight="550" text-anchor="start">서로 다른 주문만 집계</text>
+    <text x="611" y="363" fill="#182e29" font-size="38" font-weight="820" text-anchor="end">0명</text>
+  </g>
+</svg>
